@@ -1627,7 +1627,7 @@
 </script>
 
 <script>/*leadgen-reveal-failsafe*/
-window.addEventListener('load',function(){if(window.ScrollTrigger)ScrollTrigger.refresh();setTimeout(function(){if(window.ScrollTrigger)ScrollTrigger.refresh();document.querySelectorAll('section *').forEach(function(el){if(el.offsetParent!==null&&parseFloat(getComputedStyle(el).opacity)<0.05){el.style.setProperty('opacity','1','important');el.style.setProperty('transform','none','important');}});},1000);});
+window.addEventListener('load',function(){if(window.ScrollTrigger)ScrollTrigger.refresh();setTimeout(function(){if(window.ScrollTrigger)ScrollTrigger.refresh();document.querySelectorAll('section *').forEach(function(el){var o=el.style.opacity;if(o!==''&&parseFloat(o)<1&&el.offsetParent!==null){el.style.setProperty('opacity','1','important');el.style.setProperty('transform','none','important');}});},1200);});
 </script>
 </body>
 </html>
