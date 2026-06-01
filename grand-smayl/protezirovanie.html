@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Протезирование — Гранд Смайл, Москва</title>
+<meta name="description" content="Стоматология в Беляево, ул. Миклухо-Маклая 43. Лечение, имплантация, виниры, детская. Рейтинг 4,9★. Онлайн-запись 24/7. Приём до 21:00.">
+<meta name="keywords" content="стоматология Беляево, лечение зубов Беляево, имплантация зубов Беляево цена, детская стоматология Беляево, виниры зубов Беляево">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#115E59',
+          secondary: '#F0F4F2',
+          accent: '#D9A441',
+          ink: '#1A1A2E'
+        },
+        fontFamily: {
+          display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+          body: ['Manrope', 'system-ui', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { -webkit-font-smoothing: antialiased; }
+  .grain::before {
+    content: ""; position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: .04;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  .faq-panel { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+  .outline-num {
+    -webkit-text-stroke: 1.5px rgba(217,164,65,.35); color: transparent;
+  }
+</style>
+</head>
+<body class="font-body bg-white text-ink antialiased overflow-x-hidden pb-20 md:pb-0 grain">
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-ink/10">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      <a href="index.html" class="flex items-center gap-2 shrink-0">
+        <span class="inline-block w-2.5 h-2.5 bg-accent rotate-45"></span>
+        <span class="font-display text-2xl md:text-3xl font-semibold tracking-tight text-primary leading-none">Гранд Смайл</span>
+      </a>
+
+      <!-- desktop nav -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-ink/80">
+        <div class="relative group">
+          <button class="flex items-center gap-1 py-2 hover:text-primary transition-colors" aria-haspopup="true">
+            Услуги
+            <svg class="w-3.5 h-3.5 mt-0.5" viewBox="0 0 20 20" fill="none"><path d="M5 7.5 10 12.5 15 7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="absolute left-0 top-full pt-2 w-64 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200">
+            <div class="bg-white border border-ink/10 shadow-xl py-2">
+              <a href="lechenie-zubov.html" class="block px-4 py-2.5 hover:bg-secondary hover:text-primary transition-colors">Лечение зубов</a>
+              <a href="protezirovanie.html" class="block px-4 py-2.5 hover:bg-secondary hover:text-primary transition-colors">Протезирование</a>
+              <a href="implantatsiya.html" class="block px-4 py-2.5 hover:bg-secondary hover:text-primary transition-colors">Имплантация</a>
+              <a href="esteticheskaya-stomatologiya.html" class="block px-4 py-2.5 hover:bg-secondary hover:text-primary transition-colors">Эстетическая стоматология</a>
+              <a href="detskaya-stomatologiya.html" class="block px-4 py-2.5 hover:bg-secondary hover:text-primary transition-colors">Детская стоматология</a>
+            </div>
+          </div>
+        </div>
+        <a href="index.html#doctors" class="py-2 hover:text-primary transition-colors">Врачи</a>
+        <a href="index.html#prices" class="py-2 hover:text-primary transition-colors">Цены</a>
+        <a href="index.html#contacts" class="py-2 hover:text-primary transition-colors">Контакты</a>
+        <a href="tel:+74957792328" class="py-2 font-semibold text-primary hover:text-accent transition-colors">+7 (495) 779-23-28</a>
+        <a href="index.html#form" class="inline-flex items-center justify-center min-h-[44px] px-6 bg-primary text-white font-semibold hover:bg-accent hover:text-primary transition-colors">Записаться</a>
+      </nav>
+
+      <!-- mobile burger -->
+      <button id="burger" class="md:hidden inline-flex items-center justify-center w-12 h-12 -mr-2 text-primary" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+        <svg id="burger-open" class="w-7 h-7" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <svg id="burger-close" class="w-7 h-7 hidden" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-ink/10 bg-white">
+    <nav class="max-w-6xl mx-auto px-4 py-4 flex flex-col text-base">
+      <span class="text-xs uppercase tracking-widest text-ink/40 mt-1 mb-1">Услуги</span>
+      <a href="lechenie-zubov.html" class="py-2.5 border-b border-ink/5">Лечение зубов</a>
+      <a href="protezirovanie.html" class="py-2.5 border-b border-ink/5">Протезирование</a>
+      <a href="implantatsiya.html" class="py-2.5 border-b border-ink/5">Имплантация</a>
+      <a href="esteticheskaya-stomatologiya.html" class="py-2.5 border-b border-ink/5">Эстетическая стоматология</a>
+      <a href="detskaya-stomatologiya.html" class="py-2.5 border-b border-ink/5">Детская стоматология</a>
+      <a href="index.html#doctors" class="py-3 mt-1 border-b border-ink/5">Врачи</a>
+      <a href="index.html#prices" class="py-3 border-b border-ink/5">Цены</a>
+      <a href="index.html#contacts" class="py-3 border-b border-ink/5">Контакты</a>
+      <a href="tel:+74957792328" class="py-3 font-semibold text-primary">+7 (495) 779-23-28</a>
+      <a href="index.html#form" class="mt-3 inline-flex items-center justify-center min-h-[48px] px-6 bg-primary text-white font-semibold">Записаться онлайн</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+Existing `index.html` is a different clinic (МигДент, #243B53). The task spec is authoritative for «Гранд Смайл» (#115E59 / Cormorant Garamond / form anchor `index.html#form`), so I'll follow the spec exactly. Here is the inner HTML of `<main>`:
+
+<section id="service-hero" class="relative overflow-hidden bg-[#115E59] text-white">
+  <div aria-hidden="true" class="pointer-events-none absolute -top-24 -right-24 h-80 w-80 rounded-full bg-[#D9A441]/10 blur-3xl"></div>
+  <div aria-hidden="true" class="pointer-events-none absolute bottom-0 left-1/3 h-px w-2/3 bg-white/10"></div>
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-20 md:py-28 lg:py-32">
+    <div class="max-w-3xl">
+      <span class="inline-flex items-center gap-2 text-[#D9A441] text-xs sm:text-sm tracking-[0.22em] uppercase mb-5">
+        <span class="h-px w-8 bg-[#D9A441]"></span> Гранд Смайл · Беляево, Москва
+      </span>
+      <h1 class="font-['Cormorant_Garamond'] font-bold leading-tight break-words text-[clamp(2.25rem,8vw,5rem)]">
+        Протезирование
+      </h1>
+      <p class="mt-6 text-base sm:text-lg md:text-xl text-white/85 font-light leading-relaxed max-w-2xl">
+        Восстановление формы, жевания и эстетики зубов с помощью коронок, мостов и виниров. Конструкции делаем по цифровым слепкам высокой точности — без оттискной массы и без зазоров на готовой работе.
+      </p>
+
+      <div class="mt-9 flex flex-wrap items-center gap-4">
+        <div class="inline-flex flex-col rounded-sm border border-[#D9A441]/40 bg-white/5 px-6 py-4">
+          <span class="text-xs uppercase tracking-[0.2em] text-white/55">Стоимость</span>
+          <span class="font-['Cormorant_Garamond'] text-3xl md:text-4xl font-bold text-[#D9A441]">от 8 000 ₽</span>
+          <span class="text-xs text-white/55">за коронку</span>
+        </div>
+      </div>
+
+      <div class="mt-9 flex flex-col sm:flex-row gap-3 sm:gap-4">
+        <a href="index.html#form" class="inline-flex items-center justify-center bg-[#D9A441] text-[#115E59] font-semibold px-7 py-4 rounded-sm hover:bg-white transition-colors">
+          Записаться на консультацию
+        </a>
+        <a href="tel:+74957792328" class="inline-flex items-center justify-center gap-2 border border-white/30 text-white font-medium px-7 py-4 rounded-sm hover:bg-white/10 transition-colors">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          +7 (495) 779-23-28
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="what-is" class="bg-white text-[#115E59]">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-16 md:py-24">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-start">
+      <div class="md:col-span-4">
+        <span class="font-['Cormorant_Garamond'] text-6xl md:text-7xl font-bold text-[#D9A441]/30 leading-none">01</span>
+        <h2 class="mt-3 font-['Cormorant_Garamond'] text-3xl md:text-4xl font-bold leading-tight">Что это и кому показано</h2>
+      </div>
+      <div class="md:col-span-8">
+        <p class="text-base md:text-lg text-[#115E59]/80 leading-relaxed">
+          Протезирование — это замещение разрушенных или утраченных зубов искусственными конструкциями, которые берут на себя жевательную нагрузку и возвращают зубному ряду естественный вид. Коронка надевается на сильно разрушенный зуб, мост закрывает промежуток из одного-двух отсутствующих зубов с опорой на соседние, винир восстанавливает переднюю поверхность зуба в зоне улыбки.
+        </p>
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-px bg-[#115E59]/10 border border-[#115E59]/10">
+          <div class="bg-white p-6">
+            <h3 class="font-['Cormorant_Garamond'] text-xl font-bold">Зуб сильно разрушен</h3>
+            <p class="mt-2 text-sm text-[#115E59]/70 leading-relaxed">Пломба уже не держит форму или стенки зуба истончились — коронка защищает то, что осталось.</p>
+          </div>
+          <div class="bg-white p-6">
+            <h3 class="font-['Cormorant_Garamond'] text-xl font-bold">Зуб удалён</h3>
+            <p class="mt-2 text-sm text-[#115E59]/70 leading-relaxed">Промежуток в ряду можно закрыть мостовидным протезом с опорой на соседние зубы.</p>
+          </div>
+          <div class="bg-white p-6">
+            <h3 class="font-['Cormorant_Garamond'] text-xl font-bold">После лечения каналов</h3>
+            <p class="mt-2 text-sm text-[#115E59]/70 leading-relaxed">Депульпированный зуб становится хрупким — коронка снижает риск раскола.</p>
+          </div>
+          <div class="bg-white p-6">
+            <h3 class="font-['Cormorant_Garamond'] text-xl font-bold">Эстетика улыбки</h3>
+            <p class="mt-2 text-sm text-[#115E59]/70 leading-relaxed">Сколы, щели и неровный цвет фронтальных зубов корректируются винирами.</p>
+          </div>
+        </div>
+        <p class="mt-6 text-sm text-[#115E59]/55">Подходит ли протезирование именно вам и какая конструкция нужна — определяет врач на осмотре по снимку.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="stages" class="bg-[#F0F4F2] text-[#115E59]">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-16 md:py-24">
+    <div class="max-w-3xl mb-12 md:mb-16">
+      <span class="font-['Cormorant_Garamond'] text-6xl md:text-7xl font-bold text-[#D9A441]/40 leading-none">02</span>
+      <h2 class="mt-3 font-['Cormorant_Garamond'] text-3xl md:text-4xl font-bold leading-tight">Как проходит протезирование</h2>
+      <p class="mt-4 text-base md:text-lg text-[#115E59]/65">Обычно 2–3 визита: между ними работу изготавливает зуботехническая лаборатория.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-[#115E59]/10 border border-[#115E59]/10">
+      <div class="bg-[#F0F4F2] p-7">
+        <span class="font-['Cormorant_Garamond'] text-3xl font-bold text-[#D9A441]">01</span>
+        <h3 class="mt-3 font-['Cormorant_Garamond'] text-xl font-bold">Осмотр и план</h3>
+        <p class="mt-2 text-sm text-[#115E59]/70 leading-relaxed">Врач оценивает зуб, делает снимок, подбирает тип конструкции и материал, рассчитывает смету.</p>
+      </div>
+      <div class="bg-[#F0F4F2] p-7">
+        <span class="font-['Cormorant_Garamond'] text-3xl font-bold text-[#D9A441]">02</span>
+        <h3 class="mt-3 font-['Cormorant_Garamond'] text-xl font-bold">Подготовка и слепок</h3>
+        <p class="mt-2 text-sm text-[#115E59]/70 leading-relaxed">Зуб обтачивается под коронку, затем снимается цифровой слепок сканером — без оттискной ложки во рту.</p>
+      </div>
+      <div class="bg-[#F0F4F2] p-7">
+        <span class="font-['Cormorant_Garamond'] text-3xl font-bold text-[#D9A441]">03</span>
+        <h3 class="mt-3 font-['Cormorant_Garamond'] text-xl font-bold">Изготовление</h3>
+        <p class="mt-2 text-sm text-[#115E59]/70 leading-relaxed">По 3D-модели техник изготавливает конструкцию. На это время при необходимости ставится временная коронка.</p>
+      </div>
+      <div class="bg-[#F0F4F2] p-7">
+        <span class="font-['Cormorant_Garamond'] text-3xl font-bold text-[#D9A441]">04</span>
+        <h3 class="mt-3 font-['Cormorant_Garamond'] text-xl font-bold">Примерка и фиксация</h3>
+        <p class="mt-2 text-sm text-[#115E59]/70 leading-relaxed">Врач проверяет прилегание и прикус, корректирует при необходимости и фиксирует работу на стоматологический цемент.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="methods" class="relative overflow-hidden bg-[#115E59] text-white">
+  <div aria-hidden="true" class="pointer-events-none absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-[#D9A441]/10 blur-3xl"></div>
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-16 md:py-24">
+    <div class="max-w-3xl mb-12 md:mb-16">
+      <span class="font-['Cormorant_Garamond'] text-6xl md:text-7xl font-bold text-[#D9A441]/40 leading-none">03</span>
+      <h2 class="mt-3 font-['Cormorant_Garamond'] text-3xl md:text-4xl font-bold leading-tight">Материалы и виды конструкций</h2>
+      <p class="mt-4 text-base md:text-lg text-white/65">Какой вариант подойдёт — зависит от того, какой это зуб (жевательный или в зоне улыбки), от нагрузки и бюджета.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-7">
+      <div class="border-l-2 border-[#D9A441]/50 pl-6 py-1">
+        <h3 class="font-['Cormorant_Garamond'] text-2xl font-bold">Металлокерамика</h3>
+        <p class="mt-2 text-sm md:text-base text-white/70 leading-relaxed">Металлический каркас облицован керамикой. Проверенная временем, прочная классика — хорошо подходит для жевательных зубов и мостов, где важна выносливость к нагрузке.</p>
+      </div>
+      <div class="border-l-2 border-[#D9A441]/50 pl-6 py-1">
+        <h3 class="font-['Cormorant_Garamond'] text-2xl font-bold">Безметалловые коронки (диоксид циркония, ZrO₂)</h3>
+        <p class="mt-2 text-sm md:text-base text-white/70 leading-relaxed">Без металла внутри: материал биосовместим, пропускает свет ближе к естественной эмали и не даёт тёмной полоски у десны. Уместен и для передних зубов, и для жевательных.</p>
+      </div>
+      <div class="border-l-2 border-[#D9A441]/50 pl-6 py-1">
+        <h3 class="font-['Cormorant_Garamond'] text-2xl font-bold">Керамические виниры</h3>
+        <p class="mt-2 text-sm md:text-base text-white/70 leading-relaxed">Тонкие накладки на переднюю поверхность зуба. Решают эстетические задачи в зоне улыбки — форму, цвет, мелкие сколы и щели.</p>
+      </div>
+      <div class="border-l-2 border-[#D9A441]/50 pl-6 py-1">
+        <h3 class="font-['Cormorant_Garamond'] text-2xl font-bold">Мостовидные протезы</h3>
+        <p class="mt-2 text-sm md:text-base text-white/70 leading-relaxed">Замещают один-два отсутствующих зуба с опорой на соседние. Изготавливаются из тех же материалов — металлокерамики или диоксида циркония.</p>
+      </div>
+    </div>
+    <p class="mt-8 text-sm text-white/55">Все конструкции делаем по цифровым слепкам высокой точности — это снижает риск зазоров и переделок при примерке.</p>
+  </div>
+</section>
+
+<section id="prices" class="bg-white text-[#115E59]">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-16 md:py-24">
+    <div class="max-w-3xl mb-10 md:mb-14">
+      <span class="font-['Cormorant_Garamond'] text-6xl md:text-7xl font-bold text-[#D9A441]/30 leading-none">04</span>
+      <h2 class="mt-3 font-['Cormorant_Garamond'] text-3xl md:text-4xl font-bold leading-tight">Цены на протезирование</h2>
+      <p class="mt-4 text-base md:text-lg text-[#115E59]/65">Ориентировочная стоимость за единицу. Точную сумму врач называет после консультации и осмотра.</p>
+    </div>
+
+    <div class="border border-[#115E59]/10 rounded-sm overflow-hidden">
+      <div class="flex items-baseline justify-between gap-4 px-5 md:px-7 py-5 border-b border-[#115E59]/10">
+        <div>
+          <span class="text-sm md:text-base text-[#115E59]/85 font-medium">Коронка металлокерамика</span>
+          <p class="text-xs text-[#115E59]/50 mt-0.5">Прочная классика для жевательных зубов и мостов</p>
+        </div>
+        <span class="font-['Cormorant_Garamond'] text-xl md:text-2xl font-bold text-[#115E59] whitespace-nowrap">от 8 000 ₽</span>
+      </div>
+      <div class="flex items-baseline justify-between gap-4 px-5 md:px-7 py-5 border-b border-[#115E59]/10">
+        <div>
+          <span class="text-sm md:text-base text-[#115E59]/85 font-medium">Коронка безметалловая (ZrO₂)</span>
+          <p class="text-xs text-[#115E59]/50 mt-0.5">Диоксид циркония, эстетика без тёмной полоски у десны</p>
+        </div>
+        <span class="font-['Cormorant_Garamond'] text-xl md:text-2xl font-bold text-[#115E59] whitespace-nowrap">от 18 000 ₽</span>
+      </div>
+      <div class="flex items-baseline justify-between gap-4 px-5 md:px-7 py-5 border-b border-[#115E59]/10">
+        <div>
+          <span class="text-sm md:text-base text-[#115E59]/85 font-medium">Винир керамический</span>
+          <p class="text-xs text-[#115E59]/50 mt-0.5">Накладка для зоны улыбки</p>
+        </div>
+        <span class="font-['Cormorant_Garamond'] text-xl md:text-2xl font-bold text-[#115E59] whitespace-nowrap">от 22 000 ₽</span>
+      </div>
+      <div class="flex items-baseline justify-between gap-4 px-5 md:px-7 py-5">
+        <div>
+          <span class="text-sm md:text-base text-[#115E59]/85 font-medium">Отбеливание ZOOM</span>
+          <p class="text-xs text-[#115E59]/50 mt-0.5">Подбор оттенка перед протезированием зоны улыбки</p>
+        </div>
+        <span class="font-['Cormorant_Garamond'] text-xl md:text-2xl font-bold text-[#115E59] whitespace-nowrap">18 000 ₽</span>
+      </div>
+    </div>
+
+    <div class="mt-6 flex flex-col sm:flex-row sm:items-center gap-4 bg-[#F0F4F2] rounded-sm px-5 md:px-7 py-5">
+      <p class="text-sm text-[#115E59]/70 flex-grow">Цены ориентировочные. Точная стоимость — после консультации: она зависит от количества зубов, материала и состояния полости рта.</p>
+      <a href="index.html#form" class="inline-flex items-center justify-center bg-[#115E59] text-white font-semibold px-6 py-3 rounded-sm hover:bg-[#0d4a46] transition-colors whitespace-nowrap">Узнать свою цену</a>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="bg-[#F0F4F2] text-[#115E59]">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-16 md:py-24">
+    <div class="mb-10 md:mb-14">
+      <span class="font-['Cormorant_Garamond'] text-6xl md:text-7xl font-bold text-[#D9A441]/40 leading-none">05</span>
+      <h2 class="mt-3 font-['Cormorant_Garamond'] text-3xl md:text-4xl font-bold leading-tight">Частые вопросы</h2>
+    </div>
+
+    <div class="space-y-3">
+      <details class="group bg-white border border-[#115E59]/10 rounded-sm">
+        <summary class="flex items-center justify-between gap-4 cursor-pointer list-none px-5 md:px-7 py-5 font-['Cormorant_Garamond'] text-lg md:text-xl font-bold">
+          Чем металлокерамика отличается от циркониевой коронки?
+          <span class="text-[#D9A441] text-2xl leading-none transition-transform group-open:rotate-45">+</span>
+        </summary>
+        <div class="px-5 md:px-7 pb-5 text-sm md:text-base text-[#115E59]/70 leading-relaxed">
+          У металлокерамики внутри металлический каркас — она прочная и обычно дешевле. Цирконий безметалловый: он лучше передаёт естественную полупрозрачность зуба и не даёт тёмного контура у десны со временем, поэтому его часто выбирают для зоны улыбки. Что подойдёт именно вам, врач решает с учётом зуба и нагрузки.
+        </div>
+      </details>
+      <details class="group bg-white border border-[#115E59]/10 rounded-sm">
+        <summary class="flex items-center justify-between gap-4 cursor-pointer list-none px-5 md:px-7 py-5 font-['Cormorant_Garamond'] text-lg md:text-xl font-bold">
+          Это больно? Сколько нужно визитов?
+          <span class="text-[#D9A441] text-2xl leading-none transition-transform group-open:rotate-45">+</span>
+        </summary>
+        <div class="px-5 md:px-7 pb-5 text-sm md:text-base text-[#115E59]/70 leading-relaxed">
+          Подготовка зуба проводится под местной анестезией, поэтому она безболезненна. Обычно требуется 2–3 визита: осмотр и слепок, затем примерка и фиксация готовой конструкции. Между визитами работу изготавливает лаборатория.
+        </div>
+      </details>
+      <details class="group bg-white border border-[#115E59]/10 rounded-sm">
+        <summary class="flex items-center justify-between gap-4 cursor-pointer list-none px-5 md:px-7 py-5 font-['Cormorant_Garamond'] text-lg md:text-xl font-bold">
+          Сколько служит коронка?
+          <span class="text-[#D9A441] text-2xl leading-none transition-transform group-open:rotate-45">+</span>
+        </summary>
+        <div class="px-5 md:px-7 pb-5 text-sm md:text-base text-[#115E59]/70 leading-relaxed">
+          Срок службы зависит от материала, прикуса, состояния опорного зуба и того, насколько тщательно вы ухаживаете за полостью рта и приходите на профосмотры. Точный прогноз для вашего случая врач даст на консультации — заочно давать гарантию в годах было бы некорректно.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="why-us" class="relative overflow-hidden bg-[#115E59] text-white">
+  <div aria-hidden="true" class="pointer-events-none absolute -top-24 right-1/4 h-72 w-72 rounded-full bg-[#D9A441]/10 blur-3xl"></div>
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-16 md:py-24">
+    <div class="max-w-3xl mb-12 md:mb-16">
+      <span class="font-['Cormorant_Garamond'] text-6xl md:text-7xl font-bold text-[#D9A441]/40 leading-none">06</span>
+      <h2 class="mt-3 font-['Cormorant_Garamond'] text-3xl md:text-4xl font-bold leading-tight">Почему протезирование у нас</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10">
+      <div class="bg-[#115E59] p-7 md:p-8">
+        <span class="text-[#D9A441]"><svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+        <h3 class="mt-4 font-['Cormorant_Garamond'] text-xl font-bold">Цифровой 3D-томограф и микроскоп</h3>
+        <p class="mt-2 text-sm text-white/70 leading-relaxed">Диагностика и подготовка зуба с точностью, недоступной в кабинетах без современного оборудования — это напрямую влияет на посадку коронки.</p>
+      </div>
+      <div class="bg-[#115E59] p-7 md:p-8">
+        <span class="text-[#D9A441]"><svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></span>
+        <h3 class="mt-4 font-['Cormorant_Garamond'] text-xl font-bold">Прозрачная смета до начала</h3>
+        <p class="mt-2 text-sm text-white/70 leading-relaxed">Стоимость конструкции вы знаете до первого этапа, а полный прайс-лист открыт на сайте — защита от скрытых доплат.</p>
+      </div>
+      <div class="bg-[#115E59] p-7 md:p-8">
+        <span class="text-[#D9A441]"><svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+        <h3 class="mt-4 font-['Cormorant_Garamond'] text-xl font-bold">Онлайн-запись 24/7</h3>
+        <p class="mt-2 text-sm text-white/70 leading-relaxed">Выбирайте конкретного врача и удобное время прямо на сайте — без звонков и ожидания на линии.</p>
+      </div>
+      <div class="bg-[#115E59] p-7 md:p-8">
+        <span class="text-[#D9A441]"><svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+        <h3 class="mt-4 font-['Cormorant_Garamond'] text-xl font-bold">Приём до 21:00 и по субботам</h3>
+        <p class="mt-2 text-sm text-white/70 leading-relaxed">Этапы протезирования можно проходить после работы — для тех, кому некогда записываться днём.</p>
+      </div>
+    </div>
+
+    <div class="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
+      <a href="index.html#form" class="inline-flex items-center justify-center bg-[#D9A441] text-[#115E59] font-semibold px-7 py-4 rounded-sm hover:bg-white transition-colors">Записаться на консультацию</a>
+      <a href="tel:+74957792328" class="inline-flex items-center justify-center gap-2 border border-white/30 text-white font-medium px-7 py-4 rounded-sm hover:bg-white/10 transition-colors">+7 (495) 779-23-28</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ RELATED SERVICES ============ -->
+<section id="related" class="bg-secondary scroll-mt-20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-16 md:py-28">
+    <div class="reveal max-w-2xl">
+      <span class="text-xs font-semibold tracking-[0.2em] uppercase text-accent">Направления</span>
+      <h2 class="mt-3 font-display text-4xl md:text-5xl font-semibold text-primary leading-none">Другие направления</h2>
+    </div>
+    <div class="reveal mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-px bg-ink/10 border border-ink/10">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+  <a href="lechenie-zubov.html" class="block p-5 rounded-xl border border-black/10 bg-white/80 hover:shadow-lg transition-all duration-200">
+    <h3 class="text-lg font-semibold mb-1">Лечение зубов</h3>
+    <p class="text-sm opacity-70 mb-3">Кариес, пульпит, пародонтит — лечим под микроскопом, без боли, с гарантией на пломбу.</p>
+    <span class="text-sm font-medium" style="color:#D9A441">от 2 500 ₽ →</span>
+  </a>
+  <a href="implantatsiya.html" class="block p-5 rounded-xl border border-black/10 bg-white/80 hover:shadow-lg transition-all duration-200">
+    <h3 class="text-lg font-semibold mb-1">Имплантация</h3>
+    <p class="text-sm opacity-70 mb-3">Импланты Nobel Biocare и Osstem — восстанавливаем зуб полностью, с корнем, навсегда.</p>
+    <span class="text-sm font-medium" style="color:#D9A441">от 35 000 ₽ →</span>
+  </a>
+  <a href="esteticheskaya-stomatologiya.html" class="block p-5 rounded-xl border border-black/10 bg-white/80 hover:shadow-lg transition-all duration-200">
+    <h3 class="text-lg font-semibold mb-1">Эстетическая стоматология</h3>
+    <p class="text-sm opacity-70 mb-3">Виниры, люминиры, отбеливание ZOOM и реставрации — красивая улыбка за 1–2 визита.</p>
+    <span class="text-sm font-medium" style="color:#D9A441">от 7 000 ₽ →</span>
+  </a>
+  <a href="detskaya-stomatologiya.html" class="block p-5 rounded-xl border border-black/10 bg-white/80 hover:shadow-lg transition-all duration-200">
+    <h3 class="text-lg font-semibold mb-1">Детская стоматология</h3>
+    <p class="text-sm opacity-70 mb-3">Лечение молочных и постоянных зубов у детей от 3 лет в отдельном кабинете с игровой зоной.</p>
+    <span class="text-sm font-medium" style="color:#D9A441">от 1 800 ₽ →</span>
+  </a>
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-primary text-white mt-0">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-14">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+      <div class="sm:col-span-2">
+        <div class="flex items-center gap-2">
+          <span class="inline-block w-2.5 h-2.5 bg-accent rotate-45"></span>
+          <span class="font-display text-3xl font-semibold">Гранд Смайл</span>
+        </div>
+        <p class="mt-4 text-sm text-white/70 max-w-sm leading-relaxed">Стоматология в Беляево для всей семьи. Лечим взрослых и детей бережно: анестезия последнего поколения, никакой спешки.</p>
+        <a href="index.html#form" class="mt-6 inline-flex items-center justify-center min-h-[48px] px-7 bg-accent text-primary font-bold hover:brightness-95 transition">Записаться онлайн</a>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-widest text-accent mb-4">Услуги</p>
+        <ul class="space-y-2 text-sm text-white/75">
+          <li><a href="lechenie-zubov.html" class="hover:text-white transition-colors">Лечение зубов</a></li>
+          <li><a href="protezirovanie.html" class="hover:text-white transition-colors">Протезирование</a></li>
+          <li><a href="implantatsiya.html" class="hover:text-white transition-colors">Имплантация</a></li>
+          <li><a href="esteticheskaya-stomatologiya.html" class="hover:text-white transition-colors">Эстетическая стоматология</a></li>
+          <li><a href="detskaya-stomatologiya.html" class="hover:text-white transition-colors">Детская стоматология</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-widest text-accent mb-4">Контакты</p>
+        <ul class="space-y-2 text-sm text-white/75">
+          <li><a href="tel:+74957792328" class="hover:text-white transition-colors">+7 (495) 779-23-28</a></li>
+          <li>Москва, ул. Миклухо-Маклая, 43</li>
+          <li>Пн–Пт 09:00–21:00</li>
+          <li>Сб 09:00–15:00</li>
+          <li><a href="index.html#contacts" class="hover:text-white transition-colors">Карта проезда</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-12 pt-6 border-t border-white/15 text-xs text-white/55 flex flex-col sm:flex-row gap-2 sm:justify-between">
+      <p>© 2026 Стоматология «Гранд Смайл». Все права защищены.</p>
+      <p>Имеются противопоказания. Необходима консультация специалиста.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ STICKY MOBILE CTA ============ -->
+<div id="sticky-cta" class="fixed bottom-0 inset-x-0 z-40 md:hidden bg-white border-t border-ink/10 flex transition-transform duration-300">
+  <a href="tel:+74957792328" class="flex-1 flex items-center justify-center gap-2 min-h-[56px] text-primary font-semibold">
+    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M5 4h3l1.5 4-2 1.5a12 12 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    Позвонить
+  </a>
+  <a href="index.html#form" class="flex-1 flex items-center justify-center min-h-[56px] bg-accent text-primary font-bold">Записаться</a>
+</div>
+
+<!-- ============ SCRIPTS ============ -->
+<script>
+  // Mobile menu
+  const burger = document.getElementById('burger');
+  const menu = document.getElementById('mobile-menu');
+  const iOpen = document.getElementById('burger-open');
+  const iClose = document.getElementById('burger-close');
+  burger.addEventListener('click', () => {
+    const open = menu.classList.toggle('hidden') === false;
+    burger.setAttribute('aria-expanded', String(open));
+    iOpen.classList.toggle('hidden', open);
+    iClose.classList.toggle('hidden', !open);
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menu.classList.add('hidden');
+    burger.setAttribute('aria-expanded', 'false');
+    iOpen.classList.remove('hidden');
+    iClose.classList.add('hidden');
+  }));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      const panel = btn.nextElementSibling;
+      const icon = btn.querySelector('.faq-icon');
+      btn.setAttribute('aria-expanded', String(!expanded));
+      icon.style.transform = expanded ? 'rotate(0deg)' : 'rotate(180deg)';
+      panel.style.maxHeight = expanded ? '0px' : panel.scrollHeight + 'px';
+    });
+  });
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Hide sticky CTA when footer in view
+  const sticky = document.getElementById('sticky-cta');
+  const footer = document.querySelector('footer');
+  if (sticky && footer) {
+    const ctaIO = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        sticky.style.transform = en.isIntersecting ? 'translateY(100%)' : 'translateY(0)';
+      });
+    }, { threshold: 0.2 });
+    ctaIO.observe(footer);
+  }
+</script>
+
+</body>
+</html>

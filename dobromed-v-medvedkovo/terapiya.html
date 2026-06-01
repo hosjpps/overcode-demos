@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Терапевтическая стоматология — Добромед в Медведково, Москва</title>
+<meta name="description" content="Стоматология Добромед у м. Медведково — рейтинг 4.8, 653 отзыва. Терапия, имплантация, элайнеры, детский приём. Запись онлайн, работаем до 21:00. Ул. Грекова, 5.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#102A43',
+        secondary: '#F5F2EC',
+        accent: '#C9A24B',
+        ink: '#1A2B3C',
+      },
+      fontFamily: {
+        display: ['"Playfair Display"', 'Georgia', 'serif'],
+        body: ['Manrope', 'system-ui', 'sans-serif'],
+      },
+    },
+  },
+};
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Manrope', system-ui, sans-serif; }
+  h1,h2,h3,.font-display { font-family: 'Playfair Display', Georgia, serif; }
+  .grain {
+    position: fixed; inset: 0; pointer-events: none; z-index: 60; opacity: 0.045;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .faq-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .35s ease; }
+  .faq-body.open { grid-template-rows: 1fr; }
+  ::selection { background: #C9A24B; color: #102A43; }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+</head>
+<body class="bg-secondary text-ink antialiased overflow-x-hidden pb-16 lg:pb-0">
+<div class="grain"></div>
+
+<!-- HEADER -->
+<header class="sticky top-0 z-40 bg-secondary/90 backdrop-blur-md border-b border-primary/10">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 md:px-8">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      <a href="index.html" class="flex flex-col leading-none">
+        <span class="font-display text-xl md:text-2xl font-bold text-primary tracking-tight">Добромед</span>
+        <span class="text-[10px] md:text-xs uppercase tracking-[0.25em] text-accent font-semibold">в Медведково</span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-primary/80">
+        <div class="relative group">
+          <button class="flex items-center gap-1 hover:text-primary transition-colors py-2">
+            Услуги
+            <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="absolute left-0 top-full pt-3 hidden group-hover:block">
+            <div class="w-64 bg-white rounded-xl shadow-xl ring-1 ring-primary/10 p-2">
+              <a href="terapiya.html" class="block px-4 py-2.5 rounded-lg hover:bg-secondary transition-colors">Терапевтическая стоматология</a>
+              <a href="implantatsiya.html" class="block px-4 py-2.5 rounded-lg hover:bg-secondary transition-colors">Имплантация зубов</a>
+              <a href="ortodontiya.html" class="block px-4 py-2.5 rounded-lg hover:bg-secondary transition-colors">Ортодонтия и элайнеры</a>
+              <a href="detskaya.html" class="block px-4 py-2.5 rounded-lg hover:bg-secondary transition-colors">Детская стоматология</a>
+              <a href="hirurgiya.html" class="block px-4 py-2.5 rounded-lg hover:bg-secondary transition-colors">Хирургия</a>
+              <a href="estetika.html" class="block px-4 py-2.5 rounded-lg hover:bg-secondary transition-colors">Эстетическая стоматология</a>
+            </div>
+          </div>
+        </div>
+        <a href="index.html#doctors" class="hover:text-primary transition-colors py-2">Врачи</a>
+        <a href="index.html#prices" class="hover:text-primary transition-colors py-2">Цены</a>
+        <a href="index.html#contacts" class="hover:text-primary transition-colors py-2">Контакты</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="index.html#appointment_cta" class="cta hidden sm:inline-flex items-center justify-center rounded-full bg-accent text-primary font-semibold text-sm px-5 py-2.5 hover:bg-primary hover:text-secondary transition-all duration-200">
+          Записаться
+        </a>
+        <button id="burger" aria-label="Открыть меню" class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-full text-primary">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-primary/10 bg-secondary">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-4 flex flex-col">
+      <p class="text-xs uppercase tracking-[0.2em] text-accent font-semibold mb-2">Услуги</p>
+      <a href="terapiya.html" class="py-2.5 text-primary/90">Терапевтическая стоматология</a>
+      <a href="implantatsiya.html" class="py-2.5 text-primary/90">Имплантация зубов</a>
+      <a href="ortodontiya.html" class="py-2.5 text-primary/90">Ортодонтия и элайнеры</a>
+      <a href="detskaya.html" class="py-2.5 text-primary/90">Детская стоматология</a>
+      <a href="hirurgiya.html" class="py-2.5 text-primary/90">Хирургия</a>
+      <a href="estetika.html" class="py-2.5 text-primary/90">Эстетическая стоматология</a>
+      <div class="h-px bg-primary/10 my-3"></div>
+      <a href="index.html#doctors" class="py-2.5 text-primary/90">Врачи</a>
+      <a href="index.html#prices" class="py-2.5 text-primary/90">Цены</a>
+      <a href="index.html#contacts" class="py-2.5 text-primary/90">Контакты</a>
+      <a href="index.html#appointment_cta" class="cta mt-3 inline-flex items-center justify-center rounded-full bg-accent text-primary font-semibold px-5 py-3">Записаться на приём</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="bg-[#102A43] text-[#F5F2EC] relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-28">
+    <p class="font-mono text-[#C9A24B] text-sm tracking-[0.3em] uppercase mb-6">01 — Услуга</p>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+      <div class="md:col-span-8">
+        <h1 class="font-['Playfair_Display'] font-semibold leading-tight break-words" style="font-size:clamp(2.2rem,7vw,4.5rem)">
+          Терапевтическая стоматология
+        </h1>
+        <p class="mt-6 text-base sm:text-lg text-[#F5F2EC]/80 max-w-2xl leading-relaxed">
+          Лечение кариеса, пульпита и периодонтита под анестезией — без боли и без спешки.
+          Сохраняем живой зуб там, где это возможно, и аккуратно восстанавливаем форму светоотверждаемой пломбой.
+        </p>
+      </div>
+      <div class="md:col-span-4">
+        <div class="inline-flex flex-col rounded-xl border border-[#C9A24B]/40 bg-white/5 p-6">
+          <span class="text-xs uppercase tracking-widest text-[#F5F2EC]/60">Стоимость</span>
+          <span class="font-['Playfair_Display'] text-4xl sm:text-5xl text-[#C9A24B] mt-2">от 2 500 ₽</span>
+          <span class="text-xs text-[#F5F2EC]/60 mt-2">точная сумма — после осмотра</span>
+        </div>
+      </div>
+    </div>
+    <div class="mt-10 flex flex-col sm:flex-row gap-4">
+      <a href="tel:+74994791011" class="inline-flex items-center justify-center rounded-full bg-[#C9A24B] text-[#102A43] font-semibold px-7 py-4 hover:bg-[#d9b667] transition">
+        Позвонить: +7 (499) 479-10-11
+      </a>
+      <a href="index.html#form" class="inline-flex items-center justify-center rounded-full border border-[#F5F2EC]/40 text-[#F5F2EC] font-semibold px-7 py-4 hover:bg-white/10 transition">
+        Записаться на приём
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="bg-[#F5F2EC] text-[#102A43]">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-16 sm:py-20">
+    <p class="font-mono text-[#C9A24B] text-sm tracking-[0.3em] uppercase mb-6">02 — Что это и кому показана</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+      <div>
+        <h2 class="font-['Playfair_Display'] text-3xl sm:text-4xl leading-tight mb-5">Лечим причину, а не маскируем</h2>
+        <p class="text-[#102A43]/80 leading-relaxed">
+          Терапевтическая стоматология — это лечение самого зуба: удаление кариозных тканей, обработка
+          корневых каналов при воспалении нерва и восстановление коронки пломбой. Задача — остановить
+          разрушение на ранней стадии, снять воспаление и вернуть зубу работу без протезирования.
+        </p>
+        <p class="text-[#102A43]/80 leading-relaxed mt-4">
+          Чем раньше пациент приходит, тем меньше вмешательство: поверхностный кариес лечится в одно
+          посещение, запущенный пульпит требует работы с каналами.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-sm uppercase tracking-widest text-[#102A43]/60 mb-5">Когда стоит прийти</h3>
+        <ul class="space-y-4">
+          <li class="flex gap-4 rounded-xl bg-white p-5">
+            <span class="text-[#C9A24B] font-['Playfair_Display'] text-2xl leading-none">·</span>
+            <span>Тёмные пятна, шероховатости или «дырки» на зубах</span>
+          </li>
+          <li class="flex gap-4 rounded-xl bg-white p-5">
+            <span class="text-[#C9A24B] font-['Playfair_Display'] text-2xl leading-none">·</span>
+            <span>Чувствительность к холодному, горячему, сладкому</span>
+          </li>
+          <li class="flex gap-4 rounded-xl bg-white p-5">
+            <span class="text-[#C9A24B] font-['Playfair_Display'] text-2xl leading-none">·</span>
+            <span>Острая или ноющая боль, реакция при накусывании</span>
+          </li>
+          <li class="flex gap-4 rounded-xl bg-white p-5">
+            <span class="text-[#C9A24B] font-['Playfair_Display'] text-2xl leading-none">·</span>
+            <span>Выпавшая или потемневшая старая пломба</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-[#102A43] text-[#F5F2EC]">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-16 sm:py-20">
+    <p class="font-mono text-[#C9A24B] text-sm tracking-[0.3em] uppercase mb-6">03 — Как проходит лечение</p>
+    <h2 class="font-['Playfair_Display'] text-3xl sm:text-4xl leading-tight mb-12 max-w-2xl">
+      От осмотра до восстановленного зуба
+    </h2>
+    <ol class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <li class="rounded-xl border border-[#F5F2EC]/15 p-6">
+        <span class="font-['Playfair_Display'] text-[#C9A24B] text-4xl">01</span>
+        <h3 class="text-lg font-semibold mt-3 mb-2">Осмотр и диагностика</h3>
+        <p class="text-[#F5F2EC]/70 leading-relaxed">Врач осматривает зуб, при необходимости назначает снимок, чтобы оценить глубину поражения и состояние каналов.</p>
+      </li>
+      <li class="rounded-xl border border-[#F5F2EC]/15 p-6">
+        <span class="font-['Playfair_Display'] text-[#C9A24B] text-4xl">02</span>
+        <h3 class="text-lg font-semibold mt-3 mb-2">Анестезия</h3>
+        <p class="text-[#F5F2EC]/70 leading-relaxed">Местное обезболивание подбираем под объём вмешательства — лечение проходит безболезненно.</p>
+      </li>
+      <li class="rounded-xl border border-[#F5F2EC]/15 p-6">
+        <span class="font-['Playfair_Display'] text-[#C9A24B] text-4xl">03</span>
+        <h3 class="text-lg font-semibold mt-3 mb-2">Обработка тканей</h3>
+        <p class="text-[#F5F2EC]/70 leading-relaxed">Удаляем поражённые ткани. При пульпите и периодонтите очищаем и пломбируем корневые каналы.</p>
+      </li>
+      <li class="rounded-xl border border-[#F5F2EC]/15 p-6">
+        <span class="font-['Playfair_Display'] text-[#C9A24B] text-4xl">04</span>
+        <h3 class="text-lg font-semibold mt-3 mb-2">Реставрация и пришлифовка</h3>
+        <p class="text-[#F5F2EC]/70 leading-relaxed">Восстанавливаем форму зуба пломбой, корректируем прикус и полируем поверхность, чтобы пломба не мешала.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="bg-[#F5F2EC] text-[#102A43]">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-16 sm:py-20">
+    <p class="font-mono text-[#C9A24B] text-sm tracking-[0.3em] uppercase mb-6">04 — Методы и материалы</p>
+    <h2 class="font-['Playfair_Display'] text-3xl sm:text-4xl leading-tight mb-12 max-w-2xl">
+      Подход зависит от диагноза
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="rounded-xl bg-white p-7">
+        <h3 class="font-['Playfair_Display'] text-xl mb-3">Лечение кариеса</h3>
+        <p class="text-[#102A43]/75 leading-relaxed">Поражённые ткани удаляются, полость восстанавливается светоотверждаемой (фотополимерной) пломбой с подбором оттенка под цвет зуба.</p>
+      </div>
+      <div class="rounded-xl bg-white p-7">
+        <h3 class="font-['Playfair_Display'] text-xl mb-3">Лечение пульпита</h3>
+        <p class="text-[#102A43]/75 leading-relaxed">При воспалении нерва проводится эндодонтическое лечение: каналы очищаются, обрабатываются и пломбируются. Часто требуется несколько посещений.</p>
+      </div>
+      <div class="rounded-xl bg-white p-7">
+        <h3 class="font-['Playfair_Display'] text-xl mb-3">Лечение периодонтита</h3>
+        <p class="text-[#102A43]/75 leading-relaxed">При воспалении у верхушки корня каналы пролечивают и пломбируют, контролируя процесс по снимкам до полного снятия воспаления.</p>
+      </div>
+    </div>
+    <p class="mt-8 text-sm text-[#102A43]/60 max-w-2xl">
+      Конкретный метод, число посещений и материал врач определяет на осмотре — исходя из глубины поражения и количества каналов.
+    </p>
+  </div>
+</section>
+
+<section class="bg-[#102A43] text-[#F5F2EC]">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-16 sm:py-20">
+    <p class="font-mono text-[#C9A24B] text-sm tracking-[0.3em] uppercase mb-6">05 — Цены</p>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+      <div class="md:col-span-5">
+        <h2 class="font-['Playfair_Display'] text-3xl sm:text-4xl leading-tight mb-4">Прозрачно, до начала лечения</h2>
+        <p class="text-[#F5F2EC]/70 leading-relaxed">
+          Стоимость терапевтического лечения зависит от диагноза, объёма поражения, количества корневых
+          каналов и материала. Финальную сумму вы видите в плане лечения — до того, как мы приступим.
+        </p>
+      </div>
+      <div class="md:col-span-7">
+        <div class="rounded-xl bg-white/5 border border-[#F5F2EC]/15 p-7">
+          <div class="flex items-baseline justify-between border-b border-[#F5F2EC]/10 pb-5">
+            <span class="text-[#F5F2EC]/80">Терапевтическое лечение</span>
+            <span class="font-['Playfair_Display'] text-3xl text-[#C9A24B]">от 2 500 ₽</span>
+          </div>
+          <p class="text-sm text-[#F5F2EC]/60 mt-5">
+            Указана начальная цена. Точная стоимость рассчитывается индивидуально после консультации и
+            фиксируется в плане лечения.
+          </p>
+          <a href="index.html#form" class="mt-6 inline-flex items-center justify-center rounded-full bg-[#C9A24B] text-[#102A43] font-semibold px-7 py-3.5 hover:bg-[#d9b667] transition">
+            Узнать стоимость на консультации
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-[#F5F2EC] text-[#102A43]">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-16 sm:py-20">
+    <p class="font-mono text-[#C9A24B] text-sm tracking-[0.3em] uppercase mb-6">06 — Частые вопросы</p>
+    <h2 class="font-['Playfair_Display'] text-3xl sm:text-4xl leading-tight mb-10 max-w-2xl">
+      Что обычно спрашивают
+    </h2>
+    <div class="space-y-4 max-w-3xl">
+      <details class="group rounded-xl bg-white p-6" open>
+        <summary class="flex justify-between items-center cursor-pointer list-none font-semibold">
+          Лечение точно будет без боли?
+          <span class="text-[#C9A24B] text-2xl leading-none group-open:rotate-45 transition">+</span>
+        </summary>
+        <p class="mt-4 text-[#102A43]/75 leading-relaxed">
+          Лечение проводится под местной анестезией, которую подбирают под объём вмешательства, поэтому
+          сама процедура безболезненна. О любом дискомфорте можно сказать врачу в процессе.
+        </p>
+      </details>
+      <details class="group rounded-xl bg-white p-6">
+        <summary class="flex justify-between items-center cursor-pointer list-none font-semibold">
+          За сколько посещений вылечат зуб?
+          <span class="text-[#C9A24B] text-2xl leading-none group-open:rotate-45 transition">+</span>
+        </summary>
+        <p class="mt-4 text-[#102A43]/75 leading-relaxed">
+          Неглубокий кариес обычно лечится за одно посещение. Пульпит и периодонтит с обработкой каналов
+          могут потребовать нескольких визитов — точное число врач назовёт после осмотра.
+        </p>
+      </details>
+      <details class="group rounded-xl bg-white p-6">
+        <summary class="flex justify-between items-center cursor-pointer list-none font-semibold">
+          Можно ли спасти зуб с воспалением нерва?
+          <span class="text-[#C9A24B] text-2xl leading-none group-open:rotate-45 transition">+</span>
+        </summary>
+        <p class="mt-4 text-[#102A43]/75 leading-relaxed">
+          В большинстве случаев при пульпите и периодонтите зуб сохраняют за счёт лечения корневых каналов.
+          Возможность сохранения зависит от состояния зуба и оценивается на консультации.
+        </p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="bg-[#102A43] text-[#F5F2EC]">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-16 sm:py-20">
+    <p class="font-mono text-[#C9A24B] text-sm tracking-[0.3em] uppercase mb-6">07 — Почему мы</p>
+    <h2 class="font-['Playfair_Display'] text-3xl sm:text-4xl leading-tight mb-12 max-w-2xl">
+      Добромед в Медведково
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="rounded-xl border border-[#F5F2EC]/15 p-6">
+        <h3 class="font-semibold text-lg mb-2">Рейтинг 4.8 по 653 отзывам</h3>
+        <p class="text-[#F5F2EC]/70 leading-relaxed">Лучший показатель среди клиник района Медведково.</p>
+      </div>
+      <div class="rounded-xl border border-[#F5F2EC]/15 p-6">
+        <h3 class="font-semibold text-lg mb-2">Прозрачное ценообразование</h3>
+        <p class="text-[#F5F2EC]/70 leading-relaxed">Стоимость фиксируется в плане лечения до начала процедур — без сюрпризов в кассе.</p>
+      </div>
+      <div class="rounded-xl border border-[#F5F2EC]/15 p-6">
+        <h3 class="font-semibold text-lg mb-2">Семейный приём</h3>
+        <p class="text-[#F5F2EC]/70 leading-relaxed">Дети от 3 лет и взрослые лечатся у профильных специалистов в одной клинике.</p>
+      </div>
+      <div class="rounded-xl border border-[#F5F2EC]/15 p-6">
+        <h3 class="font-semibold text-lg mb-2">Запись напрямую</h3>
+        <p class="text-[#F5F2EC]/70 leading-relaxed">Без комиссии агрегаторов — экономия 15–20% на стоимости услуг.</p>
+      </div>
+      <div class="rounded-xl border border-[#F5F2EC]/15 p-6 md:col-span-2">
+        <h3 class="font-semibold text-lg mb-2">Работаем до 21:00 в будни</h3>
+        <p class="text-[#F5F2EC]/70 leading-relaxed">Принимаем после рабочего дня — лечение можно не откладывать.</p>
+      </div>
+    </div>
+    <div class="mt-10 flex flex-col sm:flex-row gap-4">
+      <a href="tel:+74994791011" class="inline-flex items-center justify-center rounded-full bg-[#C9A24B] text-[#102A43] font-semibold px-7 py-4 hover:bg-[#d9b667] transition">
+        +7 (499) 479-10-11
+      </a>
+      <a href="index.html#form" class="inline-flex items-center justify-center rounded-full border border-[#F5F2EC]/40 text-[#F5F2EC] font-semibold px-7 py-4 hover:bg-white/10 transition">
+        Записаться на приём
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- RELATED SERVICES -->
+<section id="related_services" class="py-16 md:py-28 bg-secondary scroll-mt-24">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 md:px-8">
+    <div class="max-w-2xl mb-12 md:mb-16" data-animate>
+      <p class="text-xs uppercase tracking-[0.25em] text-accent font-semibold mb-3">Направления</p>
+      <h2 class="font-display text-3xl md:text-5xl font-bold text-primary mb-0">Другие направления</h2>
+    </div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+  <a href="implantatsiya.html" class="block p-5 rounded-xl border border-black/10 bg-white/80 hover:shadow-lg transition-all duration-200">
+    <h3 class="text-lg font-semibold mb-1">Имплантация зубов</h3>
+    <p class="text-sm opacity-70 mb-3">Установка импланта под ключ: КТ, хирургия и коронка с гарантией на конструкцию.</p>
+    <span class="text-sm font-medium" style="color:#C9A24B">от 35 000 ₽ →</span>
+  </a>
+  <a href="ortodontiya.html" class="block p-5 rounded-xl border border-black/10 bg-white/80 hover:shadow-lg transition-all duration-200">
+    <h3 class="text-lg font-semibold mb-1">Ортодонтия и элайнеры</h3>
+    <p class="text-sm opacity-70 mb-3">Исправление прикуса прозрачными капами — незаметно для окружающих, эффективно для взрослых.</p>
+    <span class="text-sm font-medium" style="color:#C9A24B">от 120 000 ₽ →</span>
+  </a>
+  <a href="detskaya.html" class="block p-5 rounded-xl border border-black/10 bg-white/80 hover:shadow-lg transition-all duration-200">
+    <h3 class="text-lg font-semibold mb-1">Детская стоматология</h3>
+    <p class="text-sm opacity-70 mb-3">Лечение молочных и постоянных зубов у детей от 3 лет — без стресса, с игровым подходом.</p>
+    <span class="text-sm font-medium" style="color:#C9A24B">от 1 800 ₽ →</span>
+  </a>
+  <a href="hirurgiya.html" class="block p-5 rounded-xl border border-black/10 bg-white/80 hover:shadow-lg transition-all duration-200">
+    <h3 class="text-lg font-semibold mb-1">Хирургия</h3>
+    <p class="text-sm opacity-70 mb-3">Удаление зубов, в том числе сложных «восьмёрок», под местной анестезией — в день обращения.</p>
+    <span class="text-sm font-medium" style="color:#C9A24B">от 3 500 ₽ →</span>
+  </a>
+  <a href="estetika.html" class="block p-5 rounded-xl border border-black/10 bg-white/80 hover:shadow-lg transition-all duration-200">
+    <h3 class="text-lg font-semibold mb-1">Эстетическая стоматология</h3>
+    <p class="text-sm opacity-70 mb-3">Виниры, люминиры и профессиональное отбеливание — заметный эффект за 1–2 визита.</p>
+    <span class="text-sm font-medium" style="color:#C9A24B">от 12 000 ₽ →</span>
+  </a>
+</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-primary text-secondary pt-16 pb-10 mt-0">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 md:px-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+      <div>
+        <p class="font-display text-2xl font-bold mb-1">Добромед в Медведково</p>
+        <p class="text-sm text-secondary/60 mb-4">Стоматология с рейтингом 4.8 в районе Медведково. Прозрачные цены, приём до 21:00.</p>
+        <a href="tel:+74994791011" class="font-display text-xl font-bold text-accent hover:text-secondary transition-colors">+7 (499) 479-10-11</a>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-[0.2em] text-accent font-semibold mb-4">Услуги</p>
+        <ul class="space-y-2 text-sm text-secondary/70">
+          <li><a href="terapiya.html" class="hover:text-accent transition-colors">Терапия</a></li>
+          <li><a href="implantatsiya.html" class="hover:text-accent transition-colors">Имплантация</a></li>
+          <li><a href="ortodontiya.html" class="hover:text-accent transition-colors">Ортодонтия и элайнеры</a></li>
+          <li><a href="detskaya.html" class="hover:text-accent transition-colors">Детская стоматология</a></li>
+          <li><a href="hirurgiya.html" class="hover:text-accent transition-colors">Хирургия</a></li>
+          <li><a href="estetika.html" class="hover:text-accent transition-colors">Эстетика</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-[0.2em] text-accent font-semibold mb-4">Разделы</p>
+        <ul class="space-y-2 text-sm text-secondary/70">
+          <li><a href="index.html#doctors" class="hover:text-accent transition-colors">Врачи</a></li>
+          <li><a href="index.html#prices" class="hover:text-accent transition-colors">Цены</a></li>
+          <li><a href="index.html#reviews" class="hover:text-accent transition-colors">Отзывы</a></li>
+          <li><a href="index.html#faq" class="hover:text-accent transition-colors">Вопросы</a></li>
+          <li><a href="index.html#contacts" class="hover:text-accent transition-colors">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-[0.2em] text-accent font-semibold mb-4">Контакты</p>
+        <ul class="space-y-2 text-sm text-secondary/70">
+          <li>Москва, улица Грекова, 5</li>
+          <li>м. Медведково, 3 мин пешком</li>
+          <li>Пн–Сб: 08:00–21:00</li>
+          <li>Вс: 09:00–20:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-secondary/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-secondary/50">
+      <p>© 2026 Добромед в Медведково. Все права защищены.</p>
+      <p>Имеются противопоказания. Необходима консультация специалиста.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE BAR -->
+<div class="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-primary/95 backdrop-blur border-t border-secondary/10 grid grid-cols-2">
+  <a href="tel:+74994791011" class="flex items-center justify-center gap-2 py-3.5 text-secondary font-semibold text-sm">
+    <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Позвонить
+  </a>
+  <a href="index.html#appointment_cta" class="cta flex items-center justify-center py-3.5 bg-accent text-primary font-bold text-sm">Записаться</a>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="hidden fixed inset-0 z-[70] bg-primary/95 items-center justify-center p-4" role="dialog" aria-modal="true">
+  <button id="lightboxClose" aria-label="Закрыть" class="absolute top-5 right-5 text-secondary w-11 h-11 inline-flex items-center justify-center rounded-full hover:bg-secondary/10">
+    <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <img id="lightboxImg" src="" alt="Фото клиники Добромед — увеличенный просмотр" class="max-w-full max-h-[85vh] rounded-xl object-contain">
+</div>
+
+<script>
+  // Mobile menu
+  const burger = document.getElementById('burger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  burger.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+  // Price tabs
+  const tabs = document.querySelectorAll('.price-tab');
+  const panels = document.querySelectorAll('.price-panel');
+  tabs.forEach(tab => tab.addEventListener('click', () => {
+    tabs.forEach(t => {
+      t.classList.remove('bg-primary', 'text-secondary');
+      t.classList.add('bg-white', 'text-primary', 'ring-1', 'ring-primary/15');
+    });
+    tab.classList.add('bg-primary', 'text-secondary');
+    tab.classList.remove('bg-white', 'text-primary', 'ring-1', 'ring-primary/15');
+    const target = tab.dataset.tab;
+    panels.forEach(p => p.classList.toggle('hidden', p.dataset.panel !== target));
+  }));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const body = btn.nextElementSibling;
+      const chevron = btn.querySelector('.faq-chevron');
+      const isOpen = body.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+      chevron.classList.toggle('rotate-180', isOpen);
+    });
+  });
+
+  // Appointment form
+  const form = document.getElementById('appointmentForm');
+  const success = document.getElementById('formSuccess');
+  if (form) {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      form.classList.add('hidden');
+      success.classList.remove('hidden');
+    });
+  }
+
+  // Lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxClose = document.getElementById('lightboxClose');
+  document.querySelectorAll('.gallery-item img').forEach(img => {
+    img.parentElement.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.remove('hidden');
+      lightbox.classList.add('flex');
+    });
+  });
+  function closeLightbox() { lightbox.classList.add('hidden'); lightbox.classList.remove('flex'); }
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+  // GSAP scroll animations
+  if (window.gsap && window.ScrollTrigger) {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray('[data-animate]').forEach(el => {
+      gsap.from(el, {
+        opacity: 0, y: 32, duration: 0.7, ease: 'power2.out',
+        scrollTrigger: { trigger: el, start: 'top 88%' }
+      });
+    });
+  }
+</script>
+<script>/*leadgen-reveal-failsafe*/
+window.addEventListener('load',function(){if(window.ScrollTrigger)ScrollTrigger.refresh();setTimeout(function(){if(window.ScrollTrigger)ScrollTrigger.refresh();document.querySelectorAll('section *').forEach(function(el){var o=el.style.opacity;if(o!==''&&parseFloat(o)<1&&el.offsetParent!==null){el.style.setProperty('opacity','1','important');el.style.setProperty('transform','none','important');}});},1200);});
+</script>
+</body>
+</html>
