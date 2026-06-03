@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>СтомСити — Стоматология в Люблино | Рейтинг 5★ | Москва</title>
+<meta name="description" content="Стоматология у метро Братиславская и Марьино. Лечение, имплантация, ортодонтия. Бесплатный осмотр. Рейтинг 5.0 / 128 отзывов. Запись онлайн.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="https://avatars.mds.yandex.net/get-altay/14090612/2a00000193555033217d363efd04405adcac/XXXL">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#115E59',
+        secondary: '#F0F4F2',
+        accent: '#D9A441',
+        ink: '#1a1a1a',
+      },
+      fontFamily: {
+        display: ['"Playfair Display"', 'serif'],
+        body: ['Manrope', 'sans-serif'],
+      },
+    },
+  },
+};
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Manrope', sans-serif; color: #1a1a1a; background: #FFFFFF; }
+  h1, h2, h3, .font-display { font-family: 'Playfair Display', serif; }
+  .grain { position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  .reveal { opacity: 0; transform: translateY(28px); }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  .snap-x-c { scroll-snap-type: x mandatory; }
+  .snap-c { scroll-snap-align: center; }
+  .faq-body { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+  details summary::-webkit-details-marker { display: none; }
+</style>
+</head>
+<body class="bg-white antialiased pb-14 md:pb-0">
+<div class="grain"></div>
+
+<!-- ===== HEADER ===== -->
+<header class="fixed top-0 inset-x-0 z-40 bg-white/85 backdrop-blur border-b border-black/5">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 h-16 flex items-center justify-between">
+    <a href="#hero" class="flex items-baseline gap-2">
+      <span class="font-display text-2xl font-bold text-primary tracking-tight">СтомСити</span>
+      <span class="hidden sm:inline text-xs uppercase tracking-[0.25em] text-accent">Люблино</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-ink/70">
+      <a href="#services" class="hover:text-primary transition-colors">Услуги</a>
+      <a href="#doctors" class="hover:text-primary transition-colors">Врачи</a>
+      <a href="#price" class="hover:text-primary transition-colors">Цены</a>
+      <a href="#reviews" class="hover:text-primary transition-colors">Отзывы</a>
+      <a href="#contacts_map" class="hover:text-primary transition-colors">Контакты</a>
+    </nav>
+    <a href="tel:+74953490070" class="btn-cta inline-flex items-center gap-2 bg-primary text-white text-sm font-semibold px-5 py-2.5 rounded-sm hover:bg-[#0d4a46] transition-colors">
+      +7 (495) 349-00-70
+    </a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section id="hero" class="relative min-h-[88vh] md:min-h-screen flex items-center bg-primary text-white overflow-hidden pt-16">
+  <img src="https://avatars.mds.yandex.net/get-altay/14090612/2a00000193555033217d363efd04405adcac/XXXL" alt="Интерьер стоматологии СтомСити в Люблино" loading="eager" class="absolute inset-0 w-full h-full object-cover opacity-30">
+  <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/40"></div>
+  <div class="absolute -right-10 top-1/4 font-display text-[28vw] leading-none text-white/5 select-none pointer-events-none">5★</div>
+  <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-8 grid md:grid-cols-12 gap-10 items-center w-full">
+    <div class="md:col-span-7">
+      <span class="inline-flex items-center gap-2 text-accent text-xs sm:text-sm uppercase tracking-[0.25em] mb-6">
+        <span class="h-px w-8 bg-accent"></span> Стоматология · Люблино, Москва
+      </span>
+      <h1 class="font-display font-bold leading-tight break-words text-[clamp(2rem,7vw,4.75rem)]">
+        Стоматология в&nbsp;Люблино — <span class="text-accent">рейтинг 5★</span>
+      </h1>
+      <p class="mt-6 text-base sm:text-lg text-white/80 max-w-xl leading-relaxed">
+        128 отзывов от жителей района, прозрачный прайс и приём без очередей на ул. Верхние Поля, 4
+      </p>
+      <div class="mt-9 flex flex-wrap gap-4">
+        <a href="tel:+74953490070" class="btn-cta inline-flex items-center justify-center bg-accent text-ink font-semibold px-7 py-4 rounded-sm hover:brightness-105 transition min-h-[44px]">
+          Записаться на приём
+        </a>
+        <a href="#price" class="inline-flex items-center justify-center border border-white/40 text-white font-semibold px-7 py-4 rounded-sm hover:bg-white/10 transition min-h-[44px]">
+          Посмотреть цены
+        </a>
+      </div>
+      <dl class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/15 rounded-sm overflow-hidden max-w-2xl">
+        <div class="bg-primary p-4">
+          <dt class="text-white/55 text-xs uppercase tracking-wide">Яндекс.Карты</dt>
+          <dd class="mt-1 font-display text-lg text-accent">★ 5.0 / 128 отзывов</dd>
+        </div>
+        <div class="bg-primary p-4">
+          <dt class="text-white/55 text-xs uppercase tracking-wide">Опыт врачей</dt>
+          <dd class="mt-1 font-display text-lg">от 9 лет</dd>
+        </div>
+        <div class="bg-primary p-4">
+          <dt class="text-white/55 text-xs uppercase tracking-wide">До метро пешком</dt>
+          <dd class="mt-1 font-display text-lg">10 мин от Братиславской</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services" class="py-16 md:py-28 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+    <div class="max-w-2xl mb-12 md:mb-16">
+      <span class="text-accent text-xs uppercase tracking-[0.25em]">Направления</span>
+      <h2 class="mt-3 font-display font-bold text-3xl md:text-5xl leading-tight">Лечим всё — взрослых и детей</h2>
+      <p class="mt-4 text-ink/60 text-lg">Полный спектр стоматологии в одной клинике рядом с домом</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- card -->
+      <article class="reveal group relative border border-black/10 rounded-sm p-7 hover:border-primary transition-colors bg-white">
+        <span class="font-display text-5xl text-secondary group-hover:text-accent/30 transition-colors absolute top-4 right-5 select-none">01</span>
+        <h3 class="font-display text-xl font-semibold pr-12">Лечение кариеса</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Современные композитные материалы, анестезия по запросу, без боли.</p>
+        <div class="mt-5 flex items-center justify-between">
+          <span class="bg-secondary text-primary font-semibold text-sm px-3 py-1 rounded-sm">от 2 500 ₽</span>
+          <span class="text-xs text-ink/40">30–60 мин</span>
+        </div>
+      </article>
+      <article class="reveal group relative border border-black/10 rounded-sm p-7 hover:border-primary transition-colors bg-white">
+        <span class="font-display text-5xl text-secondary group-hover:text-accent/30 transition-colors absolute top-4 right-5 select-none">02</span>
+        <h3 class="font-display text-xl font-semibold pr-12">Имплантация зубов</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Имплант + коронка под ключ, гарантия на конструкцию.</p>
+        <div class="mt-5 flex items-center justify-between">
+          <span class="bg-secondary text-primary font-semibold text-sm px-3 py-1 rounded-sm">от 35 000 ₽</span>
+          <span class="text-xs text-ink/40">2–3 визита</span>
+        </div>
+      </article>
+      <article class="reveal group relative border border-black/10 rounded-sm p-7 hover:border-primary transition-colors bg-white">
+        <span class="font-display text-5xl text-secondary group-hover:text-accent/30 transition-colors absolute top-4 right-5 select-none">03</span>
+        <h3 class="font-display text-xl font-semibold pr-12">Ортодонтия и брекеты</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Металлические, керамические и сапфировые брекет-системы для взрослых и детей.</p>
+        <div class="mt-5 flex items-center justify-between">
+          <span class="bg-secondary text-primary font-semibold text-sm px-3 py-1 rounded-sm">от 55 000 ₽</span>
+          <span class="text-xs text-ink/40">курс 12–24 мес</span>
+        </div>
+      </article>
+      <article class="reveal group relative border border-black/10 rounded-sm p-7 hover:border-primary transition-colors bg-white">
+        <span class="font-display text-5xl text-secondary group-hover:text-accent/30 transition-colors absolute top-4 right-5 select-none">04</span>
+        <h3 class="font-display text-xl font-semibold pr-12">Протезирование</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Коронки, мосты, виниры — восстановление формы и эстетики зуба.</p>
+        <div class="mt-5"><span class="bg-secondary text-primary font-semibold text-sm px-3 py-1 rounded-sm">от 12 000 ₽</span></div>
+      </article>
+      <article class="reveal group relative border border-black/10 rounded-sm p-7 hover:border-primary transition-colors bg-white">
+        <span class="font-display text-5xl text-secondary group-hover:text-accent/30 transition-colors absolute top-4 right-5 select-none">05</span>
+        <h3 class="font-display text-xl font-semibold pr-12">Профессиональная гигиена</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Ультразвуковая чистка + Air Flow, полировка, фторирование.</p>
+        <div class="mt-5 flex items-center justify-between">
+          <span class="bg-secondary text-primary font-semibold text-sm px-3 py-1 rounded-sm">от 3 500 ₽</span>
+          <span class="text-xs text-ink/40">60 мин</span>
+        </div>
+      </article>
+      <article class="reveal group relative border border-black/10 rounded-sm p-7 hover:border-primary transition-colors bg-white">
+        <span class="font-display text-5xl text-secondary group-hover:text-accent/30 transition-colors absolute top-4 right-5 select-none">06</span>
+        <h3 class="font-display text-xl font-semibold pr-12">Удаление зубов</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Простое и сложное удаление, включая зубы мудрости.</p>
+        <div class="mt-5"><span class="bg-secondary text-primary font-semibold text-sm px-3 py-1 rounded-sm">от 1 800 ₽</span></div>
+      </article>
+      <article class="reveal group relative border border-black/10 rounded-sm p-7 hover:border-primary transition-colors bg-white">
+        <span class="font-display text-5xl text-secondary group-hover:text-accent/30 transition-colors absolute top-4 right-5 select-none">07</span>
+        <h3 class="font-display text-xl font-semibold pr-12">Отбеливание</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Кабинетное отбеливание или домашние каппы — подберём под ваш случай.</p>
+        <div class="mt-5 flex items-center justify-between">
+          <span class="bg-secondary text-primary font-semibold text-sm px-3 py-1 rounded-sm">от 8 000 ₽</span>
+          <span class="text-xs text-ink/40">1 визит</span>
+        </div>
+      </article>
+      <article class="reveal group relative border border-black/10 rounded-sm p-7 hover:border-primary transition-colors bg-white">
+        <span class="font-display text-5xl text-secondary group-hover:text-accent/30 transition-colors absolute top-4 right-5 select-none">08</span>
+        <h3 class="font-display text-xl font-semibold pr-12">Лечение каналов</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Эндодонтия под микроскопом, лечение периодонтита и кисты зуба.</p>
+        <div class="mt-5"><span class="bg-secondary text-primary font-semibold text-sm px-3 py-1 rounded-sm">от 4 000 ₽</span></div>
+      </article>
+      <article class="reveal group relative border border-black/10 rounded-sm p-7 hover:border-primary transition-colors bg-white">
+        <span class="font-display text-5xl text-secondary group-hover:text-accent/30 transition-colors absolute top-4 right-5 select-none">09</span>
+        <h3 class="font-display text-xl font-semibold pr-12">Виниры и люминиры</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Керамические накладки для идеальной улыбки без значительной сошлифовки зуба.</p>
+        <div class="mt-5"><span class="bg-secondary text-primary font-semibold text-sm px-3 py-1 rounded-sm">от 15 000 ₽</span></div>
+      </article>
+    </div>
+    <!-- after-services banner -->
+    <div class="reveal mt-12 bg-secondary rounded-sm p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+      <p class="font-display text-xl md:text-2xl text-ink">Не знаете, с чего начать? Запишитесь на бесплатный осмотр.</p>
+      <a href="tel:+74953490070" class="btn-cta shrink-0 bg-primary text-white font-semibold px-7 py-4 rounded-sm hover:bg-[#0d4a46] transition min-h-[44px] inline-flex items-center">Записаться</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DOCTORS ===== -->
+<section id="doctors" class="py-16 md:py-28 bg-primary text-white relative overflow-hidden">
+  <div class="absolute left-0 top-10 font-display text-[20vw] leading-none text-white/5 select-none pointer-events-none">Dr</div>
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+    <div class="max-w-2xl mb-12 md:mb-16">
+      <span class="text-accent text-xs uppercase tracking-[0.25em]">Команда</span>
+      <h2 class="mt-3 font-display font-bold text-3xl md:text-5xl leading-tight">Врачи, которым доверяют в&nbsp;Люблино</h2>
+      <p class="mt-4 text-white/70 text-lg">Профильное образование и многолетняя практика — каждый в своём направлении</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      <article class="reveal bg-white text-ink rounded-sm overflow-hidden group">
+        <div class="aspect-[3/4] overflow-hidden">
+          <img src="https://images.pexels.com/photos/28516278/pexels-photo-28516278.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Стоматолог-хирург, имплантолог До Минь Фыонг" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-lg font-semibold leading-snug">До Минь Фыонг</h3>
+          <p class="mt-1 text-sm text-primary font-medium">Стоматолог-хирург, имплантолог</p>
+          <p class="mt-3 text-xs uppercase tracking-wide text-accent">Стаж 17 лет</p>
+        </div>
+      </article>
+      <article class="reveal bg-white text-ink rounded-sm overflow-hidden group">
+        <div class="aspect-[3/4] overflow-hidden">
+          <img src="https://images.pexels.com/photos/5998480/pexels-photo-5998480.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Стоматолог Ларионова Ольга Юрьевна" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-lg font-semibold leading-snug">Ларионова Ольга Юрьевна</h3>
+          <p class="mt-1 text-sm text-primary font-medium">Стоматолог</p>
+          <p class="mt-3 text-xs uppercase tracking-wide text-accent">Стаж 27 лет</p>
+        </div>
+      </article>
+      <article class="reveal bg-white text-ink rounded-sm overflow-hidden group">
+        <div class="aspect-[3/4] overflow-hidden">
+          <img src="https://images.pexels.com/photos/32160037/pexels-photo-32160037.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Стоматолог-ортопед Шукюров Рамид Шакирович" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-lg font-semibold leading-snug">Шукюров Рамид Шакирович</h3>
+          <p class="mt-1 text-sm text-primary font-medium">Стоматолог-ортопед</p>
+          <p class="mt-3 text-xs uppercase tracking-wide text-accent">Стаж 15 лет</p>
+        </div>
+      </article>
+      <article class="reveal bg-white text-ink rounded-sm overflow-hidden group">
+        <div class="aspect-[3/4] overflow-hidden">
+          <img src="https://images.pexels.com/photos/32254667/pexels-photo-32254667.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Стоматолог Гаркуша Светлана Валерьевна" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-lg font-semibold leading-snug">Гаркуша Светлана Валерьевна</h3>
+          <p class="mt-1 text-sm text-primary font-medium">Стоматолог</p>
+          <p class="mt-3 text-xs uppercase tracking-wide text-accent">Стаж 7 лет</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ADVANTAGES ===== -->
+<section id="advantages" class="py-16 md:py-28 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+    <div class="max-w-2xl mb-12 md:mb-16">
+      <span class="text-accent text-xs uppercase tracking-[0.25em]">Почему мы</span>
+      <h2 class="mt-3 font-display font-bold text-3xl md:text-5xl leading-tight">Почему 128 пациентов поставили нам 5★</h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="reveal border-t-2 border-accent pt-6">
+        <h3 class="font-display text-xl font-semibold">Рейтинг 5.0 на Яндекс.Картах</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">128 настоящих отзывов жителей Люблино — проверьте сами по ссылке в футере.</p>
+      </div>
+      <div class="reveal border-t-2 border-accent pt-6">
+        <h3 class="font-display text-xl font-semibold">Прозрачный прайс без доплат</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Смета до начала лечения: цена на приёме совпадает с той, что назвали на осмотре.</p>
+      </div>
+      <div class="reveal border-t-2 border-accent pt-6">
+        <h3 class="font-display text-xl font-semibold">10 минут от Братиславской</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">ул. Верхние Поля, 4 — пешком из Люблино, Марьино и Братиславской, парковка бесплатно.</p>
+      </div>
+      <div class="reveal border-t-2 border-accent pt-6">
+        <h3 class="font-display text-xl font-semibold">Запись за 5 минут без звонка</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">WhatsApp или Telegram — ответим и подберём время, не нужно слушать гудки.</p>
+      </div>
+      <div class="reveal border-t-2 border-accent pt-6">
+        <h3 class="font-display text-xl font-semibold">Взрослые и дети в одной клинике</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Один адрес для всей семьи: детский приём с 3 лет, врач умеет работать без страха.</p>
+      </div>
+      <div class="reveal border-t-2 border-accent pt-6">
+        <h3 class="font-display text-xl font-semibold">Приём строго по записи</h3>
+        <p class="mt-3 text-sm text-ink/60 leading-relaxed">Время соблюдается — в коридоре не ждут по 40 минут.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICE ===== -->
+<section id="price" class="py-16 md:py-28 bg-secondary">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 md:px-8">
+    <div class="max-w-2xl mb-10 md:mb-14">
+      <span class="text-accent text-xs uppercase tracking-[0.25em]">Прайс</span>
+      <h2 class="mt-3 font-display font-bold text-3xl md:text-5xl leading-tight">Цены — открыто и без звёздочек</h2>
+      <p class="mt-4 text-ink/60 text-lg">Называем диапазон сразу, точную сумму — после осмотра и плана лечения</p>
+    </div>
+    <!-- tabs -->
+    <div class="flex flex-wrap gap-2 mb-8" id="price-tabs">
+      <button data-tab="0" class="price-tab bg-primary text-white text-sm font-semibold px-4 py-2.5 rounded-sm transition">Терапия</button>
+      <button data-tab="1" class="price-tab bg-white text-ink/70 text-sm font-semibold px-4 py-2.5 rounded-sm transition hover:text-primary">Гигиена и эстетика</button>
+      <button data-tab="2" class="price-tab bg-white text-ink/70 text-sm font-semibold px-4 py-2.5 rounded-sm transition hover:text-primary">Хирургия</button>
+      <button data-tab="3" class="price-tab bg-white text-ink/70 text-sm font-semibold px-4 py-2.5 rounded-sm transition hover:text-primary">Имплантология</button>
+      <button data-tab="4" class="price-tab bg-white text-ink/70 text-sm font-semibold px-4 py-2.5 rounded-sm transition hover:text-primary">Протезирование и ортодонтия</button>
+    </div>
+    <div class="bg-white rounded-sm overflow-hidden">
+      <div class="overflow-x-auto scrollbar-hide">
+        <table class="w-full min-w-[420px] text-left">
+          <tbody id="price-body" class="divide-y divide-black/5 text-[15px]"></tbody>
+        </table>
+      </div>
+    </div>
+    <p class="mt-5 text-sm text-ink/50 leading-relaxed">Первичный осмотр и консультация — бесплатно. Стоимость «от» без учёта сложности случая и анестезии.</p>
+    <div class="mt-8 flex flex-col sm:flex-row sm:items-center gap-4">
+      <a href="tel:+74953490070" class="btn-cta inline-flex items-center justify-center bg-accent text-ink font-semibold px-7 py-4 rounded-sm hover:brightness-105 transition min-h-[44px]">Записаться на бесплатный осмотр</a>
+      <span class="text-sm text-ink/50">После осмотра — подробная смета без обязательств</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CLINIC ===== -->
+<section id="clinic" class="py-16 md:py-28 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+    <div class="max-w-2xl mb-12 md:mb-16">
+      <span class="text-accent text-xs uppercase tracking-[0.25em]">Интерьер</span>
+      <h2 class="mt-3 font-display font-bold text-3xl md:text-5xl leading-tight">Наша клиника</h2>
+      <p class="mt-4 text-ink/60 text-lg">Современное оборудование, чистота и уютная атмосфера на ул. Верхние Поля, 4</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+      <figure class="reveal col-span-2 md:row-span-2 rounded-sm overflow-hidden aspect-[4/3] md:aspect-auto md:h-full">
+        <img src="https://avatars.mds.yandex.net/get-altay/14021655/2a0000019355502e25438a939faf844e8b21/XXXL" alt="Стойка регистрации клиники СтомСити" loading="lazy" class="w-full h-full object-cover">
+      </figure>
+      <figure class="reveal rounded-sm overflow-hidden aspect-[4/3]">
+        <img src="https://avatars.mds.yandex.net/get-altay/13671440/2a000001935550375b3ef3d5df83f38702f6/XXXL" alt="Кабинет терапевта СтомСити" loading="lazy" class="w-full h-full object-cover">
+      </figure>
+      <figure class="reveal rounded-sm overflow-hidden aspect-[4/3]">
+        <img src="https://avatars.mds.yandex.net/get-altay/14031726/2a0000019355502d75e6751050023059d181/XXXL" alt="Хирургический кабинет СтомСити" loading="lazy" class="w-full h-full object-cover">
+      </figure>
+      <figure class="reveal col-span-2 rounded-sm overflow-hidden aspect-[16/9]">
+        <img src="https://avatars.mds.yandex.net/get-altay/14165812/2a00000193555056ff1d03e173d9a7ea1214/XXXL" alt="Зона ожидания и вход в клинику СтомСити" loading="lazy" class="w-full h-full object-cover">
+      </figure>
+    </div>
+    <!-- highlights -->
+    <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="reveal">
+        <p class="font-display text-lg font-semibold text-primary">Цифровой рентген</p>
+        <p class="mt-1 text-sm text-ink/55">Лучевая нагрузка в 10 раз ниже плёночного</p>
+      </div>
+      <div class="reveal">
+        <p class="font-display text-lg font-semibold text-primary">Стерилизация класса B</p>
+        <p class="mt-1 text-sm text-ink/55">Автоклав с европейской сертификацией</p>
+      </div>
+      <div class="reveal">
+        <p class="font-display text-lg font-semibold text-primary">Лечение под микроскопом</p>
+        <p class="mt-1 text-sm text-ink/55">Для каналов и сложных реставраций</p>
+      </div>
+      <div class="reveal">
+        <p class="font-display text-lg font-semibold text-primary">Детский кабинет</p>
+        <p class="mt-1 text-sm text-ink/55">Отдельная зона с комфортной атмосферой</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section id="reviews" class="py-16 md:py-28 bg-secondary">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12">
+      <div class="max-w-xl">
+        <span class="text-accent text-xs uppercase tracking-[0.25em]">Отзывы</span>
+        <h2 class="mt-3 font-display font-bold text-3xl md:text-5xl leading-tight">128 отзывов — и все пятёрки</h2>
+        <p class="mt-4 text-ink/60 text-lg">Читайте на Яндекс.Картах — там не купишь</p>
+      </div>
+      <div class="bg-primary text-white rounded-sm p-6 shrink-0">
+        <div class="text-accent text-2xl tracking-widest">★★★★★</div>
+        <p class="mt-2 font-display text-3xl font-bold">5.0 <span class="text-base font-body font-normal text-white/60">/ 128 отзывов</span></p>
+        <a href="https://yandex.ru/maps/org/stomtsiti/" target="_blank" rel="noopener" class="mt-3 inline-block text-sm text-accent underline underline-offset-4">Все отзывы на Яндекс.Картах</a>
+      </div>
+    </div>
+    <div class="flex gap-6 overflow-x-auto scrollbar-hide snap-x-c pb-4 -mx-4 px-4 sm:mx-0 sm:px-0">
+      <article class="snap-c shrink-0 w-[85%] sm:w-[360px] bg-white rounded-sm p-7">
+        <div class="flex items-center justify-between"><span class="text-accent tracking-widest">★★★★★</span><span class="text-xs text-ink/40">февраль 2025</span></div>
+        <p class="mt-4 text-[15px] text-ink/75 leading-relaxed">Ставила имплант после долгих поисков клиники. Объяснили всё на осмотре, никаких сюрпризов по цене. Уже через год хожу как ни в чём не бывало.</p>
+        <p class="mt-5 font-display font-semibold">Марина К.</p>
+      </article>
+      <article class="snap-c shrink-0 w-[85%] sm:w-[360px] bg-white rounded-sm p-7">
+        <div class="flex items-center justify-between"><span class="text-accent tracking-widest">★★★★★</span><span class="text-xs text-ink/40">март 2025</span></div>
+        <p class="mt-4 text-[15px] text-ink/75 leading-relaxed">Привёл сына 7 лет — боялся, что ревёт. Доктор всё объяснил ему спокойно, поставил пломбу без истерики. Теперь сын сам просится сюда.</p>
+        <p class="mt-5 font-display font-semibold">Андрей П.</p>
+      </article>
+      <article class="snap-c shrink-0 w-[85%] sm:w-[360px] bg-white rounded-sm p-7">
+        <div class="flex items-center justify-between"><span class="text-accent tracking-widest">★★★★★</span><span class="text-xs text-ink/40">декабрь 2024</span></div>
+        <p class="mt-4 text-[15px] text-ink/75 leading-relaxed">Делала виниры. Оттенок подбирали долго — не торопили. Цена выше ожидания, но качество стоит того.</p>
+        <p class="mt-5 font-display font-semibold">Светлана Н.</p>
+      </article>
+      <article class="snap-c shrink-0 w-[85%] sm:w-[360px] bg-white rounded-sm p-7">
+        <div class="flex items-center justify-between"><span class="text-accent tracking-widest">★★★★★</span><span class="text-xs text-ink/40">январь 2025</span></div>
+        <p class="mt-4 text-[15px] text-ink/75 leading-relaxed">Пришёл с запущенным кариесом — сразу предложили план лечения на 3 визита и назвали итоговую сумму. Всё совпало рубль в рубль.</p>
+        <p class="mt-5 font-display font-semibold">Дмитрий В.</p>
+      </article>
+      <article class="snap-c shrink-0 w-[85%] sm:w-[360px] bg-white rounded-sm p-7">
+        <div class="flex items-center justify-between"><span class="text-accent tracking-widest">★★★★★</span><span class="text-xs text-ink/40">апрель 2025</span></div>
+        <p class="mt-4 text-[15px] text-ink/75 leading-relaxed">Живу в 5 минутах пешком, ходим всей семьёй. Один врач знает всю нашу историю — удобно и по-человечески.</p>
+        <p class="mt-5 font-display font-semibold">Ольга М.</p>
+      </article>
+    </div>
+    <div class="mt-8 text-center">
+      <a href="tel:+74953490070" class="btn-cta inline-flex items-center justify-center bg-primary text-white font-semibold px-7 py-4 rounded-sm hover:bg-[#0d4a46] transition min-h-[44px]">Записаться на приём</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CLINIC TOUR ===== -->
+<section id="clinic_tour" class="py-16 md:py-28 bg-primary text-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 text-center">
+    <span class="text-accent text-xs uppercase tracking-[0.25em]">Виртуальный тур</span>
+    <h2 class="mt-3 font-display font-bold text-3xl md:text-5xl leading-tight">Загляните к нам до визита</h2>
+    <p class="mt-4 text-white/70 text-lg">Посмотрите на клинику изнутри — мы открыты</p>
+    <div class="mt-10 rounded-sm overflow-hidden border border-white/10">
+      <iframe src="https://yandex.ru/map-widget/v1/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB.%20%D0%92%D0%B5%D1%80%D1%85%D0%BD%D0%B8%D0%B5%20%D0%9F%D0%BE%D0%BB%D1%8F%2C%204&z=17" width="100%" height="100%" frameborder="0" loading="lazy" title="Панорама клиники СтомСити на ул. Верхние Поля, 4" class="w-full aspect-video"></iframe>
+    </div>
+    <a href="tel:+74953490070" class="btn-cta mt-10 inline-flex items-center justify-center bg-accent text-ink font-semibold px-7 py-4 rounded-sm hover:brightness-105 transition min-h-[44px]">Записаться на первый приём</a>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" class="py-16 md:py-28 bg-white">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 md:px-8">
+    <div class="mb-12 text-center">
+      <span class="text-accent text-xs uppercase tracking-[0.25em]">Вопросы</span>
+      <h2 class="mt-3 font-display font-bold text-3xl md:text-5xl leading-tight">Вопросы и ответы</h2>
+    </div>
+    <div class="divide-y divide-black/10 border-y border-black/10">
+      <div class="faq-item">
+        <button class="faq-q w-full flex items-center justify-between gap-4 text-left py-5 font-display text-lg font-semibold" aria-expanded="true">
+          <span>Больно ли лечить зубы?</span><span class="faq-icon text-accent text-2xl shrink-0 transition-transform">+</span>
+        </button>
+        <div class="faq-body"><p class="pb-5 text-ink/65 leading-relaxed">Нет. Все процедуры — под местной анестезией. Если боитесь иглы, скажите врачу: подберём метод обезболивания.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q w-full flex items-center justify-between gap-4 text-left py-5 font-display text-lg font-semibold" aria-expanded="false">
+          <span>Сколько стоит первый приём?</span><span class="faq-icon text-accent text-2xl shrink-0 transition-transform">+</span>
+        </button>
+        <div class="faq-body"><p class="pb-5 text-ink/65 leading-relaxed">Первичный осмотр и консультация — бесплатно. После осмотра врач составит план лечения с ценами до начала любых процедур.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q w-full flex items-center justify-between gap-4 text-left py-5 font-display text-lg font-semibold" aria-expanded="false">
+          <span>Принимаете ли детей?</span><span class="faq-icon text-accent text-2xl shrink-0 transition-transform">+</span>
+        </button>
+        <div class="faq-body"><p class="pb-5 text-ink/65 leading-relaxed">Да, с 3 лет. Отдельный кабинет, врач умеет работать без стресса. Запись для детей — в те же часы, что для взрослых.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q w-full flex items-center justify-between gap-4 text-left py-5 font-display text-lg font-semibold" aria-expanded="false">
+          <span>Как быстро попасть на приём?</span><span class="faq-icon text-accent text-2xl shrink-0 transition-transform">+</span>
+        </button>
+        <div class="faq-body"><p class="pb-5 text-ink/65 leading-relaxed">Обычно свободное окно находится в течение 1–2 дней. Напишите в WhatsApp или Telegram — ответим за 15 минут.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q w-full flex items-center justify-between gap-4 text-left py-5 font-display text-lg font-semibold" aria-expanded="false">
+          <span>Есть ли гарантия на лечение?</span><span class="faq-icon text-accent text-2xl shrink-0 transition-transform">+</span>
+        </button>
+        <div class="faq-body"><p class="pb-5 text-ink/65 leading-relaxed">Да. На пломбы — 1 год, на коронки и протезы — 2 года, на импланты — по условиям производителя (10–15 лет).</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q w-full flex items-center justify-between gap-4 text-left py-5 font-display text-lg font-semibold" aria-expanded="false">
+          <span>Работаете ли вы по ОМС или ДМС?</span><span class="faq-icon text-accent text-2xl shrink-0 transition-transform">+</span>
+        </button>
+        <div class="faq-body"><p class="pb-5 text-ink/65 leading-relaxed">Клиника работает за наличный расчёт и картой. По ДМС — уточняйте по телефону, список страховых партнёров меняется.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q w-full flex items-center justify-between gap-4 text-left py-5 font-display text-lg font-semibold" aria-expanded="false">
+          <span>Можно ли рассрочку?</span><span class="faq-icon text-accent text-2xl shrink-0 transition-transform">+</span>
+        </button>
+        <div class="faq-body"><p class="pb-5 text-ink/65 leading-relaxed">Да, для крупных лечений (имплантация, ортодонтия) — рассрочка 0% через банк-партнёр. Условия уточняйте у администратора.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q w-full flex items-center justify-between gap-4 text-left py-5 font-display text-lg font-semibold" aria-expanded="false">
+          <span>Как добраться?</span><span class="faq-icon text-accent text-2xl shrink-0 transition-transform">+</span>
+        </button>
+        <div class="faq-body"><p class="pb-5 text-ink/65 leading-relaxed">ул. Верхние Поля, 4. Пешком: 10 мин от м. Братиславская, 12 мин от м. Марьино. Парковка у здания — бесплатно.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section id="cta" class="py-16 md:py-28 bg-secondary">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 grid md:grid-cols-2 gap-12 items-start">
+    <div>
+      <span class="text-accent text-xs uppercase tracking-[0.25em]">Запись</span>
+      <h2 class="mt-3 font-display font-bold text-3xl md:text-5xl leading-tight">Запишитесь на бесплатный осмотр</h2>
+      <p class="mt-5 text-ink/65 text-lg leading-relaxed">Первый осмотр и консультация — бесплатно. Врач составит план и назовёт точную стоимость до начала лечения.</p>
+      <p class="mt-6 inline-flex items-center gap-2 text-sm text-primary font-medium"><span class="h-2 w-2 rounded-full bg-accent"></span> Отвечаем за 15 минут в рабочие часы</p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="tel:+74953490070" class="btn-cta inline-flex items-center justify-center bg-primary text-white font-semibold px-6 py-4 rounded-sm hover:bg-[#0d4a46] transition min-h-[44px]">Позвонить: +7 (495) 349-00-70</a>
+        <a href="https://wa.me/74953490070" target="_blank" rel="noopener" class="inline-flex items-center justify-center border border-primary text-primary font-semibold px-6 py-4 rounded-sm hover:bg-primary hover:text-white transition min-h-[44px]">Написать в WhatsApp</a>
+      </div>
+    </div>
+    <form id="lead-form" class="bg-white rounded-sm p-7 md:p-8" novalidate>
+      <div class="space-y-5">
+        <div>
+          <label for="f-name" class="block text-sm font-medium mb-1.5">Ваше имя</label>
+          <input id="f-name" name="name" type="text" required class="w-full border border-black/15 rounded-sm px-4 py-3 text-[15px] focus:border-primary focus:outline-none" placeholder="Имя">
+        </div>
+        <div>
+          <label for="f-phone" class="block text-sm font-medium mb-1.5">Телефон</label>
+          <input id="f-phone" name="phone" type="tel" required pattern="[+0-9()\s-]{10,}" class="w-full border border-black/15 rounded-sm px-4 py-3 text-[15px] focus:border-primary focus:outline-none" placeholder="+7 (___) ___-__-__">
+        </div>
+        <div>
+          <label for="f-time" class="block text-sm font-medium mb-1.5">Удобное время</label>
+          <input id="f-time" name="time" type="text" class="w-full border border-black/15 rounded-sm px-4 py-3 text-[15px] focus:border-primary focus:outline-none" placeholder="Утро / день / вечер">
+        </div>
+        <button type="submit" class="btn-cta w-full bg-accent text-ink font-semibold py-4 rounded-sm hover:brightness-105 transition min-h-[44px]">Записаться</button>
+        <p class="text-xs text-ink/45 leading-relaxed">Нажимая «Записаться», вы соглашаетесь с обработкой персональных данных</p>
+      </div>
+      <p id="form-success" class="hidden mt-4 bg-secondary text-primary text-sm font-medium px-4 py-3 rounded-sm">Спасибо! Перезвоним в течение 15 минут в рабочие часы.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ===== CONTACTS + MAP ===== -->
+<section id="contacts_map" class="py-16 md:py-28 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+    <div class="mb-12">
+      <span class="text-accent text-xs uppercase tracking-[0.25em]">Контакты</span>
+      <h2 class="mt-3 font-display font-bold text-3xl md:text-5xl leading-tight">Как нас найти</h2>
+    </div>
+    <div class="grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-5 space-y-7">
+        <div>
+          <p class="text-xs uppercase tracking-wide text-ink/40">Телефон</p>
+          <a href="tel:+74953490070" class="font-display text-2xl font-semibold text-primary hover:text-accent transition">+7 (495) 349-00-70</a>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-wide text-ink/40">Адрес</p>
+          <p class="text-lg">Москва, ул. Верхние Поля, 4</p>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-wide text-ink/40 mb-2">Часы работы</p>
+          <ul class="space-y-1 text-[15px]">
+            <li class="flex justify-between border-b border-black/5 py-1"><span>Понедельник — Пятница</span><span class="font-medium">09:00 — 21:00</span></li>
+            <li class="flex justify-between border-b border-black/5 py-1"><span>Суббота</span><span class="font-medium">10:00 — 18:00</span></li>
+            <li class="flex justify-between py-1"><span>Воскресенье</span><span class="font-medium text-ink/50">выходной</span></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-wide text-ink/40 mb-2">Метро</p>
+          <ul class="space-y-1 text-[15px] text-ink/70">
+            <li>Братиславская — 10 мин пешком</li>
+            <li>Марьино — 12 мин пешком</li>
+            <li>Люблино — 15 мин пешком</li>
+          </ul>
+        </div>
+        <p class="text-[15px] text-ink/70">Бесплатная парковка у здания</p>
+        <div class="flex gap-3">
+          <a href="https://wa.me/74953490070" target="_blank" rel="noopener" aria-label="WhatsApp СтомСити" class="px-5 py-2.5 border border-primary text-primary rounded-sm text-sm font-semibold hover:bg-primary hover:text-white transition">WhatsApp</a>
+          <a href="https://t.me/stomtsity" target="_blank" rel="noopener" aria-label="Telegram СтомСити" class="px-5 py-2.5 border border-primary text-primary rounded-sm text-sm font-semibold hover:bg-primary hover:text-white transition">Telegram</a>
+        </div>
+      </div>
+      <div class="md:col-span-7">
+        <div class="rounded-sm overflow-hidden border border-black/10 h-64 md:h-full">
+          <iframe src="https://yandex.ru/map-widget/v1/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB.%20%D0%92%D0%B5%D1%80%D1%85%D0%BD%D0%B8%D0%B5%20%D0%9F%D0%BE%D0%BB%D1%8F%2C%204&z=17" width="100%" height="100%" frameborder="0" loading="lazy" title="Карта: ул. Верхние Поля, 4, Москва" class="w-full h-full min-h-[256px]"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="mt-0 bg-primary text-white/80">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-12 grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+    <div>
+      <span class="font-display text-2xl font-bold text-white">СтомСити</span>
+      <p class="mt-3 text-sm text-white/55 leading-relaxed">Стоматология в Люблино. Рейтинг 5.0 на Яндекс.Картах — 128 отзывов.</p>
+    </div>
+    <div class="text-sm space-y-2">
+      <p class="text-white/40 uppercase text-xs tracking-wide mb-3">Навигация</p>
+      <a href="#services" class="block hover:text-accent transition">Услуги</a>
+      <a href="#doctors" class="block hover:text-accent transition">Врачи</a>
+      <a href="#price" class="block hover:text-accent transition">Цены</a>
+      <a href="#reviews" class="block hover:text-accent transition">Отзывы</a>
+    </div>
+    <div class="text-sm space-y-2">
+      <p class="text-white/40 uppercase text-xs tracking-wide mb-3">Контакты</p>
+      <a href="tel:+74953490070" class="block hover:text-accent transition">+7 (495) 349-00-70</a>
+      <p>Москва, ул. Верхние Поля, 4</p>
+      <a href="https://yandex.ru/maps/org/stomtsiti/" target="_blank" rel="noopener" class="block hover:text-accent transition">Все отзывы на Яндекс.Картах</a>
+    </div>
+    <div class="text-sm space-y-2">
+      <p class="text-white/40 uppercase text-xs tracking-wide mb-3">Связаться</p>
+      <a href="https://wa.me/74953490070" target="_blank" rel="noopener" class="block hover:text-accent transition">WhatsApp</a>
+      <a href="https://t.me/stomtsity" target="_blank" rel="noopener" class="block hover:text-accent transition">Telegram</a>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-5 text-center text-xs text-white/40">© 2026 СтомСити · Стоматология в Люблино, Москва</div>
+</footer>
+
+<!-- ===== MOBILE STICKY CTA ===== -->
+<div class="md:hidden fixed bottom-0 inset-x-0 z-50 h-14 grid grid-cols-2 divide-x divide-white/20">
+  <a href="tel:+74953490070" class="bg-primary text-white flex items-center justify-center font-semibold text-sm" aria-label="Позвонить в СтомСити">Позвонить</a>
+  <a href="https://wa.me/74953490070" target="_blank" rel="noopener" class="bg-accent text-ink flex items-center justify-center font-semibold text-sm" aria-label="Написать в WhatsApp">WhatsApp</a>
+</div>
+
+<script>
+// ---- Price tabs ----
+const PRICE = [
+  [["Первичный осмотр + консультация","бесплатно"],["Лечение кариеса (1 поверхность)","от 2 500 ₽"],["Лечение кариеса (2+ поверхности)","от 3 800 ₽"],["Реставрация зуба","от 4 500 ₽"],["Лечение каналов (1 канал)","от 4 000 ₽"],["Лечение периодонтита","от 6 000 ₽"],["Лечение кисты зуба","от 7 000 ₽"]],
+  [["Профессиональная гигиена (ультразвук + Air Flow)","от 3 500 ₽"],["Отбеливание кабинетное Zoom 4","от 8 000 ₽"],["Домашнее отбеливание (каппы)","от 5 000 ₽"],["Виниры керамические (1 зуб)","от 15 000 ₽"],["Люминиры (1 зуб)","от 18 000 ₽"],["Художественная реставрация (1 зуб)","от 4 500 ₽"]],
+  [["Удаление зуба простое","от 1 800 ₽"],["Удаление зуба мудрости","от 3 500 ₽"],["Удаление сложное (атипичное)","от 5 000 ₽"],["Костная пластика","от 15 000 ₽"],["Синус-лифтинг","от 25 000 ₽"],["Лечение кисты хирургически","от 8 000 ₽"]],
+  [["Имплант + абатмент (без коронки)","от 25 000 ₽"],["Имплант + коронка под ключ","от 35 000 ₽"],["Одномоментная имплантация","от 40 000 ₽"],["All-on-4 (одна челюсть)","от 180 000 ₽"]],
+  [["Коронка металлокерамика","от 12 000 ₽"],["Коронка диоксид циркония","от 18 000 ₽"],["Мостовидный протез (3 единицы)","от 30 000 ₽"],["Брекеты металлические (одна челюсть)","от 30 000 ₽"],["Брекеты керамические (одна челюсть)","от 45 000 ₽"],["Сапфировые брекеты (одна челюсть)","от 55 000 ₽"]]
+];
+const body = document.getElementById('price-body');
+const tabs = document.querySelectorAll('.price-tab');
+function renderPrice(i){
+  body.innerHTML = PRICE[i].map(r=>`<tr class="hover:bg-secondary/60 transition-colors"><td class="py-3.5 px-5 pr-6">${r[0]}</td><td class="py-3.5 px-5 text-right font-semibold whitespace-nowrap ${r[1]==='бесплатно'?'text-primary':''}">${r[1]}</td></tr>`).join('');
+  tabs.forEach((t,k)=>{
+    const on = k===i;
+    t.classList.toggle('bg-primary', on); t.classList.toggle('text-white', on);
+    t.classList.toggle('bg-white', !on); t.classList.toggle('text-ink/70', !on);
+  });
+}
+tabs.forEach(t=>t.addEventListener('click',()=>renderPrice(+t.dataset.tab)));
+renderPrice(0);
+
+// ---- FAQ accordion ----
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  const body = btn.nextElementSibling, icon = btn.querySelector('.faq-icon');
+  function open(o){
+    btn.setAttribute('aria-expanded', o);
+    body.style.maxHeight = o ? body.scrollHeight + 'px' : '0px';
+    icon.style.transform = o ? 'rotate(45deg)' : 'rotate(0)';
+  }
+  if(btn.getAttribute('aria-expanded')==='true') requestAnimationFrame(()=>open(true));
+  btn.addEventListener('click',()=>{
+    const isOpen = btn.getAttribute('aria-expanded')==='true';
+    document.querySelectorAll('.faq-q').forEach(b=>{
+      b.setAttribute('aria-expanded','false');
+      b.nextElementSibling.style.maxHeight='0px';
+      b.querySelector('.faq-icon').style.transform='rotate(0)';
+    });
+    if(!isOpen) open(true);
+  });
+});
+
+// ---- Form ----
+document.getElementById('lead-form').addEventListener('submit',function(e){
+  e.preventDefault();
+  if(!this.checkValidity()){ this.reportValidity(); return; }
+  document.getElementById('form-success').classList.remove('hidden');
+  this.reset();
+});
+
+// ---- Reveal on scroll ----
+if(window.gsap){
+  gsap.utils.toArray('.reveal').forEach(el=>{
+    gsap.to(el,{opacity:1,y:0,duration:.7,ease:'power2.out',scrollTrigger:el,
+      onStart:()=>el.style.willChange='transform'});
+  });
+}
+// fallback / simple IO (no ScrollTrigger plugin loaded) -> use IntersectionObserver
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(en=>{
+    if(en.isIntersecting){ en.target.style.transition='opacity .7s ease, transform .7s ease'; en.target.style.opacity=1; en.target.style.transform='none'; io.unobserve(en.target); }
+  });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

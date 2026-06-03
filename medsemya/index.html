@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>МедСемья — стоматология Орехово-Борисово | Запись онлайн</title>
+  <meta name="description" content="МедСемья на ул. Захарова, 10 — стоматология в Орехово-Борисово. Рейтинг 4.7, 512 отзывов. Терапия, имплантация, брекеты, детская. Бесплатная консультация.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3B3A23',
+            secondary: '#F2EFE3',
+            accent: '#C9A24B',
+            ink: '#1F2937'
+          },
+          fontFamily: {
+            display: ['Spectral', 'serif'],
+            body: ['Manrope', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Manrope', sans-serif; background: #F2EFE3; color: #1F2937; }
+    h1,h2,h3,.font-display { font-family: 'Spectral', serif; }
+    .grain::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .04;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .outline-text { -webkit-text-stroke: 1px rgba(201,162,75,.45); color: transparent; }
+    .reveal { opacity: 0; transform: translateY(28px); }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    details > summary { list-style: none; }
+    details > summary::-webkit-details-marker { display: none; }
+  </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-secondary/90 backdrop-blur border-b border-primary/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 h-16 flex items-center justify-between">
+      <a href="#hero" class="flex items-baseline gap-1">
+        <span class="font-display text-2xl font-700 text-primary tracking-tight">МедСемья</span>
+        <span class="hidden sm:inline text-[11px] uppercase tracking-[0.2em] text-accent font-600">стоматология</span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-500 text-primary/80">
+        <a href="#services" class="hover:text-accent transition-colors">Услуги</a>
+        <a href="#doctors" class="hover:text-accent transition-colors">Врачи</a>
+        <a href="#price" class="hover:text-accent transition-colors">Цены</a>
+        <a href="#reviews" class="hover:text-accent transition-colors">Отзывы</a>
+        <a href="#faq" class="hover:text-accent transition-colors">Вопросы</a>
+        <a href="#contacts-map" class="hover:text-accent transition-colors">Контакты</a>
+      </nav>
+      <a href="tel:+74952120990" class="hidden sm:inline-flex items-center gap-2 text-sm font-600 text-primary border border-primary/30 px-4 py-2 rounded-sm hover:bg-primary hover:text-secondary transition-colors">
+        +7 (495) 212-09-90
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="relative min-h-screen bg-primary text-secondary grain overflow-hidden flex items-center pt-16">
+    <img src="https://avatars.mds.yandex.net/get-altay/18098886/2a0000019dfc62bc3b7e388519f458f87943/XXXL" alt="Интерьер стоматологической клиники МедСемья в Орехово-Борисово" class="absolute inset-0 w-full h-full object-cover opacity-25" fetchpriority="high">
+    <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-primary/40"></div>
+    <div class="absolute -bottom-10 right-0 select-none pointer-events-none hidden md:block">
+      <span class="outline-text font-display font-800 text-[14rem] leading-none">4.7</span>
+    </div>
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 md:px-8 w-full grid md:grid-cols-12 gap-10 items-center py-20">
+      <div class="md:col-span-7">
+        <p class="inline-flex items-center gap-2 text-accent text-xs sm:text-sm uppercase tracking-[0.25em] font-600 mb-6">
+          <span class="h-px w-8 bg-accent"></span> Орехово-Борисово · Москва
+        </p>
+        <h1 class="font-display font-700 leading-[1.02] break-words text-[clamp(2.2rem,7vw,5rem)]">
+          Стоматология рядом<br>с метро <span class="text-accent">Орехово</span>
+        </h1>
+        <p class="mt-6 text-base sm:text-lg text-secondary/80 max-w-xl leading-relaxed font-300">
+          Семейная клиника с рейтингом 4.7 — лечим детей и взрослых без очередей, с онлайн-записью.
+        </p>
+        <div class="mt-9 flex flex-col sm:flex-row gap-3">
+          <a href="#form" class="btn-cta inline-flex justify-center items-center gap-2 bg-accent text-primary font-700 px-8 py-4 rounded-sm hover:bg-secondary transition-colors min-h-[44px]">
+            Записаться онлайн
+          </a>
+          <a href="tel:+74952120990" class="inline-flex justify-center items-center gap-2 border border-secondary/40 text-secondary font-600 px-8 py-4 rounded-sm hover:bg-secondary/10 transition-colors min-h-[44px]">
+            Позвонить
+          </a>
+        </div>
+        <div class="mt-12 grid sm:grid-cols-3 gap-px bg-secondary/15 border border-secondary/15 rounded-sm overflow-hidden max-w-2xl">
+          <div class="bg-primary px-4 py-4"><p class="text-accent font-display text-xl font-700">4.7 ★</p><p class="text-xs text-secondary/70 mt-1">512 отзывов на Яндекс Картах</p></div>
+          <div class="bg-primary px-4 py-4"><p class="text-accent font-display text-xl font-700">9:00</p><p class="text-xs text-secondary/70 mt-1">Приём ежедневно</p></div>
+          <div class="bg-primary px-4 py-4"><p class="text-accent font-display text-xl font-700">0 ₽</p><p class="text-xs text-secondary/70 mt-1">Бесплатная консультация</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="relative py-16 md:py-28 bg-secondary">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+      <div class="max-w-2xl">
+        <p class="text-accent text-xs uppercase tracking-[0.25em] font-600 mb-4">01 — Направления</p>
+        <h2 class="font-display font-700 text-3xl md:text-5xl text-primary leading-tight">Все направления стоматологии</h2>
+        <p class="mt-5 text-ink/70 text-base md:text-lg">Терапия, хирургия, имплантация, ортодонтия и детская стоматология в одной клинике.</p>
+      </div>
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <!-- card -->
+        <div class="reveal group bg-white border border-primary/10 rounded-sm p-6 hover:border-accent transition-colors flex flex-col">
+          <span class="font-display text-accent text-3xl font-700">01</span>
+          <h3 class="font-display text-lg font-600 text-primary mt-4">Терапевтическая стоматология</h3>
+          <p class="text-sm text-ink/65 mt-2 flex-1">Лечение кариеса, пломбирование, лечение каналов и дёсен.</p>
+          <p class="mt-4 font-700 text-primary">от 3 500 ₽</p>
+        </div>
+        <div class="reveal group bg-white border border-primary/10 rounded-sm p-6 hover:border-accent transition-colors flex flex-col">
+          <span class="font-display text-accent text-3xl font-700">02</span>
+          <h3 class="font-display text-lg font-600 text-primary mt-4">Хирургия</h3>
+          <p class="text-sm text-ink/65 mt-2 flex-1">Удаление зубов любой сложности, костная пластика.</p>
+          <p class="mt-4 font-700 text-primary">от 2 500 ₽</p>
+        </div>
+        <div class="reveal group bg-white border border-primary/10 rounded-sm p-6 hover:border-accent transition-colors flex flex-col">
+          <span class="font-display text-accent text-3xl font-700">03</span>
+          <h3 class="font-display text-lg font-600 text-primary mt-4">Имплантация</h3>
+          <p class="text-sm text-ink/65 mt-2 flex-1">Импланты под ключ с установкой коронки, в том числе при костной пластике.</p>
+          <p class="mt-4 font-700 text-primary">от 35 000 ₽</p>
+        </div>
+        <div class="reveal group bg-white border border-primary/10 rounded-sm p-6 hover:border-accent transition-colors flex flex-col">
+          <span class="font-display text-accent text-3xl font-700">04</span>
+          <h3 class="font-display text-lg font-600 text-primary mt-4">Ортодонтия</h3>
+          <p class="text-sm text-ink/65 mt-2 flex-1">Металлические и керамические брекеты, ретейнеры.</p>
+          <p class="mt-4 font-700 text-primary">от 45 000 ₽</p>
+        </div>
+        <div class="reveal group bg-white border border-primary/10 rounded-sm p-6 hover:border-accent transition-colors flex flex-col">
+          <span class="font-display text-accent text-3xl font-700">05</span>
+          <h3 class="font-display text-lg font-600 text-primary mt-4">Протезирование</h3>
+          <p class="text-sm text-ink/65 mt-2 flex-1">Коронки, мостовидные и съёмные протезы, виниры и люминиры.</p>
+          <p class="mt-4 font-700 text-primary">от 8 000 ₽</p>
+        </div>
+        <div class="reveal group bg-white border border-primary/10 rounded-sm p-6 hover:border-accent transition-colors flex flex-col">
+          <span class="font-display text-accent text-3xl font-700">06</span>
+          <h3 class="font-display text-lg font-600 text-primary mt-4">Эстетическая стоматология</h3>
+          <p class="text-sm text-ink/65 mt-2 flex-1">Профессиональное отбеливание Zoom, виниры, люминиры.</p>
+          <p class="mt-4 font-700 text-primary">от 5 000 ₽</p>
+        </div>
+        <div class="reveal group bg-white border border-primary/10 rounded-sm p-6 hover:border-accent transition-colors flex flex-col">
+          <span class="font-display text-accent text-3xl font-700">07</span>
+          <h3 class="font-display text-lg font-600 text-primary mt-4">Гигиена полости рта</h3>
+          <p class="text-sm text-ink/65 mt-2 flex-1">Ультразвуковая чистка, Air Flow, полировка.</p>
+          <p class="mt-4 font-700 text-primary">от 4 500 ₽</p>
+        </div>
+        <div class="reveal group bg-white border border-primary/10 rounded-sm p-6 hover:border-accent transition-colors flex flex-col">
+          <span class="font-display text-accent text-3xl font-700">08</span>
+          <h3 class="font-display text-lg font-600 text-primary mt-4">Диагностика</h3>
+          <p class="text-sm text-ink/65 mt-2 flex-1">Прицельный рентген и компьютерная томография (КТ).</p>
+          <p class="mt-4 font-700 text-primary">от 500 ₽</p>
+        </div>
+      </div>
+      <div class="mt-12 flex justify-center">
+        <a href="#form" class="btn-cta inline-flex items-center gap-2 bg-primary text-secondary font-600 px-8 py-4 rounded-sm hover:bg-accent hover:text-primary transition-colors min-h-[44px]">Записаться на консультацию</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOCTORS -->
+  <section id="doctors" class="relative py-16 md:py-28 bg-primary text-secondary grain overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 relative">
+      <div class="max-w-2xl">
+        <p class="text-accent text-xs uppercase tracking-[0.25em] font-600 mb-4">02 — Команда</p>
+        <h2 class="font-display font-700 text-3xl md:text-5xl leading-tight">Наши врачи</h2>
+        <p class="mt-5 text-secondary/75 text-base md:text-lg">Специалисты клиники МедСемья. Принимаем детей и взрослых.</p>
+      </div>
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="reveal bg-secondary/5 border border-secondary/15 rounded-sm overflow-hidden">
+          <img loading="lazy" src="https://images.pexels.com/photos/7578810/pexels-photo-7578810.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Дармограй Ольга Леонидовна — офтальмолог" class="w-full aspect-[3/4] object-cover">
+          <div class="p-5">
+            <h3 class="font-display text-lg font-600">Дармограй Ольга Леонидовна</h3>
+            <p class="text-sm text-accent mt-1">Офтальмолог (окулист), детский офтальмолог</p>
+            <p class="text-xs text-secondary/60 mt-2">Стаж 22 года</p>
+          </div>
+        </div>
+        <div class="reveal bg-secondary/5 border border-secondary/15 rounded-sm overflow-hidden">
+          <img loading="lazy" src="https://images.pexels.com/photos/7904457/pexels-photo-7904457.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Тирацвян Сатеник Размиковна — стоматолог-имплантолог" class="w-full aspect-[3/4] object-cover">
+          <div class="p-5">
+            <h3 class="font-display text-lg font-600">Тирацвян Сатеник Размиковна</h3>
+            <p class="text-sm text-accent mt-1">Стоматолог, имплантолог, ортопед, хирург</p>
+            <p class="text-xs text-secondary/60 mt-2">Стаж 33 года</p>
+          </div>
+        </div>
+        <div class="reveal bg-secondary/5 border border-secondary/15 rounded-sm overflow-hidden">
+          <img loading="lazy" src="https://images.pexels.com/photos/5234519/pexels-photo-5234519.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Исакова Нодира Абдурахимовна — ЛОР" class="w-full aspect-[3/4] object-cover">
+          <div class="p-5">
+            <h3 class="font-display text-lg font-600">Исакова Нодира Абдурахимовна</h3>
+            <p class="text-sm text-accent mt-1">ЛОР, детский ЛОР</p>
+            <p class="text-xs text-secondary/60 mt-2">Стаж 16 лет</p>
+          </div>
+        </div>
+        <div class="reveal bg-secondary/5 border border-secondary/15 rounded-sm overflow-hidden">
+          <img loading="lazy" src="https://images.pexels.com/photos/28516278/pexels-photo-28516278.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Рамадан Фади Дибо — уролог, андролог" class="w-full aspect-[3/4] object-cover">
+          <div class="p-5">
+            <h3 class="font-display text-lg font-600">Рамадан Фади Дибо</h3>
+            <p class="text-sm text-accent mt-1">Уролог, андролог</p>
+            <p class="text-xs text-secondary/60 mt-2">Стаж 27 лет</p>
+          </div>
+        </div>
+        <div class="reveal bg-secondary/5 border border-secondary/15 rounded-sm overflow-hidden">
+          <img loading="lazy" src="https://images.pexels.com/photos/31017709/pexels-photo-31017709.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Шагаева Кристина Артуровна — дерматовенеролог, косметолог" class="w-full aspect-[3/4] object-cover">
+          <div class="p-5">
+            <h3 class="font-display text-lg font-600">Шагаева Кристина Артуровна</h3>
+            <p class="text-sm text-accent mt-1">Дерматовенеролог, венеролог, косметолог</p>
+            <p class="text-xs text-secondary/60 mt-2">Стаж 4 года</p>
+          </div>
+        </div>
+        <div class="reveal bg-accent text-primary rounded-sm p-6 flex flex-col justify-center">
+          <h3 class="font-display text-2xl font-700 leading-tight">Подберём врача под вашу задачу</h3>
+          <p class="text-sm mt-3 text-primary/80">Опишите проблему при записи — администратор направит к нужному специалисту.</p>
+          <a href="#form" class="btn-cta mt-6 inline-flex items-center justify-center bg-primary text-secondary font-600 px-6 py-3 rounded-sm hover:bg-primary/90 transition-colors min-h-[44px]">Записаться</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADVANTAGES -->
+  <section id="advantages" class="py-16 md:py-28 bg-secondary">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+      <div class="max-w-2xl">
+        <p class="text-accent text-xs uppercase tracking-[0.25em] font-600 mb-4">03 — Почему мы</p>
+        <h2 class="font-display font-700 text-3xl md:text-5xl text-primary leading-tight">Почему выбирают МедСемью</h2>
+      </div>
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-primary/10 border border-primary/10 rounded-sm overflow-hidden">
+        <div class="reveal bg-secondary p-7"><h3 class="font-display text-lg font-600 text-primary">Рейтинг 4.7 — 512 отзывов</h3><p class="text-sm text-ink/65 mt-3">Реальные оценки пациентов на Яндекс Картах: не корпоративный маркетинг, а живая репутация района.</p></div>
+        <div class="reveal bg-secondary p-7"><h3 class="font-display text-lg font-600 text-primary">Персонал хвалят в 80% отзывов</h3><p class="text-sm text-ink/65 mt-3">324 из 404 упоминаний персонала — положительные: вежливость, внимательность, отсутствие давления на пациента.</p></div>
+        <div class="reveal bg-secondary p-7"><h3 class="font-display text-lg font-600 text-primary">Чистота — 100% положительных упоминаний</h3><p class="text-sm text-ink/65 mt-3">Ни одного негативного отзыва о чистоте: стерильность контролируется в каждом кабинете.</p></div>
+        <div class="reveal bg-secondary p-7"><h3 class="font-display text-lg font-600 text-primary">Без очередей</h3><p class="text-sm text-ink/65 mt-3">85 из 113 отзывов о времени ожидания — положительные: запись на конкретное время, без многочасовой очереди.</p></div>
+        <div class="reveal bg-secondary p-7"><h3 class="font-display text-lg font-600 text-primary">Частная клиника без сетевых наценок</h3><p class="text-sm text-ink/65 mt-3">Цены локальные: нет расходов на франшизу и федеральный маркетинг, которые включены в счёт сетевых операторов.</p></div>
+        <div class="reveal bg-secondary p-7"><h3 class="font-display text-lg font-600 text-primary">Доступность для людей с инвалидностью</h3><p class="text-sm text-ink/65 mt-3">Туалет для людей с инвалидностью, адаптированный вход — клиника принимает всех членов семьи.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICE -->
+  <section id="price" class="py-16 md:py-28 bg-primary text-secondary grain overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 relative">
+      <div class="max-w-2xl">
+        <p class="text-accent text-xs uppercase tracking-[0.25em] font-600 mb-4">04 — Прайс</p>
+        <h2 class="font-display font-700 text-3xl md:text-5xl leading-tight">Прозрачные цены</h2>
+        <p class="mt-5 text-secondary/75 text-base md:text-lg">Стоимость фиксируется в плане лечения до начала любых процедур.</p>
+      </div>
+
+      <div class="mt-10 flex flex-wrap gap-2" id="price-tabs">
+        <button data-tab="terapiya" class="price-tab is-active text-sm font-600 px-5 py-2.5 rounded-sm border border-secondary/30 transition-colors min-h-[44px]">Терапия</button>
+        <button data-tab="gigiena" class="price-tab text-sm font-600 px-5 py-2.5 rounded-sm border border-secondary/30 transition-colors min-h-[44px]">Гигиена</button>
+        <button data-tab="hirurgiya" class="price-tab text-sm font-600 px-5 py-2.5 rounded-sm border border-secondary/30 transition-colors min-h-[44px]">Хирургия</button>
+        <button data-tab="protez" class="price-tab text-sm font-600 px-5 py-2.5 rounded-sm border border-secondary/30 transition-colors min-h-[44px]">Протезирование</button>
+        <button data-tab="implant" class="price-tab text-sm font-600 px-5 py-2.5 rounded-sm border border-secondary/30 transition-colors min-h-[44px]">Имплантация</button>
+        <button data-tab="diagnostika" class="price-tab text-sm font-600 px-5 py-2.5 rounded-sm border border-secondary/30 transition-colors min-h-[44px]">Диагностика</button>
+      </div>
+
+      <div class="mt-8 bg-secondary/5 border border-secondary/15 rounded-sm divide-y divide-secondary/10" id="price-body">
+        <div class="price-panel" data-panel="terapiya">
+          <div class="flex justify-between gap-4 px-5 py-4"><span class="text-secondary/85">Первичная консультация</span><span class="font-700 text-accent whitespace-nowrap">Бесплатно</span></div>
+          <div class="flex justify-between gap-4 px-5 py-4 border-t border-secondary/10"><span class="text-secondary/85">Лечение кариеса (1 поверхность)</span><span class="font-700 whitespace-nowrap">от 3 500 ₽</span></div>
+          <div class="flex justify-between gap-4 px-5 py-4 border-t border-secondary/10"><span class="text-secondary/85">Лечение кариеса (2 поверхности)</span><span class="font-700 whitespace-nowrap">от 4 500 ₽</span></div>
+          <div class="flex justify-between gap-4 px-5 py-4 border-t border-secondary/10"><span class="text-secondary/85">Лечение каналов (1 канал)</span><span class="font-700 whitespace-nowrap">от 5 000 ₽</span></div>
+          <div class="flex justify-between gap-4 px-5 py-4 border-t border-secondary/10"><span class="text-secondary/85">Световая пломба</span><span class="font-700 whitespace-nowrap">от 3 500 ₽</span></div>
+          <div class="flex justify-between gap-4 px-5 py-4 border-t border-secondary/10"><span class="text-secondary/85">Лечение периодонтита</span><span class="font-700 whitespace-nowrap">от 5 500 ₽</span></div>
+        </div>
+        <div class="price-panel hidden" data-panel="gigiena">
+          <div class="flex justify-between gap-4 px-5 py-4"><span class="text-secondary/85">Профессиональная чистка Air Flow</span><span class="font-700 whitespace-nowrap">от 4 500 ₽</span></div>
+          <div class="flex justify-between gap-4 px-5 py-4 border-t border-secondary/10"><span class="text-secondary/85">Ультразвуковое удаление камня</span><span class="font-700 whitespace-nowrap">от 3 000 ₽</span></div>
+          <div class="flex justify-between gap-4 px-5 py-4 border-t border-secondary/10"><span class="text-secondary/85">Полировка зубов</span><span class="font-700 whitespace-nowrap">от 1 500 ₽</span></div>
+        </div>
+        <div class="price-panel hidden" data-panel="hirurgiya">
+          <div class="flex justify-between gap-4 px-5 py-4"><span class="text-secondary/85">Удаление зуба (простое)</span><span class="font-700 whitespace-nowrap">от 2 500 ₽</span></div>
+          <div class="flex justify-between gap-4 px-5 py-4 border-t border-secondary/10"><span class="text-secondary/85">Удаление зуба мудрости</span><span class="font-700 whitespace-nowrap">от 5 000 ₽</span></div>
+          <div class="flex justify-between gap-4 px-5 py-4 border-t border-secondary/10"><span class="text-secondary/85">Костная пластика</span><span class="font-700 whitespace-nowrap">от 15 000 ₽</span></div>
+        </div>
+        <div class="price-panel hidden" data-panel="protez">
+          <div class="flex justify-between gap-4 px-5 py-4"><span class="text-secondary/85">Коронка металлокерамика</span><span class="font-700 whitespace-nowrap">от 8 000 ₽</span></div>
+          <div class="flex justify-between gap-4 px-5 py-4 border-t border-secondary/10"><span class="text-secondary/85">Коронка цирконий</span><span class="font-700 whitespace-nowrap">от 18 000 ₽</span></div>
+          <div class="flex justify-between gap-4 px-5 py-4 border-t border-secondary/10"><span class="text-secondary/85">Винир</span><span class="font-700 whitespace-nowrap">от 15 000 ₽</span></div>
+          <div class="flex justify-between gap-4 px-5 py-4 border-t border-secondary/10"><span class="text-secondary/85">Отбеливание Zoom</span><span class="font-700 whitespace-nowrap">от 15 000 ₽</span></div>
+        </div>
+        <div class="price-panel hidden" data-panel="implant">
+          <div class="flex justify-between gap-4 px-5 py-4"><span class="text-secondary/85">Имплант под ключ (эконом)</span><span class="font-700 whitespace-nowrap">от 35 000 ₽</span></div>
+          <div class="flex justify-between gap-4 px-5 py-4 border-t border-secondary/10"><span class="text-secondary/85">Имплант под ключ (премиум)</span><span class="font-700 whitespace-nowrap">от 55 000 ₽</span></div>
+        </div>
+        <div class="price-panel hidden" data-panel="diagnostika">
+          <div class="flex justify-between gap-4 px-5 py-4"><span class="text-secondary/85">Прицельный рентген</span><span class="font-700 whitespace-nowrap">от 500 ₽</span></div>
+          <div class="flex justify-between gap-4 px-5 py-4 border-t border-secondary/10"><span class="text-secondary/85">Компьютерная томография (КТ)</span><span class="font-700 whitespace-nowrap">от 3 500 ₽</span></div>
+        </div>
+      </div>
+      <p class="mt-5 text-sm text-secondary/60">Точная стоимость определяется после осмотра. Все цены — финальные, без скрытых доплат.</p>
+    </div>
+  </section>
+
+  <!-- PROMO -->
+  <section id="promo" class="py-16 md:py-28 bg-secondary">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+      <div class="max-w-2xl">
+        <p class="text-accent text-xs uppercase tracking-[0.25em] font-600 mb-4">05 — Предложения</p>
+        <h2 class="font-display font-700 text-3xl md:text-5xl text-primary leading-tight">Специальные предложения</h2>
+      </div>
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="reveal bg-white border border-primary/10 rounded-sm p-7 flex flex-col">
+          <span class="self-start text-xs uppercase tracking-wider font-600 text-primary bg-accent px-3 py-1 rounded-sm">Постоянно</span>
+          <h3 class="font-display text-xl font-600 text-primary mt-5">Бесплатная консультация</h3>
+          <p class="text-sm text-ink/65 mt-3 flex-1">Первичный осмотр и план лечения — 0 ₽. Узнайте, что нужно вашим зубам.</p>
+          <a href="#form" class="btn-cta mt-6 inline-flex items-center justify-center bg-primary text-secondary font-600 px-6 py-3 rounded-sm hover:bg-accent hover:text-primary transition-colors min-h-[44px]">Записаться</a>
+        </div>
+        <div class="reveal bg-white border border-primary/10 rounded-sm p-7 flex flex-col">
+          <span class="self-start text-xs uppercase tracking-wider font-600 text-primary bg-accent px-3 py-1 rounded-sm">Всегда в продаже</span>
+          <h3 class="font-display text-xl font-600 text-primary mt-5">Подарочный сертификат</h3>
+          <p class="text-sm text-ink/65 mt-3 flex-1">Подарите близкому здоровую улыбку — сертификаты на любую сумму от 3 000 ₽.</p>
+          <a href="#form" class="btn-cta mt-6 inline-flex items-center justify-center bg-primary text-secondary font-600 px-6 py-3 rounded-sm hover:bg-accent hover:text-primary transition-colors min-h-[44px]">Оформить сертификат</a>
+        </div>
+        <div class="reveal bg-white border border-primary/10 rounded-sm p-7 flex flex-col">
+          <span class="self-start text-xs uppercase tracking-wider font-600 text-primary bg-accent px-3 py-1 rounded-sm">Актуально</span>
+          <h3 class="font-display text-xl font-600 text-primary mt-5">Семейная скидка</h3>
+          <p class="text-sm text-ink/65 mt-3 flex-1">При записи двух и более членов семьи в один день — скидка 10% на второго пациента.</p>
+          <a href="#form" class="btn-cta mt-6 inline-flex items-center justify-center bg-primary text-secondary font-600 px-6 py-3 rounded-sm hover:bg-accent hover:text-primary transition-colors min-h-[44px]">Записаться вдвоём</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLINIC -->
+  <section id="clinic" class="py-16 md:py-28 bg-secondary">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+      <div class="max-w-2xl">
+        <p class="text-accent text-xs uppercase tracking-[0.25em] font-600 mb-4">06 — Клиника</p>
+        <h2 class="font-display font-700 text-3xl md:text-5xl text-primary leading-tight">Наша клиника</h2>
+        <p class="mt-5 text-ink/70 text-base md:text-lg">Современное оборудование, стерильность и комфортная атмосфера.</p>
+      </div>
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <figure class="reveal relative group overflow-hidden rounded-sm sm:col-span-2 lg:row-span-2">
+          <img loading="lazy" src="https://avatars.mds.yandex.net/get-altay/2390040/2a0000017445b531369f4754bfe17b6a6399/XXXL" alt="Стойка регистратуры и зал ожидания клиники МедСемья" class="w-full h-full aspect-[4/3] lg:aspect-auto object-cover">
+          <figcaption class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-primary/85 to-transparent text-secondary text-sm p-4">Стойка регистратуры и зал ожидания</figcaption>
+        </figure>
+        <figure class="reveal relative overflow-hidden rounded-sm">
+          <img loading="lazy" src="https://avatars.mds.yandex.net/get-vh/19229708/2a0000019dd370454839d0277cb1dfe2e381/smart_crop_500x500" alt="Стоматологический кабинет — рабочее место врача" class="w-full aspect-square object-cover">
+          <figcaption class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-primary/85 to-transparent text-secondary text-xs p-3">Стоматологический кабинет</figcaption>
+        </figure>
+        <figure class="reveal relative overflow-hidden rounded-sm">
+          <img loading="lazy" src="https://avatars.mds.yandex.net/get-vh/19680489/2a0000019e01a94a16246e147f79bcfc9616/smart_crop_500x500" alt="Цифровой рентген-кабинет клиники" class="w-full aspect-square object-cover">
+          <figcaption class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-primary/85 to-transparent text-secondary text-xs p-3">Цифровой рентген-кабинет</figcaption>
+        </figure>
+        <figure class="reveal relative overflow-hidden rounded-sm sm:col-span-2 lg:col-span-1">
+          <img loading="lazy" src="https://avatars.mds.yandex.net/get-altay/4441482/2a00000179179c2f5acd60d1004a658fc135/XXXL" alt="Фасад клиники на ул. Маршала Захарова, 10, корп. 1" class="w-full aspect-video lg:aspect-square object-cover">
+          <figcaption class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-primary/85 to-transparent text-secondary text-xs p-3">Фасад клиники — ул. Маршала Захарова, 10</figcaption>
+        </figure>
+      </div>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <span class="text-sm font-500 text-primary border border-primary/20 px-4 py-2 rounded-sm">Компьютерный томограф</span>
+        <span class="text-sm font-500 text-primary border border-primary/20 px-4 py-2 rounded-sm">Цифровой рентген</span>
+        <span class="text-sm font-500 text-primary border border-primary/20 px-4 py-2 rounded-sm">Система Air Flow</span>
+        <span class="text-sm font-500 text-primary border border-primary/20 px-4 py-2 rounded-sm">Стерилизационные автоклавы</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="py-16 md:py-28 bg-primary text-secondary grain overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 relative">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+        <div class="max-w-2xl">
+          <p class="text-accent text-xs uppercase tracking-[0.25em] font-600 mb-4">07 — Отзывы</p>
+          <h2 class="font-display font-700 text-3xl md:text-5xl leading-tight">Что говорят наши пациенты</h2>
+          <p class="mt-5 text-secondary/75">4.7 ★ — 512 отзывов на Яндекс Картах</p>
+        </div>
+        <a href="https://yandex.ru/maps/" target="_blank" rel="noopener" class="self-start md:self-auto inline-flex items-center gap-2 border border-secondary/30 px-5 py-3 rounded-sm text-sm font-600 hover:bg-secondary/10 transition-colors min-h-[44px]">Все отзывы</a>
+      </div>
+      <div class="mt-12 flex gap-5 overflow-x-auto snap-x no-scrollbar pb-2 md:grid md:grid-cols-3 md:overflow-visible">
+        <figure class="reveal snap-start shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-secondary/5 border border-secondary/15 rounded-sm p-6">
+          <div class="text-accent">★★★★★</div>
+          <blockquote class="mt-4 text-secondary/85 text-sm leading-relaxed">Привожу сюда детей уже третий год. Врачи терпеливые, никакого страха у ребёнка нет. Очередей нет, записываться удобно.</blockquote>
+          <figcaption class="mt-5 text-sm font-600">Елена К. <span class="block text-xs text-secondary/50 font-400 mt-1">Яндекс Карты</span></figcaption>
+        </figure>
+        <figure class="reveal snap-start shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-secondary/5 border border-secondary/15 rounded-sm p-6">
+          <div class="text-accent">★★★★★</div>
+          <blockquote class="mt-4 text-secondary/85 text-sm leading-relaxed">Делал имплант — всё объяснили до рубля, никаких сюрпризов в счёте. Чисто, профессионально, без лишней нервотрёпки.</blockquote>
+          <figcaption class="mt-5 text-sm font-600">Михаил Д. <span class="block text-xs text-secondary/50 font-400 mt-1">Яндекс Карты</span></figcaption>
+        </figure>
+        <figure class="reveal snap-start shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-secondary/5 border border-secondary/15 rounded-sm p-6">
+          <div class="text-accent">★★★★★</div>
+          <blockquote class="mt-4 text-secondary/85 text-sm leading-relaxed">Давно искала нормальную стоматологию рядом с домом. Персонал вежливый, не навязывают лишнего, объясняют понятно.</blockquote>
+          <figcaption class="mt-5 text-sm font-600">Татьяна В. <span class="block text-xs text-secondary/50 font-400 mt-1">Яндекс Карты</span></figcaption>
+        </figure>
+        <figure class="reveal snap-start shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-secondary/5 border border-secondary/15 rounded-sm p-6">
+          <div class="text-accent">★★★★★</div>
+          <blockquote class="mt-4 text-secondary/85 text-sm leading-relaxed">Пришёл с острой болью — приняли в тот же день. Вылечили быстро. Теперь хожу на профилактику регулярно.</blockquote>
+          <figcaption class="mt-5 text-sm font-600">Александр Р. <span class="block text-xs text-secondary/50 font-400 mt-1">Яндекс Карты</span></figcaption>
+        </figure>
+        <figure class="reveal snap-start shrink-0 w-[85%] sm:w-[60%] md:w-auto bg-secondary/5 border border-secondary/15 rounded-sm p-6">
+          <div class="text-accent">★★★★<span class="text-secondary/30">★</span></div>
+          <blockquote class="mt-4 text-secondary/85 text-sm leading-relaxed">Поставили брекеты дочери. Ортодонт грамотный, всегда на связи. Цена в рынке, без накруток.</blockquote>
+          <figcaption class="mt-5 text-sm font-600">Ирина М. <span class="block text-xs text-secondary/50 font-400 mt-1">Яндекс Карты</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT-CLINIC -->
+  <section id="about-clinic" class="py-16 md:py-28 bg-secondary">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 grid md:grid-cols-12 gap-10 md:gap-12 items-center">
+      <div class="md:col-span-7">
+        <p class="text-accent text-xs uppercase tracking-[0.25em] font-600 mb-4">08 — О нас</p>
+        <h2 class="font-display font-700 text-3xl md:text-5xl text-primary leading-tight">О МедСемье</h2>
+        <p class="mt-6 text-ink/75 text-base md:text-lg leading-relaxed">МедСемья — частная стоматологическая клиника в Орехово-Борисово. Принимаем пациентов всех возрастов: от детей до пожилых родителей. Лечение всей семьи у врача, которому можно доверять, — без сетевых стандартов для «среднего пациента»: у каждого свой план лечения, своё время и свой темп.</p>
+        <img loading="lazy" src="https://images.unsplash.com/photo-1685022036259-04cf91a89af1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5Mzk2ODR8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMGZlbWFsZSUyMGRlbnRpc3QlMjBzY3J1YnN8ZW58MXwwfHx8MTc4MDQ1MDUzM3ww&ixlib=rb-4.1.0&q=80&w=1080" alt="Врач клиники МедСемья" class="mt-8 w-full aspect-video object-cover rounded-sm">
+      </div>
+      <div class="md:col-span-5 grid grid-cols-2 gap-px bg-primary/10 border border-primary/10 rounded-sm overflow-hidden">
+        <div class="bg-white p-7"><p class="font-display text-3xl md:text-4xl font-700 text-primary">512</p><p class="text-sm text-ink/60 mt-2">Отзывов на Яндекс Картах</p></div>
+        <div class="bg-white p-7"><p class="font-display text-3xl md:text-4xl font-700 text-accent">4.7 ★</p><p class="text-sm text-ink/60 mt-2">Средний рейтинг</p></div>
+        <div class="bg-white p-7"><p class="font-display text-3xl md:text-4xl font-700 text-primary">10+</p><p class="text-sm text-ink/60 mt-2">Направлений лечения</p></div>
+        <div class="bg-white p-7"><p class="font-display text-3xl md:text-4xl font-700 text-accent">80%</p><p class="text-sm text-ink/60 mt-2">Положительных упоминаний персонала</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LICENSE-CERTIFICATES -->
+  <section id="license-certificates" class="py-16 md:py-28 bg-secondary border-t border-primary/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+      <div class="max-w-2xl">
+        <p class="text-accent text-xs uppercase tracking-[0.25em] font-600 mb-4">09 — Документы</p>
+        <h2 class="font-display font-700 text-3xl md:text-5xl text-primary leading-tight">Лицензии и документы</h2>
+        <p class="mt-5 text-ink/70">Медицинская деятельность ведётся на основании лицензии Министерства здравоохранения РФ.</p>
+      </div>
+      <div class="mt-12 flex flex-wrap gap-4">
+        <div class="reveal flex-1 min-w-[260px] bg-white border border-primary/10 rounded-sm p-6">
+          <svg class="w-9 h-9 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></svg>
+          <h3 class="font-display text-lg font-600 text-primary mt-4">Лицензия на медицинскую деятельность</h3>
+          <p class="text-sm text-ink/65 mt-2">Министерство здравоохранения Московской области.</p>
+          <p class="text-sm text-ink/50 mt-3">Лицензия № ____________ от __.__.____</p>
+          <a href="#" class="mt-4 inline-flex text-sm font-600 text-accent hover:underline">Открыть PDF →</a>
+        </div>
+        <div class="reveal flex-1 min-w-[260px] bg-white border border-primary/10 rounded-sm p-6">
+          <svg class="w-9 h-9 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+          <h3 class="font-display text-lg font-600 text-primary mt-4">Сертификаты специалистов</h3>
+          <p class="text-sm text-ink/65 mt-2">Сертификаты врачей по специальностям: терапия, хирургия, ортодонтия, ортопедия.</p>
+          <a href="#" class="mt-4 inline-flex text-sm font-600 text-accent hover:underline">Открыть PDF →</a>
+        </div>
+        <div class="reveal flex-1 min-w-[260px] bg-white border border-primary/10 rounded-sm p-6">
+          <svg class="w-9 h-9 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 3h6m2.25 4.5H6.75A2.25 2.25 0 0 1 4.5 17.25V6.75A2.25 2.25 0 0 1 6.75 4.5h7.5L19.5 9.75v7.5a2.25 2.25 0 0 1-2.25 2.25Z"/></svg>
+          <h3 class="font-display text-lg font-600 text-primary mt-4">Санитарно-эпидемиологическое заключение</h3>
+          <p class="text-sm text-ink/65 mt-2">СЭЗ на помещение клиники.</p>
+          <a href="#" class="mt-4 inline-flex text-sm font-600 text-accent hover:underline">Открыть PDF →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16 md:py-28 bg-primary text-secondary grain overflow-hidden">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 md:px-8 relative">
+      <div class="text-center">
+        <p class="text-accent text-xs uppercase tracking-[0.25em] font-600 mb-4">10 — FAQ</p>
+        <h2 class="font-display font-700 text-3xl md:text-5xl leading-tight">Частые вопросы</h2>
+      </div>
+      <div class="mt-12 space-y-3" id="faq-list">
+        <details class="group bg-secondary/5 border border-secondary/15 rounded-sm">
+          <summary class="flex justify-between items-center gap-4 cursor-pointer p-5 font-600 min-h-[44px]"><span>Больно ли лечить зубы у вас?</span><span class="text-accent text-xl shrink-0 group-open:rotate-45 transition-transform">+</span></summary>
+          <p class="px-5 pb-5 text-sm text-secondary/80 leading-relaxed">Используем современную анестезию: укол тонкой иглой после нанесения аппликационного геля. Большинство пациентов не чувствуют боли. Если страх сильный — скажите врачу заранее, подберём дополнительные меры комфорта.</p>
+        </details>
+        <details class="group bg-secondary/5 border border-secondary/15 rounded-sm">
+          <summary class="flex justify-between items-center gap-4 cursor-pointer p-5 font-600 min-h-[44px]"><span>Как узнать стоимость лечения заранее?</span><span class="text-accent text-xl shrink-0 group-open:rotate-45 transition-transform">+</span></summary>
+          <p class="px-5 pb-5 text-sm text-secondary/80 leading-relaxed">На бесплатной первичной консультации врач осматривает и составляет план лечения с фиксированными ценами. Итоговая сумма известна до начала любых процедур.</p>
+        </details>
+        <details class="group bg-secondary/5 border border-secondary/15 rounded-sm">
+          <summary class="flex justify-between items-center gap-4 cursor-pointer p-5 font-600 min-h-[44px]"><span>Принимаете детей? С какого возраста?</span><span class="text-accent text-xl shrink-0 group-open:rotate-45 transition-transform">+</span></summary>
+          <p class="px-5 pb-5 text-sm text-secondary/80 leading-relaxed">Принимаем детей с 3 лет. Врачи работают без спешки — объясняем процедуру понятными словами, убираем страх перед инструментами.</p>
+        </details>
+        <details class="group bg-secondary/5 border border-secondary/15 rounded-sm">
+          <summary class="flex justify-between items-center gap-4 cursor-pointer p-5 font-600 min-h-[44px]"><span>Есть ли рассрочка или оплата страховкой?</span><span class="text-accent text-xl shrink-0 group-open:rotate-45 transition-transform">+</span></summary>
+          <p class="px-5 pb-5 text-sm text-secondary/80 leading-relaxed">Уточните актуальные варианты оплаты при записи — условия могут меняться. Принимаем наличные и карты.</p>
+        </details>
+        <details class="group bg-secondary/5 border border-secondary/15 rounded-sm">
+          <summary class="flex justify-between items-center gap-4 cursor-pointer p-5 font-600 min-h-[44px]"><span>Сколько длится первый приём?</span><span class="text-accent text-xl shrink-0 group-open:rotate-45 transition-transform">+</span></summary>
+          <p class="px-5 pb-5 text-sm text-secondary/80 leading-relaxed">Консультация — 30–40 минут. Если нужно лечение — врач назначит следующий приём. С острой болью стараемся принять в день обращения.</p>
+        </details>
+        <details class="group bg-secondary/5 border border-secondary/15 rounded-sm">
+          <summary class="flex justify-between items-center gap-4 cursor-pointer p-5 font-600 min-h-[44px]"><span>Как добраться до клиники?</span><span class="text-accent text-xl shrink-0 group-open:rotate-45 transition-transform">+</span></summary>
+          <p class="px-5 pb-5 text-sm text-secondary/80 leading-relaxed">Адрес: ул. Маршала Захарова, 10, корп. 1. Ближайшие станции метро — Орехово, Домодедовская, Царицыно. От метро Орехово — 10–12 минут пешком.</p>
+        </details>
+        <details class="group bg-secondary/5 border border-secondary/15 rounded-sm">
+          <summary class="flex justify-between items-center gap-4 cursor-pointer p-5 font-600 min-h-[44px]"><span>Как записаться на приём?</span><span class="text-accent text-xl shrink-0 group-open:rotate-45 transition-transform">+</span></summary>
+          <p class="px-5 pb-5 text-sm text-secondary/80 leading-relaxed">Заполните форму на сайте или позвоните: +7 (495) 212-09-90. Работаем ежедневно.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTS-MAP -->
+  <section id="contacts-map" class="py-16 md:py-28 bg-secondary">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+      <div class="max-w-2xl">
+        <p class="text-accent text-xs uppercase tracking-[0.25em] font-600 mb-4">11 — Контакты</p>
+        <h2 class="font-display font-700 text-3xl md:text-5xl text-primary leading-tight">Запись и контакты</h2>
+      </div>
+      <div class="mt-12 grid md:grid-cols-5 gap-6">
+        <!-- FORM -->
+        <div class="md:col-span-2 bg-primary text-secondary rounded-sm p-6 sm:p-8 grain relative overflow-hidden">
+          <h3 class="font-display text-2xl font-600">Записаться на консультацию</h3>
+          <form id="form" class="mt-6 space-y-4" onsubmit="event.preventDefault(); this.reset(); document.getElementById('form-ok').classList.remove('hidden');">
+            <input type="text" name="name" required placeholder="Имя" class="w-full bg-secondary/10 border border-secondary/25 rounded-sm px-4 py-3 text-secondary placeholder:text-secondary/50 focus:outline-none focus:border-accent min-h-[44px]">
+            <input type="tel" name="phone" required placeholder="Телефон" class="w-full bg-secondary/10 border border-secondary/25 rounded-sm px-4 py-3 text-secondary placeholder:text-secondary/50 focus:outline-none focus:border-accent min-h-[44px]">
+            <input type="text" name="time" placeholder="Удобное время" class="w-full bg-secondary/10 border border-secondary/25 rounded-sm px-4 py-3 text-secondary placeholder:text-secondary/50 focus:outline-none focus:border-accent min-h-[44px]">
+            <select name="service" class="w-full bg-secondary/10 border border-secondary/25 rounded-sm px-4 py-3 text-secondary focus:outline-none focus:border-accent min-h-[44px]">
+              <option class="text-ink" value="">Услуга (опционально)</option>
+              <option class="text-ink">Терапия</option>
+              <option class="text-ink">Хирургия</option>
+              <option class="text-ink">Имплантация</option>
+              <option class="text-ink">Ортодонтия</option>
+              <option class="text-ink">Протезирование</option>
+              <option class="text-ink">Детская стоматология</option>
+            </select>
+            <button type="submit" class="btn-cta w-full bg-accent text-primary font-700 px-6 py-4 rounded-sm hover:bg-secondary transition-colors min-h-[44px]">Записаться на консультацию</button>
+            <p id="form-ok" class="hidden text-sm text-accent">Заявка отправлена — перезвоним в течение 15 минут в рабочее время.</p>
+          </form>
+        </div>
+        <!-- INFO + MAP -->
+        <div class="md:col-span-3 flex flex-col gap-6">
+          <div class="grid sm:grid-cols-2 gap-px bg-primary/10 border border-primary/10 rounded-sm overflow-hidden">
+            <div class="bg-white p-5">
+              <p class="text-xs uppercase tracking-wider text-accent font-600">Телефон</p>
+              <a href="tel:+74952120990" class="font-display text-xl font-700 text-primary mt-1 block hover:text-accent transition-colors">+7 (495) 212-09-90</a>
+            </div>
+            <div class="bg-white p-5">
+              <p class="text-xs uppercase tracking-wider text-accent font-600">Адрес</p>
+              <p class="text-primary font-600 mt-1">Москва, ул. Маршала Захарова, 10, корп. 1</p>
+            </div>
+            <div class="bg-white p-5">
+              <p class="text-xs uppercase tracking-wider text-accent font-600">Метро</p>
+              <p class="text-ink/75 mt-1">Орехово · Домодедовская · Царицыно</p>
+            </div>
+            <div class="bg-white p-5">
+              <p class="text-xs uppercase tracking-wider text-accent font-600">Часы работы</p>
+              <p class="text-ink/75 mt-1 text-sm">Пн–Пт: 9:00–21:00<br>Сб: 9:00–19:00 · Вс: 10:00–17:00</p>
+            </div>
+          </div>
+          <div class="rounded-sm overflow-hidden border border-primary/10 flex-1 min-h-[320px]">
+            <iframe title="Карта — ул. Маршала Захарова, 10, корп. 1" class="w-full h-full min-h-[320px]" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://yandex.ru/map-widget/v1/?text=Москва%2C%20улица%20Маршала%20Захарова%2C%2010%20корпус%201&z=16"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="bg-primary text-secondary text-center py-20 md:py-28 grain relative overflow-hidden">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 md:px-8 relative">
+      <h2 class="font-display font-700 text-3xl md:text-5xl leading-tight">Первая консультация — бесплатно</h2>
+      <p class="mt-6 text-secondary/80 text-base md:text-lg">512 жителей Орехово-Борисово уже доверяют МедСемье. Оставьте заявку или позвоните — ответим в течение 15 минут в рабочее время.</p>
+      <div class="mt-9 flex flex-col sm:flex-row justify-center gap-3">
+        <a href="#form" class="btn-cta inline-flex justify-center items-center bg-accent text-primary font-700 px-8 py-4 rounded-sm hover:bg-secondary transition-colors min-h-[44px]">Записаться онлайн</a>
+        <a href="tel:+74952120990" class="inline-flex justify-center items-center border border-secondary/40 text-secondary font-600 px-8 py-4 rounded-sm hover:bg-secondary/10 transition-colors min-h-[44px]">Позвонить: +7 (495) 212-09-90</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-primary text-secondary/70 border-t border-secondary/15 pt-12 pb-24 md:pb-12 mt-0">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 grid sm:grid-cols-3 gap-8">
+      <div>
+        <span class="font-display text-2xl font-700 text-secondary">МедСемья</span>
+        <p class="text-sm mt-3">Семейная стоматология в Орехово-Борисово. Лечим детей и взрослых.</p>
+      </div>
+      <div class="text-sm space-y-2">
+        <p class="text-secondary font-600 mb-3">Контакты</p>
+        <a href="tel:+74952120990" class="block hover:text-accent transition-colors">+7 (495) 212-09-90</a>
+        <p>Москва, ул. Маршала Захарова, 10, корп. 1</p>
+        <p>Пн–Пт 9:00–21:00 · Сб 9:00–19:00 · Вс 10:00–17:00</p>
+      </div>
+      <div class="text-sm space-y-2">
+        <p class="text-secondary font-600 mb-3">Разделы</p>
+        <a href="#services" class="block hover:text-accent transition-colors">Услуги</a>
+        <a href="#price" class="block hover:text-accent transition-colors">Цены</a>
+        <a href="#doctors" class="block hover:text-accent transition-colors">Врачи</a>
+        <a href="#faq" class="block hover:text-accent transition-colors">Частые вопросы</a>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 mt-10 pt-6 border-t border-secondary/15 text-xs text-secondary/50">
+      © МедСемья. Имеются противопоказания, необходима консультация специалиста.
+    </div>
+  </footer>
+
+  <!-- STICKY MOBILE CTA -->
+  <div class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-primary border-t border-secondary/15 p-3 flex gap-2">
+    <a href="#form" class="btn-cta flex-1 inline-flex justify-center items-center bg-accent text-primary font-700 px-4 py-3 rounded-sm min-h-[44px]">Записаться</a>
+    <a href="tel:+74952120990" class="inline-flex justify-center items-center border border-secondary/40 text-secondary font-600 px-5 py-3 rounded-sm min-h-[44px]">Звонок</a>
+  </div>
+
+  <script>
+    // Price tabs
+    const tabs = document.querySelectorAll('.price-tab');
+    const panels = document.querySelectorAll('.price-panel');
+    function activate(name){
+      tabs.forEach(t => {
+        const on = t.dataset.tab === name;
+        t.classList.toggle('bg-accent', on);
+        t.classList.toggle('text-primary', on);
+        t.classList.toggle('border-accent', on);
+      });
+      panels.forEach(p => p.classList.toggle('hidden', p.dataset.panel !== name));
+    }
+    tabs.forEach(t => t.addEventListener('click', () => activate(t.dataset.tab)));
+    activate('terapiya');
+
+    // FAQ — one open at a time
+    const faqItems = document.querySelectorAll('#faq-list details');
+    faqItems.forEach(d => d.addEventListener('toggle', () => {
+      if (d.open) faqItems.forEach(o => { if (o !== d) o.open = false; });
+    }));
+
+    // GSAP reveal on scroll
+    if (window.gsap && window.ScrollTrigger) {
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.utils.toArray('.reveal').forEach(el => {
+        gsap.to(el, {
+          opacity: 1, y: 0, duration: 0.7, ease: 'power2.out',
+          scrollTrigger: { trigger: el, start: 'top 88%' }
+        });
+      });
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => { el.style.opacity = 1; el.style.transform = 'none'; });
+    }
+  </script>
+</body>
+</html>

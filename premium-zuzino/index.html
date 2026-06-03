@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Стоматология Премиум в Зюзино, Москва — лечение, имплантация, протезирование</title>
+  <meta name="description" content="Стоматология у метро Севастопольская и Каховская. Лечение кариеса от 2 500 ₽, имплантация от 35 000 ₽. Бесплатная консультация. Запись онлайн.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0E3A4F',
+            secondary: '#EEF2F4',
+            accent: '#D69A4C',
+            ink: '#1A1A2E',
+          },
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'serif'],
+            sans: ['Manrope', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Manrope', system-ui, sans-serif; }
+    .font-display { font-family: 'Cormorant Garamond', serif; }
+    .grain::before {
+      content: "";
+      position: absolute; inset: 0; pointer-events: none; opacity: .06;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .reveal { opacity: 0; transform: translateY(28px); }
+    [x-tab].active { color: #0E3A4F; border-color: #D69A4C; }
+    ::selection { background: #D69A4C; color: #fff; }
+  </style>
+</head>
+<body class="bg-secondary text-ink antialiased overflow-x-hidden">
+
+<!-- ================= HEADER ================= -->
+<header class="fixed top-0 inset-x-0 z-50 transition-all duration-300" id="site-header">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 flex items-center justify-between h-16 md:h-20">
+    <a href="#hero" class="flex items-baseline gap-2">
+      <span class="font-display text-2xl md:text-3xl font-semibold tracking-tight text-white" id="logo-text">Премиум</span>
+      <span class="text-[10px] uppercase tracking-[0.25em] text-accent font-medium hidden sm:block">Зюзино</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-white/90" id="nav-links">
+      <a href="#services" class="hover:text-accent transition-colors">Услуги</a>
+      <a href="#doctors" class="hover:text-accent transition-colors">Врачи</a>
+      <a href="#price" class="hover:text-accent transition-colors">Цены</a>
+      <a href="#reviews" class="hover:text-accent transition-colors">Отзывы</a>
+      <a href="#contacts_map" class="hover:text-accent transition-colors">Контакты</a>
+    </nav>
+    <a href="#cta_appointment" class="hidden sm:inline-flex items-center gap-2 bg-accent text-primary font-semibold text-sm px-5 py-2.5 rounded-sm hover:bg-white transition-colors duration-200">
+      Записаться
+    </a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="hero" class="relative min-h-screen flex items-center bg-primary text-white grain overflow-hidden">
+  <img src="https://avatars.mds.yandex.net/get-altay/1352335/2a00000163e3c736a73f6a6c180bf5b84a7e/XXXL"
+       alt="Интерьер стоматологии Премиум в Зюзино" loading="eager"
+       class="absolute inset-0 w-full h-full object-cover opacity-25">
+  <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/40"></div>
+  <!-- giant decorative number -->
+  <span class="absolute -right-6 bottom-0 font-display text-[34vw] leading-none text-white/[0.04] select-none pointer-events-none">4.4</span>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-8 w-full pt-28 pb-32 md:py-32">
+    <div class="max-w-3xl">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="h-px w-10 bg-accent"></span>
+        <span class="text-xs uppercase tracking-[0.3em] text-accent font-medium">Стоматология · Москва</span>
+      </div>
+      <h1 class="font-display font-semibold leading-tight break-words text-[clamp(2.2rem,7vw,5.5rem)]">
+        Стоматология у метро Севастопольская и&nbsp;Каховская
+      </h1>
+      <p class="mt-6 text-base md:text-xl text-white/80 font-light max-w-2xl leading-relaxed">
+        Лечение, протезирование и имплантация в Зюзино — 31 отзыв, рейтинг 4.4 от жителей района. Бесплатная консультация, запись онлайн.
+      </p>
+      <div class="mt-9 flex flex-col sm:flex-row gap-4">
+        <a href="#cta_appointment" class="btn-cta inline-flex justify-center items-center gap-2 bg-accent text-primary font-semibold px-8 py-4 rounded-sm hover:bg-white transition-colors duration-200">
+          Записаться онлайн
+        </a>
+        <a href="tel:+74993175833" class="inline-flex justify-center items-center gap-2 border border-white/30 text-white font-medium px-8 py-4 rounded-sm hover:border-accent hover:text-accent transition-colors duration-200">
+          Позвонить
+        </a>
+      </div>
+
+      <!-- trust badges -->
+      <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/10 border border-white/10 max-w-3xl">
+        <div class="bg-primary p-4 sm:p-5">
+          <div class="text-accent text-lg font-bold">4.4 ★</div>
+          <div class="text-xs text-white/60 mt-1">на Яндекс.Картах</div>
+        </div>
+        <div class="bg-primary p-4 sm:p-5">
+          <div class="text-accent text-lg font-bold">31</div>
+          <div class="text-xs text-white/60 mt-1">отзыв от жителей</div>
+        </div>
+        <div class="bg-primary p-4 sm:p-5">
+          <div class="text-accent text-lg font-bold">2–5 мин</div>
+          <div class="text-xs text-white/60 mt-1">от метро пешком</div>
+        </div>
+        <div class="bg-primary p-4 sm:p-5">
+          <div class="text-accent text-lg font-bold">Бесплатно</div>
+          <div class="text-xs text-white/60 mt-1">консультация</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services" class="py-16 md:py-28 bg-secondary">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 md:mb-16">
+      <div class="max-w-2xl">
+        <span class="text-xs uppercase tracking-[0.3em] text-accent font-semibold">Что мы делаем</span>
+        <h2 class="font-display text-4xl md:text-6xl font-semibold mt-3 leading-tight">Услуги клиники Премиум</h2>
+        <p class="text-ink/60 mt-4 text-lg">Терапия, хирургия, ортодонтия и эстетика — полный спектр в одном месте.</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-ink/10 border border-ink/10">
+      <!-- card template -->
+      <div class="reveal group bg-white p-7 border-l-2 border-transparent hover:border-accent transition-all duration-200">
+        <span class="font-display text-3xl text-accent/40 group-hover:text-accent transition-colors">01</span>
+        <h3 class="text-lg font-bold mt-3">Лечение кариеса</h3>
+        <p class="text-sm text-ink/60 mt-2 leading-relaxed">Пломбирование светоотверждаемыми материалами без боли.</p>
+        <div class="flex items-center justify-between mt-5 pt-4 border-t border-ink/10">
+          <span class="text-accent font-bold">от 2 500 ₽</span>
+          <span class="text-xs text-ink/40">30–60 мин</span>
+        </div>
+      </div>
+      <div class="reveal group bg-white p-7 border-l-2 border-transparent hover:border-accent transition-all duration-200">
+        <span class="font-display text-3xl text-accent/40 group-hover:text-accent transition-colors">02</span>
+        <h3 class="text-lg font-bold mt-3">Лечение каналов (эндодонтия)</h3>
+        <p class="text-sm text-ink/60 mt-2 leading-relaxed">Сохранение зуба при глубоком воспалении с микроинструментарием.</p>
+        <div class="flex items-center justify-between mt-5 pt-4 border-t border-ink/10">
+          <span class="text-accent font-bold">от 6 000 ₽</span>
+          <span class="text-xs text-ink/40">60–90 мин</span>
+        </div>
+      </div>
+      <div class="reveal group bg-white p-7 border-l-2 border-transparent hover:border-accent transition-all duration-200">
+        <span class="font-display text-3xl text-accent/40 group-hover:text-accent transition-colors">03</span>
+        <h3 class="text-lg font-bold mt-3">Имплантация зубов</h3>
+        <p class="text-sm text-ink/60 mt-2 leading-relaxed">Установка имплантатов с гарантией приживаемости — консультация бесплатно.</p>
+        <div class="flex items-center justify-between mt-5 pt-4 border-t border-ink/10">
+          <span class="text-accent font-bold">от 35 000 ₽</span>
+          <span class="text-xs text-ink/40">1–2 визита</span>
+        </div>
+      </div>
+      <div class="reveal group bg-white p-7 border-l-2 border-transparent hover:border-accent transition-all duration-200">
+        <span class="font-display text-3xl text-accent/40 group-hover:text-accent transition-colors">04</span>
+        <h3 class="text-lg font-bold mt-3">Протезирование (коронки)</h3>
+        <p class="text-sm text-ink/60 mt-2 leading-relaxed">Металлокерамика и безметалловые коронки на имплантах и зубах.</p>
+        <div class="flex items-center justify-between mt-5 pt-4 border-t border-ink/10">
+          <span class="text-accent font-bold">от 8 000 ₽</span>
+          <span class="text-xs text-ink/40">2–3 визита</span>
+        </div>
+      </div>
+      <div class="reveal group bg-white p-7 border-l-2 border-transparent hover:border-accent transition-all duration-200">
+        <span class="font-display text-3xl text-accent/40 group-hover:text-accent transition-colors">05</span>
+        <h3 class="text-lg font-bold mt-3">Виниры и люминиры</h3>
+        <p class="text-sm text-ink/60 mt-2 leading-relaxed">Эстетическая реставрация передних зубов, щадящая препаровка.</p>
+        <div class="flex items-center justify-between mt-5 pt-4 border-t border-ink/10">
+          <span class="text-accent font-bold">от 15 000 ₽ за зуб</span>
+          <span class="text-xs text-ink/40">2 визита</span>
+        </div>
+      </div>
+      <div class="reveal group bg-white p-7 border-l-2 border-transparent hover:border-accent transition-all duration-200">
+        <span class="font-display text-3xl text-accent/40 group-hover:text-accent transition-colors">06</span>
+        <h3 class="text-lg font-bold mt-3">Брекеты (ортодонтия)</h3>
+        <p class="text-sm text-ink/60 mt-2 leading-relaxed">Металлические и керамические брекет-системы для выравнивания прикуса.</p>
+        <div class="flex items-center justify-between mt-5 pt-4 border-t border-ink/10">
+          <span class="text-accent font-bold">от 27 500 ₽ за челюсть</span>
+          <span class="text-xs text-ink/40">12–24 мес</span>
+        </div>
+      </div>
+      <div class="reveal group bg-white p-7 border-l-2 border-transparent hover:border-accent transition-all duration-200">
+        <span class="font-display text-3xl text-accent/40 group-hover:text-accent transition-colors">07</span>
+        <h3 class="text-lg font-bold mt-3">Удаление зубов</h3>
+        <p class="text-sm text-ink/60 mt-2 leading-relaxed">Простое и сложное удаление, включая зубы мудрости, под анестезией.</p>
+        <div class="flex items-center justify-between mt-5 pt-4 border-t border-ink/10">
+          <span class="text-accent font-bold">от 2 000 ₽</span>
+          <span class="text-xs text-ink/40">20–45 мин</span>
+        </div>
+      </div>
+      <div class="reveal group bg-white p-7 border-l-2 border-transparent hover:border-accent transition-all duration-200">
+        <span class="font-display text-3xl text-accent/40 group-hover:text-accent transition-colors">08</span>
+        <h3 class="text-lg font-bold mt-3">Профессиональная гигиена</h3>
+        <p class="text-sm text-ink/60 mt-2 leading-relaxed">Ультразвуковая чистка + Air Flow + полировка, рекомендована раз в 6 месяцев.</p>
+        <div class="flex items-center justify-between mt-5 pt-4 border-t border-ink/10">
+          <span class="text-accent font-bold">от 4 500 ₽</span>
+          <span class="text-xs text-ink/40">60 мин</span>
+        </div>
+      </div>
+      <div class="reveal group bg-white p-7 border-l-2 border-transparent hover:border-accent transition-all duration-200">
+        <span class="font-display text-3xl text-accent/40 group-hover:text-accent transition-colors">09</span>
+        <h3 class="text-lg font-bold mt-3">Рентгенография</h3>
+        <p class="text-sm text-ink/60 mt-2 leading-relaxed">Прицельные и панорамные снимки на месте — без направления в другую клинику.</p>
+        <div class="flex items-center justify-between mt-5 pt-4 border-t border-ink/10">
+          <span class="text-accent font-bold">от 500 ₽</span>
+          <span class="text-xs text-ink/40">5–10 мин</span>
+        </div>
+      </div>
+      <div class="reveal group bg-white p-7 border-l-2 border-transparent hover:border-accent transition-all duration-200 md:col-span-2 lg:col-span-1">
+        <span class="font-display text-3xl text-accent/40 group-hover:text-accent transition-colors">10</span>
+        <h3 class="text-lg font-bold mt-3">Френулопластика</h3>
+        <p class="text-sm text-ink/60 mt-2 leading-relaxed">Коррекция уздечки губы и языка у детей и взрослых.</p>
+        <div class="flex items-center justify-between mt-5 pt-4 border-t border-ink/10">
+          <span class="text-accent font-bold">от 4 000 ₽</span>
+          <span class="text-xs text-ink/40">30 мин</span>
+        </div>
+      </div>
+      <!-- inline CTA cell -->
+      <div class="bg-primary p-7 flex flex-col justify-center text-white lg:col-span-2">
+        <h3 class="font-display text-2xl md:text-3xl font-semibold leading-snug">Не нашли нужную услугу?</h3>
+        <p class="text-white/70 text-sm mt-2">Запишитесь на бесплатную консультацию — врач осмотрит и назовёт стоимость до начала лечения.</p>
+        <a href="#cta_appointment" class="btn-cta mt-5 self-start inline-flex items-center gap-2 bg-accent text-primary font-semibold px-6 py-3 rounded-sm hover:bg-white transition-colors duration-200">Записаться на консультацию</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CLINIC (dark) ================= -->
+<section id="clinic" class="relative py-16 md:py-28 bg-primary text-white grain overflow-hidden">
+  <span class="absolute -left-8 top-4 font-display text-[20vw] leading-none text-white/[0.04] select-none pointer-events-none">01</span>
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div class="order-2 lg:order-1">
+      <img src="https://images.pexels.com/photos/10049938/pexels-photo-10049938.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+           alt="Стоматологический кабинет клиники Премиум в Зюзино" loading="lazy"
+           class="w-full aspect-[4/3] object-cover rounded-sm">
+    </div>
+    <div class="order-1 lg:order-2">
+      <span class="text-xs uppercase tracking-[0.3em] text-accent font-semibold">О клинике</span>
+      <h2 class="font-display text-4xl md:text-6xl font-semibold mt-3 leading-tight">Клиника Премиум в&nbsp;Зюзино</h2>
+      <p class="text-white/75 mt-5 leading-relaxed">Принимаем на Болотниковской улице рядом с метро Севастопольская и Каховская. Полный спектр стоматологических услуг: от профилактики до имплантации и ортодонтии. Работаем для жителей Зюзино, Черёмушек и Котловки.</p>
+
+      <div class="grid grid-cols-3 gap-px bg-white/10 border border-white/10 mt-8">
+        <div class="bg-primary p-4 text-center">
+          <div class="font-display text-3xl md:text-4xl text-accent font-semibold">31</div>
+          <div class="text-[11px] text-white/60 mt-1 leading-tight">Отзывов на Яндекс.Картах</div>
+        </div>
+        <div class="bg-primary p-4 text-center">
+          <div class="font-display text-3xl md:text-4xl text-accent font-semibold">4.4 ★</div>
+          <div class="text-[11px] text-white/60 mt-1 leading-tight">Средний рейтинг</div>
+        </div>
+        <div class="bg-primary p-4 text-center">
+          <div class="font-display text-3xl md:text-4xl text-accent font-semibold">2–5</div>
+          <div class="text-[11px] text-white/60 mt-1 leading-tight">Минут от метро пешком</div>
+        </div>
+      </div>
+
+      <ul class="mt-8 space-y-3">
+        <li class="flex gap-3 text-sm text-white/80"><span class="text-accent mt-0.5">✓</span> Дентальная рентгенография — прицельные и панорамные снимки на месте</li>
+        <li class="flex gap-3 text-sm text-white/80"><span class="text-accent mt-0.5">✓</span> Ультразвуковые скалеры и Air Flow для профессиональной гигиены</li>
+        <li class="flex gap-3 text-sm text-white/80"><span class="text-accent mt-0.5">✓</span> Инструментарий для эндодонтического лечения каналов</li>
+        <li class="flex gap-3 text-sm text-white/80"><span class="text-accent mt-0.5">✓</span> Фотополимерные лампы для световых пломб</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DOCTORS ================= -->
+<section id="doctors" class="py-16 md:py-28 bg-secondary">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+    <div class="max-w-2xl mb-12 md:mb-16">
+      <span class="text-xs uppercase tracking-[0.3em] text-accent font-semibold">Команда</span>
+      <h2 class="font-display text-4xl md:text-6xl font-semibold mt-3 leading-tight">Специалисты клиники</h2>
+      <p class="text-ink/60 mt-4 text-lg">Стоматологи с профильной специализацией ведут приём по записи.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- doctor 1 -->
+      <article class="reveal group bg-white rounded-sm overflow-hidden border border-ink/10">
+        <div class="relative overflow-hidden">
+          <img src="https://images.pexels.com/photos/32254667/pexels-photo-32254667.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+               alt="Казакова Ольга Викторовна — стоматолог-ортодонт" loading="lazy"
+               class="w-full aspect-[3/4] object-cover group-hover:scale-[1.03] transition-transform duration-300">
+          <span class="absolute top-3 left-3 bg-accent text-primary text-xs font-bold px-2.5 py-1 rounded-sm">24 года стажа</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-2xl font-semibold leading-tight">Казакова Ольга Викторовна</h3>
+          <p class="text-sm text-accent font-medium mt-2">Стоматолог-ортодонт, стоматолог</p>
+        </div>
+      </article>
+      <!-- doctor 2 -->
+      <article class="reveal group bg-white rounded-sm overflow-hidden border border-ink/10">
+        <div class="relative overflow-hidden">
+          <img src="https://images.pexels.com/photos/6129500/pexels-photo-6129500.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+               alt="Кахаров Азизбек Махмудович — стоматолог" loading="lazy"
+               class="w-full aspect-[3/4] object-cover group-hover:scale-[1.03] transition-transform duration-300">
+          <span class="absolute top-3 left-3 bg-accent text-primary text-xs font-bold px-2.5 py-1 rounded-sm">19 лет стажа</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-2xl font-semibold leading-tight">Кахаров Азизбек Махмудович</h3>
+          <p class="text-sm text-accent font-medium mt-2">Стоматолог</p>
+        </div>
+      </article>
+      <!-- doctor 3 -->
+      <article class="reveal group bg-white rounded-sm overflow-hidden border border-ink/10">
+        <div class="relative overflow-hidden">
+          <img src="https://images.pexels.com/photos/7904457/pexels-photo-7904457.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+               alt="Сатканова Татьяна Шайдулловна — стоматолог-ортопед, хирург" loading="lazy"
+               class="w-full aspect-[3/4] object-cover group-hover:scale-[1.03] transition-transform duration-300">
+          <span class="absolute top-3 left-3 bg-accent text-primary text-xs font-bold px-2.5 py-1 rounded-sm">25 лет стажа</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-2xl font-semibold leading-tight">Сатканова Татьяна Шайдулловна</h3>
+          <p class="text-sm text-accent font-medium mt-2">Стоматолог-ортопед, хирург</p>
+        </div>
+      </article>
+      <!-- doctor 4 -->
+      <article class="reveal group bg-white rounded-sm overflow-hidden border border-ink/10">
+        <div class="relative overflow-hidden">
+          <img src="https://images.pexels.com/photos/5234487/pexels-photo-5234487.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+               alt="Соловьева Екатерина Николаевна — стоматолог" loading="lazy"
+               class="w-full aspect-[3/4] object-cover group-hover:scale-[1.03] transition-transform duration-300">
+          <span class="absolute top-3 left-3 bg-accent text-primary text-xs font-bold px-2.5 py-1 rounded-sm">14 лет стажа</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-2xl font-semibold leading-tight">Соловьева Екатерина Николаевна</h3>
+          <p class="text-sm text-accent font-medium mt-2">Стоматолог</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ADVANTAGES ================= -->
+<section id="advantages" class="py-16 md:py-28 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+    <div class="max-w-2xl mb-12 md:mb-16">
+      <span class="text-xs uppercase tracking-[0.3em] text-accent font-semibold">Преимущества</span>
+      <h2 class="font-display text-4xl md:text-6xl font-semibold mt-3 leading-tight">Почему пациенты возвращаются</h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="reveal p-7 bg-secondary rounded-sm">
+        <div class="text-accent text-3xl">₽</div>
+        <h3 class="font-bold text-lg mt-4">Цена — до лечения, не после</h3>
+        <p class="text-sm text-ink/60 mt-2 leading-relaxed">Называем стоимость на консультации, никаких сюрпризов в счёте.</p>
+      </div>
+      <div class="reveal p-7 bg-secondary rounded-sm">
+        <div class="text-accent text-3xl">◷</div>
+        <h3 class="font-bold text-lg mt-4">Запись онлайн 24/7</h3>
+        <p class="text-sm text-ink/60 mt-2 leading-relaxed">Выбирайте удобное время через форму — без звонков и ожидания на линии.</p>
+      </div>
+      <div class="reveal p-7 bg-secondary rounded-sm">
+        <div class="text-accent text-3xl">⚲</div>
+        <h3 class="font-bold text-lg mt-4">2–5 минут от метро</h3>
+        <p class="text-sm text-ink/60 mt-2 leading-relaxed">Пешком от Севастопольской и Каховской — не нужна машина и парковка.</p>
+      </div>
+      <div class="reveal p-7 bg-secondary rounded-sm">
+        <div class="text-accent text-3xl">⛨</div>
+        <h3 class="font-bold text-lg mt-4">Безболезненное лечение</h3>
+        <p class="text-sm text-ink/60 mt-2 leading-relaxed">Современная анестезия — принимаем пациентов с дентофобией.</p>
+      </div>
+      <div class="reveal p-7 bg-secondary rounded-sm">
+        <div class="text-accent text-3xl">★</div>
+        <h3 class="font-bold text-lg mt-4">31 отзыв от соседей</h3>
+        <p class="text-sm text-ink/60 mt-2 leading-relaxed">Рейтинг 4.4 на Яндекс.Картах — проверенный выбор жителей Зюзино.</p>
+      </div>
+      <div class="reveal p-7 bg-secondary rounded-sm">
+        <div class="text-accent text-3xl">▭</div>
+        <h3 class="font-bold text-lg mt-4">Три способа оплаты</h3>
+        <p class="text-sm text-ink/60 mt-2 leading-relaxed">Наличные, банковская карта, QR СБП. Рассрочка — по договорённости.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICE ================= -->
+<section id="price" class="py-16 md:py-28 bg-secondary">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+    <div class="max-w-2xl mb-10 md:mb-14">
+      <span class="text-xs uppercase tracking-[0.3em] text-accent font-semibold">Прайс</span>
+      <h2 class="font-display text-4xl md:text-6xl font-semibold mt-3 leading-tight">Стоимость лечения</h2>
+      <p class="text-ink/60 mt-4 text-lg">Точная цена — после осмотра. Консультация бесплатно.</p>
+    </div>
+
+    <!-- tabs -->
+    <div class="flex flex-wrap gap-2 mb-8 border-b border-ink/10" id="price-tabs">
+      <button data-cat="0" class="price-tab active px-4 py-3 text-sm font-semibold border-b-2 -mb-px transition-colors">Терапия</button>
+      <button data-cat="1" class="price-tab px-4 py-3 text-sm font-semibold border-b-2 border-transparent text-ink/50 -mb-px transition-colors">Хирургия</button>
+      <button data-cat="2" class="price-tab px-4 py-3 text-sm font-semibold border-b-2 border-transparent text-ink/50 -mb-px transition-colors">Ортопедия</button>
+      <button data-cat="3" class="price-tab px-4 py-3 text-sm font-semibold border-b-2 border-transparent text-ink/50 -mb-px transition-colors">Ортодонтия</button>
+      <button data-cat="4" class="price-tab px-4 py-3 text-sm font-semibold border-b-2 border-transparent text-ink/50 -mb-px transition-colors">Гигиена и диагностика</button>
+    </div>
+
+    <div class="bg-white rounded-xl border border-ink/10 overflow-hidden">
+      <!-- cat 0 -->
+      <div class="price-panel" data-cat="0">
+        <div class="flex justify-between gap-4 px-5 md:px-8 py-4 border-b border-ink/5"><span>Консультация стоматолога</span><span class="font-semibold text-accent whitespace-nowrap">Бесплатно</span></div>
+        <div class="flex justify-between gap-4 px-5 md:px-8 py-4 border-b border-ink/5"><span>Лечение кариеса (1 поверхность)</span><span class="font-semibold text-accent whitespace-nowrap">от 2 500 ₽</span></div>
+        <div class="flex justify-between gap-4 px-5 md:px-8 py-4 border-b border-ink/5"><span>Лечение кариеса (2–3 поверхности)</span><span class="font-semibold text-accent whitespace-nowrap">от 4 000 ₽</span></div>
+        <div class="flex justify-between gap-4 px-5 md:px-8 py-4 border-b border-ink/5"><span>Лечение пульпита (1 канал)</span><span class="font-semibold text-accent whitespace-nowrap">от 6 000 ₽</span></div>
+        <div class="flex justify-between gap-4 px-5 md:px-8 py-4 border-b border-ink/5"><span>Лечение пульпита (3 канала)</span><span class="font-semibold text-accent whitespace-nowrap">от 12 000 ₽</span></div>
+        <div class="flex justify-between gap-4 px-5 md:px-8 py-4 border-b border-ink/5"><span>Художественная реставрация зуба</span><span class="font-semibold text-accent whitespace-nowrap">от 5 000 ₽</span></div>
+        <div class="flex justify-between gap-4 px-5 md:px-8 py-4"><span>Пломбирование (световая пломба)</span><span class="font-semibold text-accent whitespace-nowrap">от 2 500 ₽</span></div>
+      </div>
+      <!-- cat 1 -->
+      <div class="price-panel hidden" data-cat="1">
+        <div class="flex justify-between gap-4 px-5 md:px-8 py-4 border-b border-ink/5"><span>Удаление зуба (простое)</span><span class="font-semibold text-accent whitespace-nowrap">от 2 000 ₽</span></div>
+        <div class="flex justify-between gap-4 px-5 md:px-8 py-4 border-b border-ink/5"><span>Удаление зуба мудрости</span><span class="font-semibold text-accent whitespace-nowrap">от 5 500 ₽</span></div>
+        <div class="flex justify-between gap-4 px-5 md:px-8 py-4 border-b border-ink/5"><span>Имплантат (1 позиция)</span><span class="font-semibold text-accent whitespace-nowrap">от 35 000 ₽</span></div>
+        <div class="flex justify-between gap-4 px-5 md:px-8 py-4 border-b border-ink/5"><span>Коронка на имплантат</span><span class="font-semibold text-accent whitespace-nowrap">от 18 000 ₽</span></div>
+        <div class="flex justify-between gap-4 px-5 md:px-8 py-4"><span>Френулопластика</span><span class="font-semibold text-accent whitespace-nowrap">от 4 000 ₽</span></div>
+      </div>
+      <!-- cat 2 -->
+      <div class="price-panel hidden" data-cat="2">
+        <div class="flex justify-between gap-4 px-5 md:px-8 py-4 border-b border-ink/5"><span>Коронка металлокерамическая</span><span class="font-semibold text-accent whitespace-nowrap">от 8 000 ₽</span></div>
+        <div class="flex justify-between gap-4 px-5 md:px-8 py-4 border-b border-ink/5"><span>Коронка безметалловая (цирконий)</span><span class="font-semibold text-accent whitespace-nowrap">от 18 000 ₽</span></div>
+        <div class="flex justify-between gap-4 px-5 md:px-8 py-4 border-b border-ink/5"><span>Винир керамический</span><span class="font-semibold text-accent whitespace-nowrap">от 15 000 ₽</span></div>
+        <div class="flex justify-between gap-4 px-5 md:px-8 py-4 border-b border-ink/5"><span>Люминир</span><span class="font-semibold text-accent whitespace-nowrap">от 18 000 ₽</span></div>
+        <div class="flex justify-between gap-4 px-5 md:px-8 py-4"><span>Протез съёмный (акриловый)</span><span class="font-semibold text-accent whitespace-nowrap">от 22 000 ₽</span></div>
+      </div>
+      <!-- cat 3 -->
+      <div class="price-panel hidden" data-cat="3">
+        <div class="flex justify-between gap-4 px-5 md:px-8 py-4 border-b border-ink/5"><span>Консультация ортодонта</span><span class="font-semibold text-accent whitespace-nowrap">Бесплатно</span></div>
+        <div class="flex justify-between gap-4 px-5 md:px-8 py-4 border-b border-ink/5"><span>Металлические брекеты (одна челюсть)</span><span class="font-semibold text-accent whitespace-nowrap">от 27 500 ₽</span></div>
+        <div class="flex justify-between gap-4 px-5 md:px-8 py-4 border-b border-ink/5"><span>Керамические брекеты (одна челюсть)</span><span class="font-semibold text-accent whitespace-nowrap">от 42 000 ₽</span></div>
+        <div class="flex justify-between gap-4 px-5 md:px-8 py-4"><span>Ретейнер несъёмный</span><span class="font-semibold text-accent whitespace-nowrap">от 5 000 ₽</span></div>
+      </div>
+      <!-- cat 4 -->
+      <div class="price-panel hidden" data-cat="4">
+        <div class="flex justify-between gap-4 px-5 md:px-8 py-4 border-b border-ink/5"><span>Профчистка (ультразвук + Air Flow)</span><span class="font-semibold text-accent whitespace-nowrap">от 4 500 ₽</span></div>
+        <div class="flex justify-between gap-4 px-5 md:px-8 py-4 border-b border-ink/5"><span>Рентген прицельный</span><span class="font-semibold text-accent whitespace-nowrap">от 500 ₽</span></div>
+        <div class="flex justify-between gap-4 px-5 md:px-8 py-4"><span>Ортопантомограмма (панорама)</span><span class="font-semibold text-accent whitespace-nowrap">от 1 200 ₽</span></div>
+      </div>
+    </div>
+
+    <p class="text-xs text-ink/50 mt-5 max-w-3xl">Цены указаны в рублях и действительны на дату публикации. Точная стоимость определяется после осмотра врача.</p>
+    <div class="flex flex-wrap gap-2 mt-5">
+      <span class="text-xs bg-white border border-ink/10 px-3 py-1.5 rounded-sm">Наличные</span>
+      <span class="text-xs bg-white border border-ink/10 px-3 py-1.5 rounded-sm">Банковская карта (Visa/МС/МИР)</span>
+      <span class="text-xs bg-white border border-ink/10 px-3 py-1.5 rounded-sm">QR-оплата СБП</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REVIEWS ================= -->
+<section id="reviews" class="py-16 md:py-28 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12 md:mb-16">
+      <div>
+        <span class="text-xs uppercase tracking-[0.3em] text-accent font-semibold">Отзывы</span>
+        <h2 class="font-display text-4xl md:text-6xl font-semibold mt-3 leading-tight">Отзывы пациентов</h2>
+        <p class="text-ink/60 mt-4 text-lg">31 отзыв на Яндекс.Картах, средняя оценка 4.4</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <figure class="reveal bg-secondary p-7 rounded-sm flex flex-col">
+        <div class="text-accent text-lg">★★★★★</div>
+        <blockquote class="text-ink/80 mt-4 leading-relaxed flex-grow">«Хожу третий год — и сама, и муж. Врач объясняет что делает, цены называет до процедуры. Запись онлайн теперь — очень удобно.»</blockquote>
+        <figcaption class="mt-5 font-semibold">Марина К.</figcaption>
+      </figure>
+      <figure class="reveal bg-secondary p-7 rounded-sm flex flex-col">
+        <div class="text-accent text-lg">★★★★★</div>
+        <blockquote class="text-ink/80 mt-4 leading-relaxed flex-grow">«Удалял зуб мудрости. Боялся, но анестезия сработала — не чувствовал почти ничего. Через день уже забыл.»</blockquote>
+        <figcaption class="mt-5 font-semibold">Дмитрий Л.</figcaption>
+      </figure>
+      <figure class="reveal bg-secondary p-7 rounded-sm flex flex-col">
+        <div class="text-accent text-lg">★★★★<span class="text-ink/20">★</span></div>
+        <blockquote class="text-ink/80 mt-4 leading-relaxed flex-grow">«Делала чистку и пломбы. Клиника чистая, оборудование нормальное. Результатом довольна.»</blockquote>
+        <figcaption class="mt-5 font-semibold">Светлана П.</figcaption>
+      </figure>
+      <figure class="reveal bg-secondary p-7 rounded-sm flex flex-col">
+        <div class="text-accent text-lg">★★★★<span class="text-ink/20">★</span></div>
+        <blockquote class="text-ink/80 mt-4 leading-relaxed flex-grow">«Живу на Болотниковской — удобно зайти после работы. Очереди не было, приняли в назначенное время.»</blockquote>
+        <figcaption class="mt-5 font-semibold">Алексей В.</figcaption>
+      </figure>
+      <figure class="reveal bg-secondary p-7 rounded-sm flex flex-col">
+        <div class="text-accent text-lg">★★★★★</div>
+        <blockquote class="text-ink/80 mt-4 leading-relaxed flex-grow">«Лечили кариес ребёнку 8 лет. Врач нашла подход, ребёнок не плакал. Спасибо за терпение.»</blockquote>
+        <figcaption class="mt-5 font-semibold">Ольга Н.</figcaption>
+      </figure>
+      <div class="reveal bg-primary p-7 rounded-sm flex flex-col justify-center text-white">
+        <div class="font-display text-5xl font-semibold text-accent">4.4 ★</div>
+        <p class="text-white/70 text-sm mt-3">Отзывы с Яндекс.Карт</p>
+        <a href="#cta_appointment" class="btn-cta mt-5 self-start inline-flex items-center gap-2 border border-white/30 text-white font-medium px-5 py-2.5 rounded-sm hover:border-accent hover:text-accent transition-colors">Читать все отзывы на Яндекс.Картах</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CERTIFICATES ================= -->
+<section id="certificates_licenses" class="py-16 md:py-28 bg-secondary">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+    <div class="max-w-2xl mb-12 md:mb-16">
+      <span class="text-xs uppercase tracking-[0.3em] text-accent font-semibold">Документы</span>
+      <h2 class="font-display text-4xl md:text-6xl font-semibold mt-3 leading-tight">Документы и лицензии</h2>
+      <p class="text-ink/60 mt-4 text-lg">Клиника работает на основании медицинской лицензии Департамента здравоохранения Москвы.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="reveal flex gap-5 bg-white p-6 rounded-sm border border-ink/10">
+        <div class="shrink-0 w-24 h-32 bg-primary/5 border border-accent/30 rounded-sm flex items-center justify-center text-accent text-3xl">⛨</div>
+        <div>
+          <h3 class="font-bold text-lg">Лицензия на медицинскую деятельность</h3>
+          <p class="text-xs text-accent font-medium mt-1">Департамент здравоохранения г. Москвы</p>
+          <p class="text-sm text-ink/60 mt-3 leading-relaxed">Разрешает оказание стоматологических услуг населению.</p>
+        </div>
+      </div>
+      <div class="reveal flex gap-5 bg-white p-6 rounded-sm border border-ink/10">
+        <div class="shrink-0 w-24 h-32 bg-primary/5 border border-accent/30 rounded-sm flex items-center justify-center text-accent text-3xl">✓</div>
+        <div>
+          <h3 class="font-bold text-lg">Сертификаты врачей-специалистов</h3>
+          <p class="text-xs text-accent font-medium mt-1">Профильные медицинские учреждения</p>
+          <p class="text-sm text-ink/60 mt-3 leading-relaxed">Сертификаты по терапии, хирургии и ортопедии — по одному документу на специалиста.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CLINIC PHOTO ================= -->
+<section id="clinic_photo" class="py-16 md:py-28 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+    <div class="max-w-2xl mb-12 md:mb-16">
+      <span class="text-xs uppercase tracking-[0.3em] text-accent font-semibold">Фотогалерея</span>
+      <h2 class="font-display text-4xl md:text-6xl font-semibold mt-3 leading-tight">Наша клиника</h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+      <figure class="reveal relative group overflow-hidden rounded-sm md:row-span-2">
+        <img src="https://avatars.mds.yandex.net/get-altay/1363250/2a00000163e3c73723577f96b7050c70c2b7/XXXL"
+             alt="Ресепшн и зона ожидания клиники Премиум" loading="lazy"
+             class="w-full h-full object-cover aspect-[3/4] md:aspect-auto md:min-h-full group-hover:scale-[1.03] transition-transform duration-300">
+        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent text-white text-xs p-3">Ресепшн и зона ожидания</figcaption>
+      </figure>
+      <figure class="reveal relative group overflow-hidden rounded-sm">
+        <img src="https://avatars.mds.yandex.net/get-altay/1007647/2a00000163e3c739acd2996c6c87e40a7b6f/XXXL"
+             alt="Стоматологический кабинет" loading="lazy"
+             class="w-full object-cover aspect-square group-hover:scale-[1.03] transition-transform duration-300">
+        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent text-white text-xs p-3">Стоматологический кабинет</figcaption>
+      </figure>
+      <figure class="reveal relative group overflow-hidden rounded-sm">
+        <img src="https://avatars.mds.yandex.net/get-altay/1363250/2a00000163e3c73ffdf3d50b5a9d6256bcc3/XXXL"
+             alt="Кресло и операционное освещение" loading="lazy"
+             class="w-full object-cover aspect-square group-hover:scale-[1.03] transition-transform duration-300">
+        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent text-white text-xs p-3">Кресло и операционное освещение</figcaption>
+      </figure>
+      <figure class="reveal relative group overflow-hidden rounded-sm md:col-span-2">
+        <img src="https://avatars.mds.yandex.net/get-altay/906486/2a00000163e3c7403de33e3dce7cefe29845/XXXL"
+             alt="Фасад, вход с Болотниковской, 31 корп. 1" loading="lazy"
+             class="w-full object-cover aspect-video group-hover:scale-[1.03] transition-transform duration-300">
+        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent text-white text-xs p-3">Фасад, вход с Болотниковской, 31 корп. 1</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA APPOINTMENT ================= -->
+<section id="cta_appointment" class="relative py-16 md:py-28 bg-primary text-white grain overflow-hidden">
+  <span class="absolute -right-10 top-6 font-display text-[24vw] leading-none text-white/[0.04] select-none pointer-events-none">✎</span>
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+    <div>
+      <span class="text-xs uppercase tracking-[0.3em] text-accent font-semibold">Запись</span>
+      <h2 class="font-display text-4xl md:text-6xl font-semibold mt-3 leading-tight">Запишитесь на консультацию</h2>
+      <p class="text-white/75 mt-5 leading-relaxed max-w-md">Бесплатная консультация — врач осмотрит, объяснит ситуацию и назовёт стоимость до лечения.</p>
+      <ul class="mt-8 space-y-3">
+        <li class="flex gap-3 text-white/85"><span class="text-accent">✓</span> Консультация бесплатно</li>
+        <li class="flex gap-3 text-white/85"><span class="text-accent">✓</span> Ответим в течение часа в рабочее время</li>
+        <li class="flex gap-3 text-white/85"><span class="text-accent">✓</span> Выберем удобный день и время</li>
+      </ul>
+      <div class="mt-8 pt-8 border-t border-white/10">
+        <p class="text-sm text-white/60">Или позвоните прямо сейчас</p>
+        <a href="tel:+74993175833" class="font-display text-3xl md:text-4xl font-semibold text-accent hover:text-white transition-colors">+7 (499) 317-58-33</a>
+      </div>
+    </div>
+
+    <div class="bg-white text-ink p-6 md:p-8 rounded-xl">
+      <form id="appointment-form" class="space-y-5" novalidate>
+        <div>
+          <label for="name" class="block text-sm font-medium mb-1.5">Ваше имя</label>
+          <input id="name" name="name" type="text" required placeholder="Иван"
+                 class="w-full border border-ink/20 rounded-sm px-4 py-3 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent">
+        </div>
+        <div>
+          <label for="phone" class="block text-sm font-medium mb-1.5">Телефон</label>
+          <input id="phone" name="phone" type="tel" required placeholder="+7 (___) ___-__-__"
+                 class="w-full border border-ink/20 rounded-sm px-4 py-3 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent">
+        </div>
+        <div>
+          <label for="service" class="block text-sm font-medium mb-1.5">Услуга (необязательно)</label>
+          <select id="service" name="service"
+                  class="w-full border border-ink/20 rounded-sm px-4 py-3 bg-white focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent">
+            <option value="">Выберите услугу</option>
+            <option>Консультация</option>
+            <option>Лечение кариеса</option>
+            <option>Имплантация</option>
+            <option>Протезирование</option>
+            <option>Ортодонтия</option>
+            <option>Гигиена полости рта</option>
+            <option>Удаление зуба</option>
+            <option>Другое</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-cta w-full bg-primary text-white font-semibold py-4 rounded-sm hover:bg-accent hover:text-primary transition-colors duration-200">
+          Записаться бесплатно
+        </button>
+        <p class="text-xs text-ink/50">Нажимая «Записаться», вы соглашаетесь с обработкой персональных данных.</p>
+      </form>
+      <div id="form-success" class="hidden text-center py-10">
+        <div class="text-accent text-5xl mb-4">✓</div>
+        <p class="font-display text-2xl font-semibold">Заявка принята!</p>
+        <p class="text-ink/60 mt-2">Перезвоним в течение часа в рабочее время.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACTS / MAP ================= -->
+<section id="contacts_map" class="py-16 md:py-28 bg-secondary">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+    <div class="max-w-2xl mb-12 md:mb-16">
+      <span class="text-xs uppercase tracking-[0.3em] text-accent font-semibold">Контакты</span>
+      <h2 class="font-display text-4xl md:text-6xl font-semibold mt-3 leading-tight">Как нас найти</h2>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div class="space-y-8">
+        <div>
+          <p class="text-xs uppercase tracking-widest text-ink/40 mb-1">Телефон</p>
+          <a href="tel:+74993175833" class="font-display text-3xl font-semibold hover:text-accent transition-colors">+7 (499) 317-58-33</a>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-widest text-ink/40 mb-1">Адрес</p>
+          <p class="text-lg">Болотниковская ул., 31, корп. 1, Москва</p>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-widest text-ink/40 mb-2">Часы работы</p>
+          <div class="space-y-1 text-sm">
+            <div class="flex justify-between border-b border-ink/10 py-1.5"><span>Понедельник–Пятница</span><span class="font-medium">09:00–20:00</span></div>
+            <div class="flex justify-between border-b border-ink/10 py-1.5"><span>Суббота</span><span class="font-medium">10:00–18:00</span></div>
+            <div class="flex justify-between py-1.5"><span>Воскресенье</span><span class="font-medium text-ink/40">Выходной</span></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-widest text-ink/40 mb-2">От метро пешком</p>
+          <ul class="space-y-1.5 text-sm">
+            <li class="flex gap-2"><span class="text-accent">⚲</span> Севастопольская — 2–3 мин пешком</li>
+            <li class="flex gap-2"><span class="text-accent">⚲</span> Каховская — 4–5 мин пешком</li>
+            <li class="flex gap-2"><span class="text-accent">⚲</span> Нахимовский проспект — 10 мин пешком</li>
+          </ul>
+          <p class="text-sm text-ink/60 mt-3 leading-relaxed">Выйти на станции Севастопольская, идти по Болотниковской улице в сторону чётных номеров. Корп. 1 — первый жилой дом после перекрёстка.</p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs bg-white border border-ink/10 px-3 py-1.5 rounded-sm">Наличные</span>
+          <span class="text-xs bg-white border border-ink/10 px-3 py-1.5 rounded-sm">Банковская карта (Visa/МС/МИР)</span>
+          <span class="text-xs bg-white border border-ink/10 px-3 py-1.5 rounded-sm">QR СБП</span>
+        </div>
+        <p class="text-sm text-ink/50">Вход без ступеней уточните по телефону перед визитом.</p>
+      </div>
+      <div class="min-h-[320px] lg:min-h-full rounded-xl overflow-hidden border border-ink/10">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?text=Болотниковская%20улица%2C%2031%20корпус%201%2C%20Москва&z=17"
+          width="100%" height="100%" frameborder="0" loading="lazy"
+          title="Карта: Болотниковская ул., 31, корп. 1, Москва"
+          class="w-full h-full min-h-[320px]"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-primary text-white/70 pt-16 pb-28 md:pb-12 mt-0 grain relative">
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+    <div class="flex flex-col md:flex-row justify-between gap-8 border-b border-white/10 pb-10">
+      <div>
+        <span class="font-display text-3xl font-semibold text-white">Премиум</span>
+        <p class="text-sm mt-3 max-w-xs">Стоматология в Зюзино у метро Севастопольская и Каховская. Полный спектр услуг для жителей района.</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-10">
+        <div>
+          <p class="text-white text-sm font-semibold mb-3">Навигация</p>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#services" class="hover:text-accent transition-colors">Услуги</a></li>
+            <li><a href="#doctors" class="hover:text-accent transition-colors">Врачи</a></li>
+            <li><a href="#price" class="hover:text-accent transition-colors">Цены</a></li>
+            <li><a href="#reviews" class="hover:text-accent transition-colors">Отзывы</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-white text-sm font-semibold mb-3">Контакты</p>
+          <ul class="space-y-2 text-sm">
+            <li><a href="tel:+74993175833" class="hover:text-accent transition-colors">+7 (499) 317-58-33</a></li>
+            <li>Болотниковская ул., 31, корп. 1</li>
+            <li>Пн–Пт 09:00–20:00, Сб 10:00–18:00</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="text-xs text-white/40 mt-6">© 2026 Стоматология «Премиум», Зюзино, Москва. Имеется медицинская лицензия. Имеются противопоказания, необходима консультация специалиста.</p>
+  </div>
+</footer>
+
+<!-- ================= STICKY MOBILE CTA ================= -->
+<div id="sticky-cta" class="fixed bottom-0 inset-x-0 z-50 sm:hidden bg-primary border-t border-white/10 p-3 grid grid-cols-2 gap-3 transition-transform duration-300">
+  <a href="tel:+74993175833" class="flex items-center justify-center gap-2 border border-white/30 text-white font-medium py-3 rounded-sm text-sm">Позвонить</a>
+  <a href="#cta_appointment" class="flex items-center justify-center gap-2 bg-accent text-primary font-semibold py-3 rounded-sm text-sm">Записаться</a>
+</div>
+
+<script>
+  // header bg on scroll
+  const header = document.getElementById('site-header');
+  const onScroll = () => {
+    if (window.scrollY > 40) {
+      header.classList.add('bg-primary','shadow-lg');
+    } else {
+      header.classList.remove('bg-primary','shadow-lg');
+    }
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // sticky mobile CTA: hide near hero (top), show after scroll
+  const sticky = document.getElementById('sticky-cta');
+  let lastY = window.scrollY;
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (y < 500) {
+      sticky.style.transform = 'translateY(100%)'; // hidden over hero
+    } else if (y > lastY) {
+      sticky.style.transform = 'translateY(0)';    // scroll down -> show
+    } else {
+      sticky.style.transform = 'translateY(0)';
+    }
+    lastY = y;
+  }, { passive: true });
+
+  // price tabs
+  const tabs = document.querySelectorAll('.price-tab');
+  const panels = document.querySelectorAll('.price-panel');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const cat = tab.dataset.cat;
+      tabs.forEach(t => {
+        t.classList.remove('active','text-ink/50','border-transparent');
+        if (t === tab) { t.classList.add('active'); }
+        else { t.classList.add('text-ink/50','border-transparent'); }
+      });
+      panels.forEach(p => p.classList.toggle('hidden', p.dataset.cat !== cat));
+    });
+  });
+  // active tab styles
+  const style = document.createElement('style');
+  style.textContent = '.price-tab.active{color:#0E3A4F;border-color:#D69A4C;}';
+  document.head.appendChild(style);
+
+  // form submit
+  const form = document.getElementById('appointment-form');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = form.name.value.trim();
+    const phone = form.phone.value.trim();
+    if (!name || !phone) {
+      if (!name) form.name.focus();
+      else form.phone.focus();
+      return;
+    }
+    form.classList.add('hidden');
+    document.getElementById('form-success').classList.remove('hidden');
+  });
+
+  // GSAP reveal
+  if (window.gsap) {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray('.reveal').forEach((el) => {
+      gsap.to(el, {
+        opacity: 1, y: 0, duration: 0.7, ease: 'power2.out',
+        scrollTrigger: { trigger: el, start: 'top 88%' }
+      });
+    });
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => { el.style.opacity = 1; el.style.transform = 'none'; });
+  }
+</script>
+</body>
+</html>

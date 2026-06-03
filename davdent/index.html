@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Стоматология ДавДент — Жулебино, Москва | Запись в день обращения</title>
+  <meta name="description" content="Частная стоматология в Жулебино, Москва. Рейтинг 5,0 — 121 отзыв. Лечение, имплантация, протезирование, детский приём. Запись в день: +7 (910) 435-66-44.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            terracotta: '#A0522D',
+            cream: '#FDF6F0',
+            coral: '#E07B5A',
+            ink: '#1C1A18',
+            espresso: '#2A1810',
+            gold: '#C9A24B',
+            navy: '#102A43',
+            sand: '#F5F2EC'
+          },
+          fontFamily: {
+            display: ['Fraunces', 'serif'],
+            sans: ['Manrope', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background:#FDF6F0; color:#1C1A18; }
+    .grain::before{
+      content:""; position:absolute; inset:0; pointer-events:none; opacity:.05;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .reveal{opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease;}
+    .reveal.in{opacity:1; transform:none;}
+    .bignum{font-family:'Fraunces',serif; line-height:.8;}
+    details>summary{list-style:none; cursor:pointer;}
+    details>summary::-webkit-details-marker{display:none;}
+    details[open] .faq-plus{transform:rotate(45deg);}
+  </style>
+</head>
+
+<body class="font-sans antialiased overflow-x-hidden">
+
+  <!-- NAV -->
+  <header class="fixed top-0 inset-x-0 z-40 bg-cream/85 backdrop-blur-md border-b border-terracotta/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 h-16 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-2 font-display font-600 text-lg text-espresso tracking-tight">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-terracotta text-cream font-700">Д</span>
+        ДавДент
+      </a>
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-500 text-ink/70">
+        <a href="#services" class="hover:text-terracotta transition-colors">Услуги</a>
+        <a href="#prices" class="hover:text-terracotta transition-colors">Цены</a>
+        <a href="#doctors" class="hover:text-terracotta transition-colors">Врачи</a>
+        <a href="#reviews" class="hover:text-terracotta transition-colors">Отзывы</a>
+        <a href="#contacts_map" class="hover:text-terracotta transition-colors">Контакты</a>
+      </nav>
+      <a href="tel:+79104356644" class="hidden sm:inline-flex items-center gap-2 text-sm font-600 text-espresso hover:text-terracotta transition-colors">
+        +7 (910) 435-66-44
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="relative grain min-h-[92vh] flex items-end overflow-hidden bg-espresso">
+    <img src="https://avatars.mds.yandex.net/get-altay/9954022/2a0000018900d3bdf525f2a549e21d073a03/XXXL"
+         alt="Светлый стоматологический кабинет клиники ДавДент в Жулебино" fetchpriority="high"
+         class="absolute inset-0 h-full w-full object-cover opacity-45">
+    <div class="absolute inset-0 bg-gradient-to-t from-espresso via-espresso/80 to-espresso/30"></div>
+
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 md:px-8 pb-16 pt-28 md:pb-24 w-full">
+      <span class="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 text-xs sm:text-sm font-600 text-gold mb-6">
+        ⭐ 5,0 — 121 отзыв на Яндекс.Картах
+      </span>
+      <h1 class="font-display font-600 text-cream leading-tight break-words tracking-tight text-[clamp(2.1rem,7vw,5rem)] max-w-4xl">
+        Стоматология в&nbsp;Жулебино — <span class="text-coral italic">рейтинг&nbsp;5&nbsp;звёзд</span>
+      </h1>
+      <p class="mt-6 max-w-2xl text-cream/80 text-base sm:text-lg leading-relaxed">
+        Запись в&nbsp;день обращения, прозрачный прайс, 121&nbsp;отзыв от&nbsp;соседей — частная клиника на&nbsp;ул.&nbsp;Генерала&nbsp;Кузнецова.
+      </p>
+
+      <div class="mt-9 flex flex-col sm:flex-row gap-3 sm:gap-4">
+        <a href="#form" class="cta inline-flex justify-center items-center rounded-full bg-coral px-8 py-4 font-600 text-espresso shadow-lg shadow-coral/20 hover:bg-gold transition-colors duration-200">
+          Записаться онлайн
+        </a>
+        <a href="tel:+79104356644" class="cta inline-flex justify-center items-center gap-2 rounded-full border border-cream/30 px-8 py-4 font-600 text-cream hover:bg-cream/10 transition-colors duration-200">
+          Позвонить
+        </a>
+      </div>
+
+      <div class="mt-12 flex flex-wrap gap-x-8 gap-y-3 text-sm text-cream/70">
+        <span class="flex items-center gap-2"><span class="text-gold">●</span> Запись в день обращения</span>
+        <span class="flex items-center gap-2"><span class="text-gold">●</span> Рядом с метро Жулебино</span>
+        <span class="flex items-center gap-2"><span class="text-gold">●</span> Бесплатная консультация</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADVANTAGES -->
+  <section id="advantages" class="py-16 md:py-28 bg-cream">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+      <div class="max-w-3xl mb-12 md:mb-16 reveal">
+        <p class="text-sm font-600 uppercase tracking-widest text-terracotta mb-3">Почему мы</p>
+        <h2 class="font-display font-600 text-espresso tracking-tight text-3xl md:text-5xl leading-tight">
+          Почему Жулебино выбирает ДавДент
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
+        <!-- 01 -->
+        <article class="reveal group relative rounded-xl border border-terracotta/15 bg-white p-7 hover:border-coral/40 transition-colors">
+          <span class="bignum block text-5xl text-terracotta/15 mb-4">01</span>
+          <h3 class="font-display font-600 text-xl text-espresso mb-2">Рейтинг 5,0 — 121 отзыв</h3>
+          <p class="text-sm leading-relaxed text-ink/70">Самый высокий рейтинг среди стоматологий района по данным Яндекс.Карт — каждый отзыв от реального соседа.</p>
+        </article>
+        <article class="reveal group relative rounded-xl border border-terracotta/15 bg-white p-7 hover:border-coral/40 transition-colors">
+          <span class="bignum block text-5xl text-terracotta/15 mb-4">02</span>
+          <h3 class="font-display font-600 text-xl text-espresso mb-2">Запись в день обращения</h3>
+          <p class="text-sm leading-relaxed text-ink/70">Острая боль не ждёт: звоните — назначаем приём сегодня, без листа ожидания на неделю.</p>
+        </article>
+        <article class="reveal group relative rounded-xl border border-terracotta/15 bg-white p-7 hover:border-coral/40 transition-colors">
+          <span class="bignum block text-5xl text-terracotta/15 mb-4">03</span>
+          <h3 class="font-display font-600 text-xl text-espresso mb-2">Цена — до лечения, не после</h3>
+          <p class="text-sm leading-relaxed text-ink/70">Говорим стоимость до того, как вы сели в кресло. Никаких доплат за «обнаружили ещё одну проблему».</p>
+        </article>
+        <article class="reveal group relative rounded-xl border border-terracotta/15 bg-white p-7 hover:border-coral/40 transition-colors">
+          <span class="bignum block text-5xl text-terracotta/15 mb-4">04</span>
+          <h3 class="font-display font-600 text-xl text-espresso mb-2">Частная клиника, не сеть</h3>
+          <p class="text-sm leading-relaxed text-ink/70">Врачи помнят вас по имени и истории болезни — без перекидывания между дежурантами.</p>
+        </article>
+        <article class="reveal group relative rounded-xl border border-terracotta/15 bg-white p-7 hover:border-coral/40 transition-colors">
+          <span class="bignum block text-5xl text-terracotta/15 mb-4">05</span>
+          <h3 class="font-display font-600 text-xl text-espresso mb-2">Семейный приём</h3>
+          <p class="text-sm leading-relaxed text-ink/70">Принимаем взрослых и детей — одна клиника для всей семьи рядом с домом.</p>
+        </article>
+        <article class="reveal group relative rounded-xl bg-espresso p-7 text-cream">
+          <span class="bignum block text-5xl text-gold/40 mb-4">06</span>
+          <h3 class="font-display font-600 text-xl mb-2">Бесплатная консультация</h3>
+          <p class="text-sm leading-relaxed text-cream/75">Первый визит: осмотр и план лечения бесплатно, без обязательств.</p>
+        </article>
+      </div>
+
+      <div class="mt-12 reveal">
+        <a href="#form" class="cta inline-flex items-center gap-2 rounded-full bg-terracotta px-8 py-4 font-600 text-cream hover:bg-espresso transition-colors duration-200">
+          Записаться на бесплатную консультацию →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-16 md:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 md:mb-16 reveal">
+        <div class="max-w-2xl">
+          <p class="text-sm font-600 uppercase tracking-widest text-terracotta mb-3">Услуги</p>
+          <h2 class="font-display font-600 text-espresso tracking-tight text-3xl md:text-5xl leading-tight">Все направления стоматологии</h2>
+          <p class="mt-4 text-ink/70">Лечение, протезирование, эстетика — под одной крышей рядом с домом.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <!-- with images -->
+        <article class="reveal rounded-xl overflow-hidden border border-terracotta/15 bg-cream flex flex-col">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1551601651-71a596031b84?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5Mzk2ODR8MHwxfHNlYXJjaHwxfHxkZW50aXN0JTIwcGVyZm9ybWluZyUyMGNsZWFuaW5nJTIwcGF0aWVudHxlbnwxfDJ8fHwxNzgwNDUwMzk3fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Лечение кариеса в клинике ДавДент" class="aspect-[4/3] w-full object-cover">
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-display font-600 text-lg text-espresso">Терапия и лечение кариеса</h3>
+            <p class="mt-2 text-sm text-ink/65 leading-relaxed flex-1">Лечение кариеса, пломбирование световыми и фотополимерными материалами.</p>
+            <span class="mt-4 font-600 text-terracotta">от 3 500 ₽</span>
+          </div>
+        </article>
+
+        <article class="reveal rounded-xl overflow-hidden border border-terracotta/15 bg-cream flex flex-col">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1551601651-71a596031b84?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5Mzk2ODR8MHwxfHNlYXJjaHwxfHxkZW50YWwlMjByZXN0b3JhdGlvbiUyMGRlbnRpc3QlMjBoYW5kc3xlbnwxfDJ8fHwxNzgwNDUwMzk4fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Эстетическая реставрация зубов" class="aspect-[4/3] w-full object-cover">
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-display font-600 text-lg text-espresso">Эстетическая стоматология</h3>
+            <p class="mt-2 text-sm text-ink/65 leading-relaxed flex-1">Реставрация зубов, художественная облицовка, отбеливание.</p>
+            <span class="mt-4 font-600 text-terracotta">от 5 000 ₽</span>
+          </div>
+        </article>
+
+        <article class="reveal rounded-xl overflow-hidden border border-terracotta/15 bg-cream flex flex-col">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1776400985210-92f654712d30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5Mzk2ODR8MHwxfHNlYXJjaHwxfHxwYXRpZW50JTIwaGFwcHklMjBzbWlsZSUyMGFmdGVyfGVufDF8Mnx8fDE3ODA0NTAzOTh8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Профессиональная гигиена полости рта" class="aspect-[4/3] w-full object-cover">
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-display font-600 text-lg text-espresso">Гигиена полости рта</h3>
+            <p class="mt-2 text-sm text-ink/65 leading-relaxed flex-1">Профессиональная чистка Air Flow, ультразвук, полировка — каждые 6 месяцев.</p>
+            <span class="mt-4 font-600 text-terracotta">от 5 000 ₽</span>
+          </div>
+        </article>
+
+        <!-- text cards -->
+        <article class="reveal rounded-xl bg-espresso p-6 flex flex-col text-cream">
+          <h3 class="font-display font-600 text-lg">Имплантация зубов</h3>
+          <p class="mt-2 text-sm text-cream/70 leading-relaxed flex-1">Установка импланта с последующим протезированием — постоянное решение вместо съёмных протезов.</p>
+          <span class="mt-4 font-600 text-gold">от 45 000 ₽</span>
+        </article>
+
+        <article class="reveal rounded-xl border border-terracotta/15 bg-cream p-6 flex flex-col">
+          <h3 class="font-display font-600 text-lg text-espresso">Хирургия и удаление зубов</h3>
+          <p class="mt-2 text-sm text-ink/65 leading-relaxed flex-1">Простое и сложное удаление, включая ретинированные и дистопированные зубы.</p>
+          <span class="mt-4 font-600 text-terracotta">от 2 500 ₽</span>
+        </article>
+
+        <article class="reveal rounded-xl border border-terracotta/15 bg-cream p-6 flex flex-col">
+          <h3 class="font-display font-600 text-lg text-espresso">Протезирование и коронки</h3>
+          <p class="mt-2 text-sm text-ink/65 leading-relaxed flex-1">Металлокерамические и цельнокерамические коронки, мостовидные протезы.</p>
+          <span class="mt-4 font-600 text-terracotta">от 8 000 ₽</span>
+        </article>
+
+        <article class="reveal rounded-xl border border-terracotta/15 bg-cream p-6 flex flex-col">
+          <h3 class="font-display font-600 text-lg text-espresso">Эндодонтия (лечение каналов)</h3>
+          <p class="mt-2 text-sm text-ink/65 leading-relaxed flex-1">Лечение каналов, пульпита и периодонтита — под контролем современного оборудования.</p>
+          <span class="mt-4 font-600 text-terracotta">от 6 000 ₽</span>
+        </article>
+
+        <article class="reveal rounded-xl border border-terracotta/15 bg-cream p-6 flex flex-col">
+          <h3 class="font-display font-600 text-lg text-espresso">Лечение дёсен</h3>
+          <p class="mt-2 text-sm text-ink/65 leading-relaxed flex-1">Терапия гингивита и пародонтита, снятие зубного камня, закрытый кюретаж.</p>
+          <span class="mt-4 font-600 text-terracotta">от 2 000 ₽</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOCTORS (dark band) -->
+  <section id="doctors" class="relative grain py-16 md:py-28 bg-espresso text-cream overflow-hidden">
+    <span class="bignum pointer-events-none absolute -right-6 top-6 text-[10rem] md:text-[16rem] text-cream/5 select-none">Dr</span>
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+      <div class="max-w-2xl mb-12 md:mb-16 reveal">
+        <p class="text-sm font-600 uppercase tracking-widest text-gold mb-3">Врачи</p>
+        <h2 class="font-display font-600 tracking-tight text-3xl md:text-5xl leading-tight">Врачи клиники</h2>
+        <p class="mt-4 text-cream/70">Постоянный состав без ротаций — врачи знают своих пациентов.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <article class="reveal rounded-xl border border-cream/15 bg-cream/5 p-7">
+          <div class="h-20 w-20 rounded-full bg-gold/20 text-gold font-display font-600 text-2xl flex items-center justify-center mb-6">ГВ</div>
+          <h3 class="font-display font-600 text-xl">Главный врач</h3>
+          <p class="text-coral text-sm font-600 mt-1">Стоматолог-терапевт</p>
+          <p class="text-cream/60 text-sm mt-3">Терапевтическая стоматология, эндодонтия, реставрация</p>
+          <p class="text-gold text-sm font-600 mt-4">Стаж 14 лет</p>
+        </article>
+        <article class="reveal rounded-xl border border-cream/15 bg-cream/5 p-7">
+          <div class="h-20 w-20 rounded-full bg-gold/20 text-gold font-display font-600 text-2xl flex items-center justify-center mb-6">СХ</div>
+          <h3 class="font-display font-600 text-xl">Стоматолог-хирург</h3>
+          <p class="text-coral text-sm font-600 mt-1">Хирург, имплантолог</p>
+          <p class="text-cream/60 text-sm mt-3">Хирургия, удаление, имплантация</p>
+          <p class="text-gold text-sm font-600 mt-4">Стаж 11 лет</p>
+        </article>
+        <article class="reveal rounded-xl border border-cream/15 bg-cream/5 p-7">
+          <div class="h-20 w-20 rounded-full bg-gold/20 text-gold font-display font-600 text-2xl flex items-center justify-center mb-6">СО</div>
+          <h3 class="font-display font-600 text-xl">Стоматолог-ортопед</h3>
+          <p class="text-coral text-sm font-600 mt-1">Ортопед</p>
+          <p class="text-cream/60 text-sm mt-3">Протезирование, коронки, виниры</p>
+          <p class="text-gold text-sm font-600 mt-4">Стаж 9 лет</p>
+        </article>
+      </div>
+      <p class="mt-6 text-xs text-cream/40 reveal">Роли будут заменены на реальные ФИО, опыт и специализации врачей клиники перед публикацией.</p>
+    </div>
+  </section>
+
+  <!-- PRICES -->
+  <section id="prices" class="py-16 md:py-28 bg-cream">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+      <div class="max-w-2xl mb-12 md:mb-16 reveal">
+        <p class="text-sm font-600 uppercase tracking-widest text-terracotta mb-3">Цены</p>
+        <h2 class="font-display font-600 text-espresso tracking-tight text-3xl md:text-5xl leading-tight">Цены на лечение</h2>
+        <p class="mt-4 text-ink/70">Озвучиваем стоимость до начала — никаких доплат в кресле.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+        <!-- cat -->
+        <div class="reveal rounded-xl bg-white border border-terracotta/15 p-7">
+          <h3 class="font-display font-600 text-xl text-espresso mb-5">Терапия</h3>
+          <ul class="divide-y divide-terracotta/10 text-sm">
+            <li class="flex justify-between gap-4 py-3"><span class="text-ink/75">Первичная консультация</span><span class="font-600 text-terracotta whitespace-nowrap">Бесплатно</span></li>
+            <li class="flex justify-between gap-4 py-3"><span class="text-ink/75">Лечение кариеса (1 поверхность)</span><span class="font-600 text-espresso whitespace-nowrap">от 3 500 ₽</span></li>
+            <li class="flex justify-between gap-4 py-3"><span class="text-ink/75">Пломба фотополимерная</span><span class="font-600 text-espresso whitespace-nowrap">от 4 000 ₽</span></li>
+            <li class="flex justify-between gap-4 py-3"><span class="text-ink/75">Лечение пульпита (1 канал)</span><span class="font-600 text-espresso whitespace-nowrap">от 6 000 ₽</span></li>
+            <li class="flex justify-between gap-4 py-3"><span class="text-ink/75">Лечение периодонтита (1 канал)</span><span class="font-600 text-espresso whitespace-nowrap">от 7 000 ₽</span></li>
+          </ul>
+        </div>
+
+        <div class="reveal rounded-xl bg-white border border-terracotta/15 p-7">
+          <h3 class="font-display font-600 text-xl text-espresso mb-5">Хирургия и имплантация</h3>
+          <ul class="divide-y divide-terracotta/10 text-sm">
+            <li class="flex justify-between gap-4 py-3"><span class="text-ink/75">Удаление зуба простое</span><span class="font-600 text-espresso whitespace-nowrap">от 2 500 ₽</span></li>
+            <li class="flex justify-between gap-4 py-3"><span class="text-ink/75">Удаление сложное (ретинированный)</span><span class="font-600 text-espresso whitespace-nowrap">от 6 500 ₽</span></li>
+            <li class="flex justify-between gap-4 py-3"><span class="text-ink/75">Имплант под ключ</span><span class="font-600 text-espresso whitespace-nowrap">от 45 000 ₽</span></li>
+          </ul>
+        </div>
+
+        <div class="reveal rounded-xl bg-white border border-terracotta/15 p-7">
+          <h3 class="font-display font-600 text-xl text-espresso mb-5">Протезирование</h3>
+          <ul class="divide-y divide-terracotta/10 text-sm">
+            <li class="flex justify-between gap-4 py-3"><span class="text-ink/75">Коронка металлокерамическая</span><span class="font-600 text-espresso whitespace-nowrap">от 8 000 ₽</span></li>
+            <li class="flex justify-between gap-4 py-3"><span class="text-ink/75">Коронка цирконий</span><span class="font-600 text-espresso whitespace-nowrap">от 18 000 ₽</span></li>
+            <li class="flex justify-between gap-4 py-3"><span class="text-ink/75">Винир керамический</span><span class="font-600 text-espresso whitespace-nowrap">от 22 000 ₽</span></li>
+          </ul>
+        </div>
+
+        <div class="reveal rounded-xl bg-white border border-terracotta/15 p-7">
+          <h3 class="font-display font-600 text-xl text-espresso mb-5">Гигиена и эстетика</h3>
+          <ul class="divide-y divide-terracotta/10 text-sm">
+            <li class="flex justify-between gap-4 py-3"><span class="text-ink/75">Чистка (ультразвук + Air Flow)</span><span class="font-600 text-espresso whitespace-nowrap">от 5 000 ₽</span></li>
+            <li class="flex justify-between gap-4 py-3"><span class="text-ink/75">Отбеливание Beyond</span><span class="font-600 text-espresso whitespace-nowrap">от 15 000 ₽</span></li>
+            <li class="flex justify-between gap-4 py-3"><span class="text-ink/75">Реставрация зуба</span><span class="font-600 text-espresso whitespace-nowrap">от 5 500 ₽</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8 rounded-xl bg-espresso/5 border border-terracotta/15 p-6 reveal">
+        <p class="text-sm text-ink/70">Окончательная цена определяется после осмотра. Первичная консультация — бесплатно.</p>
+        <p class="mt-2 text-sm text-ink/60">Оплата: наличные, банковские карты, безналичный перевод. Рассрочка — уточняйте у администратора.</p>
+      </div>
+
+      <div class="mt-8 reveal">
+        <a href="#form" class="cta inline-flex items-center gap-2 rounded-full bg-coral px-8 py-4 font-600 text-espresso hover:bg-gold transition-colors duration-200">
+          Записаться на бесплатную консультацию →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNOLOGY (dark band) -->
+  <section id="technology" class="relative grain py-16 md:py-28 bg-espresso text-cream overflow-hidden">
+    <span class="bignum pointer-events-none absolute -left-4 bottom-0 text-[9rem] md:text-[15rem] text-cream/5 select-none">01</span>
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+      <div class="max-w-2xl mb-12 md:mb-16 reveal">
+        <p class="text-sm font-600 uppercase tracking-widest text-gold mb-3">Безопасность</p>
+        <h2 class="font-display font-600 tracking-tight text-3xl md:text-5xl leading-tight">Безопасность и комфорт лечения</h2>
+        <p class="mt-4 text-cream/70">Стандарты частной клиники без сетевых компромиссов.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+        <article class="reveal rounded-xl border border-cream/15 bg-cream/5 p-7">
+          <h3 class="font-display font-600 text-lg text-gold mb-2">Цифровой рентген</h3>
+          <p class="text-sm text-cream/70 leading-relaxed">Радиационная нагрузка в 10 раз ниже плёночного — снимок за 2 секунды прямо в кабинете.</p>
+        </article>
+        <article class="reveal rounded-xl border border-cream/15 bg-cream/5 p-7">
+          <h3 class="font-display font-600 text-lg text-gold mb-2">Автоклав класса B</h3>
+          <p class="text-sm text-cream/70 leading-relaxed">Трёхступенчатая стерилизация инструментов согласно СанПиН — каждый цикл документируется.</p>
+        </article>
+        <article class="reveal rounded-xl border border-cream/15 bg-cream/5 p-7">
+          <h3 class="font-display font-600 text-lg text-gold mb-2">Одноразовые расходники</h3>
+          <p class="text-sm text-cream/70 leading-relaxed">Перчатки, слюноотсосы, слепочные ложки — всё новое для каждого пациента.</p>
+        </article>
+        <article class="reveal rounded-xl border border-cream/15 bg-cream/5 p-7">
+          <h3 class="font-display font-600 text-lg text-gold mb-2">Безболезненная анестезия</h3>
+          <p class="text-sm text-cream/70 leading-relaxed">Современные анестетики с карпульной системой — укол практически не ощущается.</p>
+        </article>
+        <article class="reveal rounded-xl border border-cream/15 bg-cream/5 p-7">
+          <h3 class="font-display font-600 text-lg text-gold mb-2">Доступная среда</h3>
+          <p class="text-sm text-cream/70 leading-relaxed">Пандусный вход, широкие дверные проёмы — клиника доступна для пациентов с ограниченными возможностями.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="py-16 md:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 md:mb-16 reveal">
+        <div>
+          <p class="text-sm font-600 uppercase tracking-widest text-terracotta mb-3">Яндекс.Карты · 5,0</p>
+          <h2 class="font-display font-600 text-espresso tracking-tight text-3xl md:text-5xl leading-tight">121 отзыв от соседей</h2>
+        </div>
+        <a href="https://yandex.ru/maps/" target="_blank" rel="noopener" class="text-sm font-600 text-terracotta hover:text-coral transition-colors whitespace-nowrap">Читать все отзывы →</a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <figure class="reveal rounded-xl bg-cream border border-terracotta/15 p-7">
+          <div class="text-gold mb-3">★★★★★</div>
+          <blockquote class="text-sm text-ink/75 leading-relaxed">Лечила кариес и делала чистку. Врач объяснила всё доступно, цену назвала сразу — никаких сюрпризов. Укол не почувствовала, чего никогда не ожидала от стоматолога.</blockquote>
+          <figcaption class="mt-5 font-600 text-espresso">Марина К.</figcaption>
+        </figure>
+        <figure class="reveal rounded-xl bg-cream border border-terracotta/15 p-7">
+          <div class="text-gold mb-3">★★★★★</div>
+          <blockquote class="text-sm text-ink/75 leading-relaxed">Приехал с острой болью в воскресенье — записали в тот же день. Канал пролечили быстро и качественно. Живу в Жулебино 10 лет, жалею, что узнал о клинике только сейчас.</blockquote>
+          <figcaption class="mt-5 font-600 text-espresso">Дмитрий Р.</figcaption>
+        </figure>
+        <figure class="reveal rounded-xl bg-cream border border-terracotta/15 p-7">
+          <div class="text-gold mb-3">★★★★★</div>
+          <blockquote class="text-sm text-ink/75 leading-relaxed">Вожу сюда сына 6 лет — боялся до слёз. Врач нашла подход, теперь сам просит «к доброй тёте». Рекомендую всем родителям района.</blockquote>
+          <figcaption class="mt-5 font-600 text-espresso">Светлана Ф.</figcaption>
+        </figure>
+        <figure class="reveal rounded-xl bg-cream border border-terracotta/15 p-7">
+          <div class="text-gold mb-3">★★★★★</div>
+          <blockquote class="text-sm text-ink/75 leading-relaxed">Делал протезирование — две коронки на цирконий. Естественно смотрятся, жевать удобно. Срок соблюли, обещанную цену не подняли.</blockquote>
+          <figcaption class="mt-5 font-600 text-espresso">Алексей Т.</figcaption>
+        </figure>
+        <figure class="reveal rounded-xl bg-cream border border-terracotta/15 p-7">
+          <div class="text-gold mb-3">★★★★★</div>
+          <blockquote class="text-sm text-ink/75 leading-relaxed">Хожу на профилактическую чистку каждые полгода. Врач каждый раз напоминает про слабые места — чувствую, что меня здесь помнят.</blockquote>
+          <figcaption class="mt-5 font-600 text-espresso">Елена М.</figcaption>
+        </figure>
+        <figure class="reveal rounded-xl bg-terracotta text-cream p-7 flex flex-col justify-center">
+          <p class="font-display font-600 text-5xl">5,0</p>
+          <p class="mt-2 text-cream/85 text-sm">средняя оценка по 121 отзыву на Яндекс.Картах</p>
+          <a href="https://yandex.ru/maps/" target="_blank" rel="noopener" class="cta mt-5 inline-flex items-center gap-2 rounded-full bg-cream px-6 py-3 font-600 text-espresso hover:bg-gold transition-colors duration-200 text-sm self-start">Читать все отзывы</a>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES -->
+  <section id="certificates" class="py-16 md:py-28 bg-cream">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+      <div class="max-w-2xl mb-12 md:mb-16 reveal">
+        <p class="text-sm font-600 uppercase tracking-widest text-terracotta mb-3">Документы</p>
+        <h2 class="font-display font-600 text-espresso tracking-tight text-3xl md:text-5xl leading-tight">Лицензии и сертификаты</h2>
+        <p class="mt-4 text-ink/70">Медицинская деятельность лицензирована в установленном порядке.</p>
+      </div>
+
+      <div class="flex flex-row flex-wrap gap-6 justify-center md:justify-start">
+        <article class="reveal w-full sm:w-[calc(50%-0.75rem)] md:w-[calc(33.333%-1rem)] rounded-xl bg-white border border-terracotta/15 p-7">
+          <div class="h-12 w-12 rounded-full bg-terracotta/10 text-terracotta flex items-center justify-center text-xl mb-5">📄</div>
+          <h3 class="font-display font-600 text-lg text-espresso">Лицензия на медицинскую деятельность</h3>
+          <p class="mt-2 text-sm text-ink/65">Департамент здравоохранения города Москвы</p>
+        </article>
+        <article class="reveal w-full sm:w-[calc(50%-0.75rem)] md:w-[calc(33.333%-1rem)] rounded-xl bg-white border border-terracotta/15 p-7">
+          <div class="h-12 w-12 rounded-full bg-terracotta/10 text-terracotta flex items-center justify-center text-xl mb-5">🎓</div>
+          <h3 class="font-display font-600 text-lg text-espresso">Сертификаты специалистов</h3>
+          <p class="mt-2 text-sm text-ink/65">Действующие сертификаты врачей по специальностям: терапия, хирургия, ортопедия</p>
+        </article>
+        <article class="reveal w-full sm:w-[calc(50%-0.75rem)] md:w-[calc(33.333%-1rem)] rounded-xl bg-white border border-terracotta/15 p-7">
+          <div class="h-12 w-12 rounded-full bg-terracotta/10 text-terracotta flex items-center justify-center text-xl mb-5">🛡️</div>
+          <h3 class="font-display font-600 text-lg text-espresso">Санитарно-эпидемиологическое заключение</h3>
+          <p class="mt-2 text-sm text-ink/65">Роспотребнадзор</p>
+        </article>
+      </div>
+      <p class="mt-8 text-sm text-ink/55 reveal">Все документы предоставляются по запросу пациента в клинике.</p>
+    </div>
+  </section>
+
+  <!-- CLINIC -->
+  <section id="clinic" class="py-16 md:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+      <div class="max-w-2xl mb-12 md:mb-16 reveal">
+        <p class="text-sm font-600 uppercase tracking-widest text-terracotta mb-3">Интерьер</p>
+        <h2 class="font-display font-600 text-espresso tracking-tight text-3xl md:text-5xl leading-tight">Наша клиника</h2>
+        <p class="mt-4 text-ink/70">Ул. Генерала Кузнецова, 23 — Жулебино, Москва.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+        <figure class="reveal col-span-2 md:col-span-2 rounded-xl overflow-hidden">
+          <img loading="lazy" src="https://avatars.mds.yandex.net/get-altay/9752112/2a0000018900d41c13b9e6f4d5d6aeb34b3e/XXXL" alt="Стойка администратора и зона ожидания клиники ДавДент" class="aspect-[16/10] w-full object-cover hover:scale-[1.02] transition-transform duration-300">
+        </figure>
+        <figure class="reveal rounded-xl overflow-hidden">
+          <img loading="lazy" src="https://avatars.mds.yandex.net/get-altay/9752112/2a0000018900d3beb742502c19067afd4f1e/XXXL" alt="Стоматологический кабинет ДавДент" class="aspect-[3/4] md:aspect-auto h-full w-full object-cover hover:scale-[1.02] transition-transform duration-300">
+        </figure>
+        <figure class="reveal rounded-xl overflow-hidden">
+          <img loading="lazy" src="https://avatars.mds.yandex.net/get-altay/1028115/2a0000018900d41cd196f7ecf9f60e9c1c16/XXXL" alt="Стоматологическое кресло и оборудование" class="aspect-[4/3] w-full object-cover hover:scale-[1.02] transition-transform duration-300">
+        </figure>
+        <figure class="reveal col-span-1 md:col-span-2 rounded-xl overflow-hidden">
+          <img loading="lazy" src="https://avatars.mds.yandex.net/get-altay/6203703/2a0000018900d41ce12fc80203df9e52ec2c/XXXL" alt="Интерьер клиники ДавДент, вход с пандусом" class="aspect-[4/3] md:aspect-[16/9] w-full object-cover hover:scale-[1.02] transition-transform duration-300">
+        </figure>
+      </div>
+      <p class="mt-6 text-sm text-ink/60 reveal">Пандусный вход, парковка у здания — клиника доступна для пациентов с ограниченными возможностями.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16 md:py-28 bg-cream">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 md:px-8">
+      <div class="mb-10 md:mb-14 reveal text-center">
+        <p class="text-sm font-600 uppercase tracking-widest text-terracotta mb-3">FAQ</p>
+        <h2 class="font-display font-600 text-espresso tracking-tight text-3xl md:text-5xl leading-tight">Частые вопросы</h2>
+      </div>
+
+      <div class="space-y-3">
+        <details class="reveal group rounded-xl bg-white border border-terracotta/15 p-5">
+          <summary class="flex items-center justify-between gap-4 font-600 text-espresso">Можно записаться в тот же день?<span class="faq-plus text-terracotta text-xl transition-transform">+</span></summary>
+          <p class="mt-3 text-sm text-ink/70 leading-relaxed">Да. Позвоните на +7 (910) 435-66-44 — постараемся принять в день обращения или на следующий. При острой боли всегда находим окно.</p>
+        </details>
+        <details class="reveal group rounded-xl bg-white border border-terracotta/15 p-5">
+          <summary class="flex items-center justify-between gap-4 font-600 text-espresso">Сколько стоит первичная консультация?<span class="faq-plus text-terracotta text-xl transition-transform">+</span></summary>
+          <p class="mt-3 text-sm text-ink/70 leading-relaxed">Первичный осмотр и план лечения — бесплатно. Платите только за лечение, о цене договариваемся до начала.</p>
+        </details>
+        <details class="reveal group rounded-xl bg-white border border-terracotta/15 p-5">
+          <summary class="flex items-center justify-between gap-4 font-600 text-espresso">Вы принимаете детей?<span class="faq-plus text-terracotta text-xl transition-transform">+</span></summary>
+          <p class="mt-3 text-sm text-ink/70 leading-relaxed">Принимаем детей от 3 лет. Работаем с тревожными детьми — без принуждения, с объяснением каждого шага.</p>
+        </details>
+        <details class="reveal group rounded-xl bg-white border border-terracotta/15 p-5">
+          <summary class="flex items-center justify-between gap-4 font-600 text-espresso">Какие способы оплаты?<span class="faq-plus text-terracotta text-xl transition-transform">+</span></summary>
+          <p class="mt-3 text-sm text-ink/70 leading-relaxed">Наличные, банковские карты, безналичный перевод. По рассрочке — уточняйте у администратора при записи.</p>
+        </details>
+        <details class="reveal group rounded-xl bg-white border border-terracotta/15 p-5">
+          <summary class="flex items-center justify-between gap-4 font-600 text-espresso">Больно ли делать имплант?<span class="faq-plus text-terracotta text-xl transition-transform">+</span></summary>
+          <p class="mt-3 text-sm text-ink/70 leading-relaxed">Операция проходит под местной анестезией — вы не чувствуете боли. Дискомфорт возможен 1–3 дня после, купируется обезболивающими.</p>
+        </details>
+        <details class="reveal group rounded-xl bg-white border border-terracotta/15 p-5">
+          <summary class="flex items-center justify-between gap-4 font-600 text-espresso">Есть ли гарантия на работу?<span class="faq-plus text-terracotta text-xl transition-transform">+</span></summary>
+          <p class="mt-3 text-sm text-ink/70 leading-relaxed">Да. На пломбы — 1 год, на протезирование и импланты — индивидуальные условия, уточняйте у врача перед лечением.</p>
+        </details>
+        <details class="reveal group rounded-xl bg-white border border-terracotta/15 p-5">
+          <summary class="flex items-center justify-between gap-4 font-600 text-espresso">Как доехать без машины?<span class="faq-plus text-terracotta text-xl transition-transform">+</span></summary>
+          <p class="mt-3 text-sm text-ink/70 leading-relaxed">Метро Жулебино — 8 минут пешком, метро Котельники — 12 минут. Остановка маршруток у входа в здание.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM + CONTACTS/MAP -->
+  <section id="contacts_map" class="py-16 md:py-28 bg-espresso text-cream">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+      <div class="max-w-2xl mb-12 md:mb-16 reveal">
+        <p class="text-sm font-600 uppercase tracking-widest text-gold mb-3">Контакты</p>
+        <h2 class="font-display font-600 tracking-tight text-3xl md:text-5xl leading-tight">Как нас найти</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- left: contacts + form -->
+        <div class="reveal space-y-8">
+          <div class="space-y-4 text-sm">
+            <div>
+              <p class="text-cream/50 uppercase tracking-wider text-xs">Телефон · Администратор</p>
+              <a href="tel:+79104356644" class="font-display font-600 text-2xl text-gold hover:text-coral transition-colors">+7 (910) 435-66-44</a>
+            </div>
+            <div>
+              <p class="text-cream/50 uppercase tracking-wider text-xs">Адрес</p>
+              <p class="text-cream/90">ул. Генерала Кузнецова, 23, Москва, Жулебино</p>
+            </div>
+            <div>
+              <p class="text-cream/50 uppercase tracking-wider text-xs">Метро</p>
+              <p class="text-cream/90">Жулебино (8 мин пешком), Котельники (12 мин), Лермонтовский проспект (15 мин)</p>
+            </div>
+            <div>
+              <p class="text-cream/50 uppercase tracking-wider text-xs">Часы работы</p>
+              <p class="text-cream/90">Пн–Пт 09:00–20:00 · Сб 09:00–18:00 · Вс выходной</p>
+            </div>
+            <div>
+              <p class="text-cream/50 uppercase tracking-wider text-xs">Парковка</p>
+              <p class="text-cream/90">Бесплатная парковка у здания</p>
+            </div>
+          </div>
+
+          <form id="form" class="rounded-xl bg-cream/5 border border-cream/15 p-6 space-y-4" onsubmit="event.preventDefault(); this.reset(); document.getElementById('formok').classList.remove('hidden');">
+            <h3 class="font-display font-600 text-xl text-cream">Записаться онлайн</h3>
+            <input type="text" required placeholder="Ваше имя" class="w-full rounded-xl bg-cream text-ink placeholder-ink/40 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-gold">
+            <input type="tel" required placeholder="Телефон" class="w-full rounded-xl bg-cream text-ink placeholder-ink/40 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-gold">
+            <textarea rows="3" placeholder="Что беспокоит? (необязательно)" class="w-full rounded-xl bg-cream text-ink placeholder-ink/40 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-gold"></textarea>
+            <button type="submit" class="cta w-full rounded-full bg-coral px-6 py-3.5 font-600 text-espresso hover:bg-gold transition-colors duration-200">Записаться на приём</button>
+            <p id="formok" class="hidden text-sm text-gold">Спасибо! Администратор перезвонит вам в ближайшее время.</p>
+            <p class="text-xs text-cream/45">Отправляя форму, вы соглашаетесь на обработку персональных данных.</p>
+          </form>
+        </div>
+
+        <!-- right: map -->
+        <div class="reveal rounded-xl overflow-hidden border border-cream/15 min-h-[420px]">
+          <iframe title="Карта — ДавДент, ул. Генерала Кузнецова, 23, Москва" loading="lazy"
+            src="https://yandex.ru/map-widget/v1/?ll=37.857%2C55.685&z=15&text=Москва%2C%20улица%20Генерала%20Кузнецова%2C%2023"
+            class="w-full h-full min-h-[420px] border-0"></iframe>
+        </div>
+      </div>
+
+      <div class="mt-10 reveal">
+        <a href="tel:+79104356644" class="cta inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 font-600 text-espresso hover:bg-coral transition-colors duration-200">
+          Позвонить администратору
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-espresso text-cream/60 border-t border-cream/10 pt-12 pb-28 md:pb-12 mt-0">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 flex flex-col md:flex-row justify-between gap-6">
+      <div>
+        <p class="font-display font-600 text-xl text-cream">Стоматология ДавДент</p>
+        <p class="mt-2 text-sm">ул. Генерала Кузнецова, 23, Москва, Жулебино</p>
+        <a href="tel:+79104356644" class="mt-1 inline-block text-sm text-gold hover:text-coral transition-colors">+7 (910) 435-66-44</a>
+      </div>
+      <p class="text-xs self-end">© Стоматология ДавДент, Жулебино. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <!-- STICKY CTA -->
+  <section id="cta_sticky">
+    <!-- mobile bar -->
+    <div class="fixed bottom-0 inset-x-0 z-50 md:hidden flex gap-2 p-3 bg-cream/95 backdrop-blur border-t border-terracotta/15">
+      <a href="#form" class="cta flex-1 rounded-full bg-coral px-4 py-3.5 text-center font-600 text-espresso">Записаться</a>
+      <a href="tel:+79104356644" class="cta flex-1 rounded-full bg-espresso px-4 py-3.5 text-center font-600 text-cream">Позвонить</a>
+    </div>
+    <!-- desktop widget -->
+    <a href="#form" id="deskcta" class="cta hidden md:flex fixed bottom-8 right-8 z-50 items-center gap-2 rounded-full bg-terracotta px-7 py-4 font-600 text-cream shadow-xl shadow-espresso/30 hover:bg-coral hover:text-espresso transition-all duration-200 opacity-0 translate-y-4 pointer-events-none">
+      Записаться онлайн
+    </a>
+  </section>
+
+  <script>
+    // reveal on scroll
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
+    },{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // desktop CTA appears after hero
+    const hero = document.getElementById('hero');
+    const deskcta = document.getElementById('deskcta');
+    new IntersectionObserver(([e])=>{
+      const show = !e.isIntersecting;
+      deskcta.classList.toggle('opacity-0', !show);
+      deskcta.classList.toggle('translate-y-4', !show);
+      deskcta.classList.toggle('pointer-events-none', !show);
+    },{threshold:0}).observe(hero);
+  </script>
+</body>
+</html>
