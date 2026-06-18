@@ -1,4 +1,4 @@
-import { chromium } from "/Users/alavg/Documents/lead-gen/node_modules/playwright/index.mjs";
+import { chromium } from "playwright";
 const sites=[["moscow-stomatology","https://moscow-stomatology.ru/"],["solnechnyy-eslizuba","http://www.eslizuba.net/domodedovskaya"],["irida-lridadent","https://lridadent.ru/"]];
 const b=await chromium.launch();
 for(const [name,url] of sites){
