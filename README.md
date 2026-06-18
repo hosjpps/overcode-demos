@@ -20,17 +20,21 @@
 - Playwright (скриншоты, Node.js / ESM)
 
 ## Структура
-- `<имя-клиники>/index.html` — отдельный лендинг для каждой клиники (`dantist/`, `mandent/`, `mirzoyan/` и др.)
+- `<имя-клиники>/index.html` — отдельный лендинг для каждой клиники (`dantist/`, `apeks/`, `alfa-dent/` и др.)
+- у части клиник несколько страниц по направлениям (`dentelit/terapiya.html`, `dentelit/hirurgiya.html` и т.д.)
 - `shot-sites.mjs`, `shot-recheck.mjs` — Playwright-скрипты для снятия скриншотов
 - `.nojekyll` — отключение обработки Jekyll на GitHub Pages
 - `LICENSE` — проприетарная лицензия
 
 ## Демки
-- [Дантист](https://hosjpps.github.io/overcode-demos/dantist/) — стоматология, Южное Бутово
-- [ManDent Clinic](https://hosjpps.github.io/overcode-demos/mandent/) — стоматология, Южное Бутово
-- [Престиж Сервис](https://hosjpps.github.io/overcode-demos/prestizh/) — стоматология, Южное Бутово
-- [Центр Геворга Мирзояна](https://hosjpps.github.io/overcode-demos/mirzoyan/) — стоматология, Гольяново
-- [Стоматология на Серпуховской](https://hosjpps.github.io/overcode-demos/serpukhovskaya/) — стоматология, Серпуховская
+- [Дантист](https://hosjpps.github.io/overcode-demos/dantist/)
+- [Апекс](https://hosjpps.github.io/overcode-demos/apeks/)
+- [Альфа-Дент](https://hosjpps.github.io/overcode-demos/alfa-dent/)
+- [Grand Clinic](https://hosjpps.github.io/overcode-demos/grand-clinic/)
+- [ДентЭлит](https://hosjpps.github.io/overcode-demos/dentelit/)
+- [Via Dent](https://hosjpps.github.io/overcode-demos/via-dent/)
+- [Ирида](https://hosjpps.github.io/overcode-demos/irida/)
+- [StomCity](https://hosjpps.github.io/overcode-demos/stomcity/)
 
 Полный список лендингов — в каталогах репозитория.
 
